@@ -11,7 +11,7 @@
 - [Jeremias Uriel Diaz](http://github.com/Uriel-98 "Jeremias Uriel Diaz")
 - [Jeanette Soledad Stranieri](http://github.com/janu-ss "Jeanette Soledad Stranieri")
 - [Emilia Rodríguez Moreno](http://github.com/MundoViolento "Emilia Rodríguez Moreno")
-- [Aldana Lourdes Garrone](http://github.cm/4ldana "Aldana Lourdes Garrone")
+- [Aldana Lourdes Garrone](https://github.com/4ldana "Aldana Lourdes Garrone")
 - [Hernán Rodrigo Torres](http://github.com/HernanRT "Hernán Rodrigo Torres")
 - [Yanina Soledad Unrein](http://github.com/Yanina-Unrein "Yanina Soledad Unrein")
 -------------
