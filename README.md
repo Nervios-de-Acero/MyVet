@@ -1,6 +1,7 @@
 # Grupo TSDWAD 2022
 
-
+## Introducción al proyecto: 
+Se trata de una aplicación dónde los usuarios podrán crear una cuenta que le facilitará ver el historial clínico de su mascota, seguir un calendario de vacunación y desparacitación, sacar turno en alguna veterinaria cercana a su domicilio pudiendo elegir el/la  veterinario/a. Contará con cartillas de especialidades y mapa de direcciones para saber en dónde puede tratar a su mascota en caso de necesitar algún tratamiento especial, o simplemente ubicar la locación más cercana en caso de querer adquirir algún producto, ya sea alimento, piedras, ropa o juguetes. 
 
 #### Integrantes :rocket:
 
