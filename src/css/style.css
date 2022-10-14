@@ -6,3 +6,22 @@
     background-attachment: fixed;
     background-size: cover;
 }
+
+header {
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+
+}
+
+#logo {
+
+    width: 200px;
+    height: 200px;
+
+}
+
