@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    font-family: 'Questrial', sans-serif ;
 }
 
 body {
@@ -9,6 +10,39 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+}
+
+/*main*/     /*ojo los main de las demas paginas*/
+main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 80vh;
+}
+
+.btn-container{
+  display: flex;
+  width: 400px;
+  height: 200px;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom{
+  background-color: #d9f87d;
+  font-size: 25px ;
+  text-align: center;
+  width: 350px;
+  height: 50px;
+  border-radius: 50px;
+  color: #6c757d;
+}
+
+.custom:hover{
+  color: white;
+  border: 5px solid #aeb7c0;
+  transition: all .4s ease-in-out;
 }
 
 /*footer*/
