@@ -133,10 +133,14 @@ form {
   position: relative;
   height: 45px;
   width: 90%;
+<<<<<<< HEAD
   margin: auto;
   margin-top: 30px;
 
 
+=======
+  margin-bottom: 17px;
+>>>>>>> f7a0870cbd6bbb8ff10ef0e8ed4424b78c2eeb26
 }
 
 .input {
@@ -148,7 +152,11 @@ form {
   border: 2px solid black;
   border-radius: 7px;
   font-size: 16px;
+<<<<<<< HEAD
   padding: 0 10px;
+=======
+  padding: 0 20px;
+>>>>>>> f7a0870cbd6bbb8ff10ef0e8ed4424b78c2eeb26
   outline: none;
   background: rgb(189, 188, 188,0.25);
   z-index: 1;
@@ -189,14 +197,22 @@ form {
   display: block;
   margin-left: auto;
   padding: 15px 30px;
+<<<<<<< HEAD
   border: 1px solid black;
+=======
+  border: none;
+>>>>>>> f7a0870cbd6bbb8ff10ef0e8ed4424b78c2eeb26
   background-color: #d9f87d;
   color: black;
   border-radius: 6px;
   cursor: pointer;
   font-size: 16px;
+<<<<<<< HEAD
   margin:auto;
   margin-top: 20px;
+=======
+  margin-top: 30px;
+>>>>>>> f7a0870cbd6bbb8ff10ef0e8ed4424b78c2eeb26
 }
 
 .btn_registro:hover {
