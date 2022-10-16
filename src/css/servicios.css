@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Questrial', sans-serif ;
+}
+
+body {
+    background-image: url(../assets/img/Main.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+main{
+    display: flex;
+    flex-direction: row;
+}
+
+.card{
+   margin: 10px;
+}
+
+.card:hover {
+        transition: all 0.3s ease-out;
+        box-shadow: rgba(247, 242, 242, 0.74) 0px 5px 15px;
+        border: 1px solid #111111;
+}
+
+.card-body{
+    background: #d9f87da9;
+}
+
+
