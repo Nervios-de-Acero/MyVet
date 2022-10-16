@@ -13,21 +13,45 @@ body {
 }
 main{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    justify-content: center;
+}
+.servicios-container {
+  display: flex;
+  column-gap: 15px;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  min-height: 500px;
 }
 
+.card-container {
+  scroll-snap-align: center;
+}
 .card{
-   margin: 10px;
+    margin: 10px;
+    max-width:380px;
+    min-width: 300px;
+    height: 438px;
 }
 
 .card:hover {
-        transition: all 0.3s ease-out;
-        box-shadow: rgba(247, 242, 242, 0.74) 0px 5px 15px;
-        border: 1px solid #111111;
+    transition: all 0.3s ease-out;
+    box-shadow: rgba(247, 242, 242, 0.74) 0px 5px 15px;
+    border: 1px solid #111111;
 }
 
 .card-body{
     background: #d9f87da9;
+    overflow: hidden;
+    padding-bottom:10px;
+}
+
+.card-body p {
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;  
+  overflow: hidden;
 }
 
 
