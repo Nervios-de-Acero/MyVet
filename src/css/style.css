@@ -177,13 +177,16 @@ footer span{
 .quienes_somos{
   height: 700px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  margin-bottom: 0px;
 }
 
 .inner-container{
+  min-width: 250px;
   position: relative;
-  height: 350px;
+  height: auto;
   width: 600px;
   background: transparent;
   border: 1px solid #fff;
