@@ -1,0 +1,2 @@
+# Seleccionar cantidad
+# Mostrar detalles
