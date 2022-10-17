@@ -1,0 +1,213 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Questrial', sans-serif ;
+}
+
+body {
+  background-image: url(../assets/img/Main.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+/*main*/     /*ojo los main de las demas paginas*/
+main{
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+height: 80vh;
+}
+
+.btn-container{
+display: flex;
+flex-direction: column;
+width: 400px;
+height: 200px;
+align-items: center;
+justify-content: center;
+}
+
+.custom{
+background-color: #d9f87d;
+font-size: 25px ;
+text-align: center;
+width: 350px;
+height: 50px;
+border-radius: 50px;
+color: #6c757d;
+margin-bottom: 15px;
+}
+
+.custom:hover{
+color: white;
+border: 5px solid #aeb7c0;
+transition: all .4s ease-in-out;
+}
+
+.customReg{
+font-size: 25px ;
+text-align: center;
+width: 350px;
+height: 50px;
+border-radius: 50px;
+color: #d9f87d;
+border: none;
+}
+.customReg:hover{
+color: white;
+border: 5px solid #d9f87d;
+background-color: transparent;
+transition: all .4s ease-in-out;
+}
+
+/*footer*/
+footer{
+position:fixed;
+bottom:0;
+width: 100%;
+height: 200px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+#emerg{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+width: 120px;
+height:100%;
+}
+footer a{
+text-decoration: none;
+cursor: pointer;
+}
+footer a:hover{
+box-shadow:inset 0 0 20px rgba(255, 255, 255, .5), 0 0 20px rgba(255, 255, 255, .2) ;
+outline-color: rgba(255, 255, 255, 0);
+outline-offset: 15px;
+text-shadow: 1px 1px 2px #427388;
+}
+
+footer span{
+display: block;
+text-align:center;
+}
+#logo_emerg{
+width:113px;
+height:113px;
+}
+
+
+/*REGISTRO*/
+
+.form_registro{
+display: flex;
+justify-content: center;
+align-items: center;
+height: 70vh;
+
+}
+
+form {
+width: 400px;
+border-radius: 8px;
+padding: 20px 40px;
+box-shadow: 0 10px 25px rgba(92, 99, 105, .2);
+backdrop-filter: blur(10px);
+background: rgb(189, 188, 188,0.5)
+}
+
+.title {
+font-size: 40px;
+margin-bottom: 30px;
+text-align: center;
+color: #080800;
+}
+
+.inputContainer {
+position: relative;
+height: 45px;
+width: 90%;
+margin: auto;
+margin-top: 30px;
+
+
+}
+
+.input {
+position: absolute;
+top: 0px;
+left: 0px;
+height: 100%;
+width: 100%;
+border: 2px solid black;
+border-radius: 7px;
+font-size: 16px;
+padding: 0 10px;
+outline: none;
+background: rgb(189, 188, 188,0.25);
+z-index: 1;
+
+}
+
+.input:focus + .label {
+top: -16px;
+left: 3px;
+z-index: 10;
+font-size: 13px;
+color: black;
+}
+
+.input:not(:placeholder-shown)+ .label {
+top: -16px;
+left: 3px;
+z-index: 10;
+font-size: 13px;
+}
+
+::placeholder {
+color: transparent;
+}
+
+.label {
+position: absolute;
+top: 15px;
+left: 15px;
+padding: 0 4px;
+color: #080800;
+font-size: 16px;
+transition: 0.5s;
+z-index: 0;
+}
+
+.btn_registro {
+display: block;
+margin-left: auto;
+padding: 15px 30px;
+border: 1px solid black;
+background-color: #d9f87d;
+color: black;
+border-radius: 6px;
+cursor: pointer;
+font-size: 16px;
+margin:auto;
+margin-top: 20px;
+}
+
+.btn_registro:hover {
+color: white;
+border: 1px solid #d9f87d;
+background-color: transparent;
+transition: all .4s ease-in-out;
+}
+
+@media (max-width= 480px) {
+.form_registro{
+  width: 100%;
+}
+}
