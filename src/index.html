@@ -18,42 +18,46 @@
     <title>MyVet</title>
   </head>
   <body>
+    <header>
+      <img id="logo" src="./assets/img/Logo_modif.png" alt="Logo App">
+    
     <!-- NavBar -->
-    <nav class="navbar navbar-expand-sm navbar-dark bg-dark sticky-lg-top text-white bg-opacity-50" id="navColor">
+    <nav class="navbar navbar-expand-sm" id="navColor">
       <div class="container-fluid">
         <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+          <span class="navbar-toggler-icon icon-color navbar-dark"></span>
         </button>
 
-        <div class="navbar-collapse hidden collapse text-white bg-opacity-25" id="navbarSupportedContent">
-          <ul class="nav navbar-nav me-auto mb-2 mb-lg-0 text-white bg-opacity-50">
+        <div class="navbar-collapse hidden collapse collapse-custom" id="navbarSupportedContent">
+          <ul class="nav navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link" href="index.html">Inicio</a>
+              <a class="nav-link text-white" href="index.html">Inicio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="quienesSomos.html">Quienes somos</a>
+              <a class="nav-link text-white" href="quienesSomos.html">Quienes somos</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="servicios.html">Servicios</a>
+              <a class="nav-link text-white" href="servicios.html">Servicios</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="sucursales.html">Sucursales</a>
+              <a class="nav-link text-white" href="sucursales.html">Sucursales</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="petshop.html">Tienda</a>
+              <a class="nav-link text-white" href="petshop.html">Tienda</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="contacto.html">Contacto</a>
+              <a class="nav-link text-white" href="contacto.html">Contacto</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
+    </header>
 
     <main>
       <div class="btn-container">
-        <button type="button" class="btn custom">Iniciar Sesión</button>
-        <button onclick="window.location.href='registro.html'"type="button" class="btn btn-outline-secondary customReg">
+        <button type="button" class="btn btn-sm custom">Iniciar Sesión</button>
+        <button onclick="window.location.href='registro.html'"type="button" class="btn btn-sm btn-outline-secondary customReg">
           Registrarse
         </button>
       </div>
