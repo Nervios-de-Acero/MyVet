@@ -1,12 +1,13 @@
 /*quienes somos*/
 
 .quienes_somos{
-    height: 700px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 0px;
+  height: 550px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0px;
+  padding: 0 10px;
   }
   
   .inner-container{
@@ -50,4 +51,5 @@
     line-height: 30px;
     text-align: center;
     margin-bottom: 30px;
+    padding: 0 10px;
   }

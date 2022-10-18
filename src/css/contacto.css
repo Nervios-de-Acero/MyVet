@@ -1,10 +1,11 @@
 /*CONTACTO*/
-/*Especifiqué todo por si se llega a usar el mismo archivo para estilizar otras páginas del sitio que usen form como el registro o el inicio de sesión.*/
+
 .contacto {
     background: rgb(189, 188, 188,0.5);
     margin-top:3em;
     border-radius: 5px;
     font-family: 'Questrial', sans-serif;
+    max-width: 600px;
   }
   
   .contacto input, select {
