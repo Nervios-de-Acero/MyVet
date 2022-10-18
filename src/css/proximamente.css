@@ -1,0 +1,18 @@
+/*Páginas PROXIMAMENTE*/
+.proximamente {
+    background-image: url(../assets/img/¡¡¡Próximamente!!!.jpg);
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+  }
+  
+  .btnProx{
+    font-size: 20px ;
+    text-align: center;
+    width: 350px;
+    height: 50px;
+    border-radius: 50px;
+    color: #d9f87d;
+    margin-bottom: 80%;
+  }
