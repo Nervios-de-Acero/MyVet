@@ -2,7 +2,8 @@
 
 .contacto {
     background: rgb(189, 188, 188,0.5);
-    margin-top:3em;
+    box-shadow: 0 10px 25px rgba(92, 99, 105, .2);
+    backdrop-filter: blur(10px);
     border-radius: 5px;
     font-family: 'Questrial', sans-serif;
     max-width: 600px;
