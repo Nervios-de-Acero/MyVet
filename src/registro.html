@@ -20,8 +20,7 @@
   </head>
   <body>
     <header>
-      <img id="logo" src="./assets/img/Logo_modif.png" alt="Logo App">
-    
+      <a href="index.html"><img id="logo" src="./assets/img/Logo_modif.png" alt="Logo App"></a>>
       <!-- NavBar -->
       <nav class="navbar navbar-expand-sm" id="navColor">
         <div class="container-fluid">
@@ -54,29 +53,29 @@
         </div>
       </nav>
     </header>
-    <main>
-      <div class="form_registro">
-      <form action="?" method="post">
-        <legend class="title">Registrate</legend>
-          <div class="inputContainer">
-            <input type="text" class="input" name="user_name" placeholder="a">
-            <label for="name" class="label">Nombre completo:</label>
-          </div>
-          <div class="inputContainer">
-            <input type="email" class="input" name="user_mail" placeholder="a">
-            <label for="mail" class="label">Correo electrónico:</label>
-          </div>
-          <div class="inputContainer">
-            <input type="password" class="input" id="password1" name="user_password" minlength="6" maxlength="15" placeholder="a">
-            <label for="password1" class="label">Contraseña:</label>
-          </div>
-          <div class="inputContainer">
-            <input type="password" class="input" id="password2" name="user_password2" minlength="6" maxlength="15" placeholder="a">
-            <label for="password2" class="label">Confirmar contraseña:</label>
-          </div>
-          <input type="submit" value="Registrarse" class="btn_registro">
-      </form>
-      </div>
+    <main class="form_registro">
+      <!-- <div class="form_registro"> -->
+        <form action="?" method="post">
+          <legend class="title">Registrate</legend>
+            <div class="inputContainer">
+              <input type="text" class="input" name="user_name" placeholder="a">
+              <label for="name" class="label">Nombre completo:</label>
+            </div>
+            <div class="inputContainer">
+              <input type="email" class="input" name="user_mail" placeholder="a">
+              <label for="mail" class="label">Correo electrónico:</label>
+            </div>
+            <div class="inputContainer">
+              <input type="password" class="input" id="password1" name="user_password" minlength="6" maxlength="15" placeholder="a">
+              <label for="password1" class="label">Contraseña:</label>
+            </div>
+            <div class="inputContainer">
+              <input type="password" class="input" id="password2" name="user_password2" minlength="6" maxlength="15" placeholder="a">
+              <label for="password2" class="label">Confirmar contraseña:</label>
+            </div>
+            <input type="submit" value="Registrarse" class="btn_registro">
+        </form>
+      <!-- </div> -->
     </main>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
