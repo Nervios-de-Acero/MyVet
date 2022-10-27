@@ -48,21 +48,21 @@
     </nav>
   </header>
   <main class="d-flex justify-content-center align-items-center">
-    <form method="post" action="" class="contacto container overflow-hidden d-grid gap-3 px-4 py-4">
+    <form id="contactForm" method="post" action="" class="contacto container overflow-hidden d-grid gap-3 px-4 py-4">
       <legend class="col-12 text-center">Contactanos</legend>
 
       <div class="d-flex flex-column flex-sm-row gap-2 px-2 justify-content-evenly">
-        <input type="text" id="nombre" placeholder="Nombre" class="col-12 col-sm-6">
-        <input type="text" id="apellido" placeholder="Apellido" class="col-12 col-sm-6">
+        <input type="text" id="nombre" name="contact_name" placeholder="Nombre" class="col-12 col-sm-6">
+        <input type="text" id="apellido" name="contact_lastname" placeholder="Apellido" class="col-12 col-sm-6">
       </div>
 
       <div class="d-flex flex-column flex-sm-row gap-2 px-2 justify-content-evenly">
-        <input type="email" id="mail" placeholder="Mail" class="col-12 col-sm-6">
-        <input type="tel" id="telefono" placeholder="Teléfono" maxlength="13" class="col-12 col-sm-6">
+        <input type="email" id="mail" name="contact_email" placeholder="Mail" class="col-12 col-sm-6">
+        <input type="tel" id="telefono" name="contact_phone" placeholder="Teléfono" maxlength="13" class="col-12 col-sm-6">
       </div>
 
       <div class="d-flex flex-column gx-4 gap-3 px-1 ">
-        <select class="col-12">
+        <select name="contact_species" class="col-12">
           <option selected>Especie</option>
           <option value="perro">Perro</option>
           <option value="gato">Gato</option>
@@ -70,12 +70,13 @@
           <option value="roedor">Roedor</option>
           <option value="exoticos">Exóticos</option>
         </select>
-        <input type="text" id="asunto" placeholder="Asunto" class="col-12">
-        <textarea id="mensaje" class="col-12" rows="5" placeholder="Mensaje"></textarea>
-        <input class="btnSubmit" type="submit" value="Enviar">
+        <input type="text" id="asunto" name="contact_subject" placeholder="Asunto" class="col-12">
+        <textarea id="mensaje" name="contact_message" class="col-12" rows="5" placeholder="Mensaje"></textarea>
+        <input type="submit" class="btnSubmit" value="Enviar">
       </div>
     </form>
   </main>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+  <script src="js/form.js"></script>
 </body>
 </html>
