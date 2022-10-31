@@ -16,3 +16,5 @@ ALTER TABLE usuario
 
 ALTER TABLE usuario
   MODIFY Id_Cliente int NOT NULL AUTO_INCREMENT;
+  
+  
