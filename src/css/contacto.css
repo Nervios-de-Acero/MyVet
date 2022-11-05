@@ -1,62 +1,59 @@
-*{
-    margin: 0;
-    padding: 0;
-    font-family: 'Questrial', sans-serif ;
-}
+/*CONTACTO*/
 
-body {
-    background-image: url(../assets/img/Main.jpg);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-}
-main{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-.servicios-container {
-  display: flex;
-  column-gap: 15px;
-  overflow-x: auto;
-  overscroll-behavior-x: contain;
-  scroll-snap-type: x mandatory;
-  min-height: 500px;
-}
-
-.card-container {
-  scroll-snap-align: center;
-}
-.card{
-    margin: 10px;
-    max-width:380px;
-    min-width: 300px;
-    height: 438px;
-}
-
-.card:hover {
-    transition: all 0.3s ease-out;
-    box-shadow: rgba(247, 242, 242, 0.74) 0px 5px 15px;
-    border: 1px solid #111111;
-}
-
-.card-body{
-    background: #d9f87da9;
-    overflow: hidden;
-    padding-bottom:10px;
-}
-
-.card-body p {
-  display: -webkit-box;
-  -webkit-line-clamp: 5;
-  -webkit-box-orient: vertical;  
-  overflow: hidden;
-}
-
-
+.contacto {
+    background: rgb(189, 188, 188,0.5);
+    box-shadow: 0 10px 25px rgba(92, 99, 105, .2);
+    backdrop-filter: blur(10px);
+    border-radius: 5px;
+    font-family: 'Questrial', sans-serif;
+    max-width: 600px;
+  }
+  
+  .contacto input, select {
+    height: 40px;
+  }
+  
+  .contacto *{
+    border-radius: 10px;
+    padding-left: 10px;
+  }
+  
+  .contacto div > *:not([type="submit"]) {
+    border: 2px solid black;
+    background: rgb(189, 188, 188,0.25);
+  }
+  
+  .contacto textarea {
+    padding-top:5px;
+  }
+  
+  /*Esto es para que no se ponga de un color feo cuando se usa el autocompletado de Chrome, parece que no funciona usar transparencia*/
+  .contacto input:-webkit-autofill,
+  .contacto input:-webkit-autofill:hover,
+  .contacto input:-webkit-autofill:focus,
+  .contacto input:-webkit-autofill:active {
+    box-shadow: 0 0 0 30px rgb(158, 156, 156) inset;
+    -webkit-box-shadow: 0 0 0 30px rgb(158, 156, 156) inset !important;
+  }
+  
+  .contacto input::placeholder, .contacto textarea::placeholder {
+    color:black;
+  }
+  
+  .contacto input:focus, textarea:focus {
+    outline: none;
+  }
+  
+  .btnSubmit {
+    background: #d9f87d;
+    border: none;
+  }
 /*FOOTER*/
 
+footer{
+  position: absolute;
+  justify-content: flex-end;
+}
 .social-buttons{
   width: 100%;
   background-color: rgb(189, 188, 188,0.5);
