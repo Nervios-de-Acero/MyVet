@@ -111,7 +111,7 @@ transition: all .4s ease-in-out;
 
 footer{
   position: absolute;
-  justify-content: flex-end;
+  height: 20%;
 }
 
 .social-buttons{
@@ -169,6 +169,7 @@ footer{
 
 .social-buttons .grupo-1 .red-social a:hover{
   color: #d9f87d;
+  
   
 }
 
