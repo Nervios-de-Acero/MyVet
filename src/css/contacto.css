@@ -52,7 +52,7 @@
 
 footer{
   position: absolute;
-  justify-content: flex-end;
+  height: 30%;
 }
 .social-buttons{
   width: 100%;
