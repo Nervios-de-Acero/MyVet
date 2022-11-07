@@ -32,3 +32,10 @@ CREATE TABLE animal (
 	Fecha_nac date NOT NULL,
 	Esterilizado boolean NOT NULL
 );
+
+CREATE TABLE visita (
+	ID_visita int NOT NULL,
+	detalles varchar(25) NOT NULL,
+	tipo_control varchar(10) NOT NULL,
+	fecha_control date NOT NULL,
+),
