@@ -34,7 +34,7 @@ CREATE TABLE animal (
 );
 
 CREATE TABLE visita (
-	ID_visita int NOT NULL,
+	ID_visita int PRIMARY KEY AUTO_INCREMENT NOT NULL,
 	detalles varchar(25) NOT NULL,
 	tipo_control varchar(10) NOT NULL,
 	fecha_control date NOT NULL,
