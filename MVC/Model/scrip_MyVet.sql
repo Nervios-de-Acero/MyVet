@@ -37,5 +37,5 @@ CREATE TABLE visita (
 	ID_visita int PRIMARY KEY AUTO_INCREMENT NOT NULL,
 	detalles varchar(25) NOT NULL,
 	tipo_control varchar(10) NOT NULL,
-	fecha_control date NOT NULL,
+	fecha_control date NOT NULL
 );
