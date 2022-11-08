@@ -39,6 +39,7 @@ CREATE TABLE visita (
 	tipo_control varchar(10) NOT NULL,
 	fecha_control date NOT NULL
 );
+
 CREATE TABLE Sucursales 
 (
 Id_Sucursal int PRIMARY KEY not null auto_increment, 
