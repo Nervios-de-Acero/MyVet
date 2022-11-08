@@ -33,6 +33,13 @@ CREATE TABLE animal (
 	Esterilizado boolean NOT NULL
 );
 
+CREATE TABLE Sucursales 
+(
+Id_Sucursal int PRIMARY KEY not null auto_increment, 
+Direccion varchar(40) not null,
+Producto varchar(100) not null
+);
+
 CREATE TABLE visita (
 	ID_visita int PRIMARY KEY AUTO_INCREMENT NOT NULL,
 	detalles varchar(25) NOT NULL,
