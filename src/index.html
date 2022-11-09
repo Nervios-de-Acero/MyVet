@@ -57,10 +57,20 @@
 
     <main>
       <div class="btn-container">
-        <button type="button" class="btn btn-sm custom">Iniciar Sesión</button>
-        <button onclick="window.location.href='registro.html'"type="button" class="btn btn-sm btn-outline-secondary customReg">
+        <button id="login" onclick="redirigirBoton(id)"type="button" class="btn btn-sm custom">Iniciar Sesión</button>
+        <button id="register" onclick="redirigirBoton(id)"type="button" class="btn btn-sm btn-outline-secondary customReg">
           Registrarse
         </button>
+        <script>
+          function redirigirBoton(boton){
+            if (boton === "login"){
+              window.location.href = "inicioSesion.html"
+
+            }else if (boton === "register"){
+              window.location.href="registro.html"
+            }
+          }
+        </script>
       </div>
     </main>
 
