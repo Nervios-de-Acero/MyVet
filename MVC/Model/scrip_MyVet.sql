@@ -59,3 +59,7 @@ CREATE TABLE visita (
   
   Insert into Tratamiento (nombre_tratamiento, fecha, tipo, observaciones)
   values("vacuna", current_date(), "vacunación", "se inyectó vacuna antirrábica");
+
+  SELECT ID_Mascota
+  FROM animal a
+  INNER JOIN Tratamiento t ON t.ID_tratamiento = a.ID_Mascota;
