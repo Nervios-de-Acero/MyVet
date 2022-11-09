@@ -46,3 +46,16 @@ CREATE TABLE visita (
 	tipo_control varchar(10) NOT NULL,
 	fecha_control date NOT NULL
 );
+
+ CREATE TABLE Tratamiento (
+  ID_tratamiento int PRIMARY KEY AUTO_INCREMENT NOT NULL,
+  nombre_tratamiento varchar(100) NOT NULL,
+  fecha date,
+  tipo varchar(100) NOT NULL,
+  observaciones varchar(250)
+  );
+  
+  select * from Tratamiento;
+  
+  Insert into Tratamiento (nombre_tratamiento, fecha, tipo, observaciones)
+  values("vacuna", current_date(), "vacunación", "se inyectó vacuna antirrábica");
