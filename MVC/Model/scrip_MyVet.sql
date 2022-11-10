@@ -63,3 +63,22 @@ CREATE TABLE visita (
   SELECT ID_Mascota
   FROM animal a
   INNER JOIN Tratamiento t ON t.ID_tratamiento = a.ID_Mascota;
+
+    SELECT * FROM animal;
+  
+  ALTER TABLE animal DROP COLUMN Vacuna; 
+  ALTER TABLE animal DROP COLUMN Id_Vacuna; 
+  ALTER TABLE animal DROP COLUMN Desparasitacion;
+  ALTER TABLE animal DROP COLUMN Turno;
+  ALTER TABLE animal DROP COLUMN Diagnostico;
+  
+  ALTER TABLE animal MODIFY Edad varchar(30);
+
+  INSERT INTO animal (Nombre, Edad, Raza,Peso,Sexo,Fecha_nac,Esterilizado)
+  VALUES ("Firulais","5 años","Pomerania",2,"Femenino","2017-08-05",True);
+  
+ /* No hay conexión entre tablas aun-
+ SELECT animal.Nombre,Tratamiento.nombre_tratamiento
+ FROM animal 
+ INNER JOIN Tratamiento ON animal.ID_Mascota = Tratamiento.ID_Mascota;
+  */
