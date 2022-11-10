@@ -64,7 +64,7 @@ CREATE TABLE visita (
   FROM animal a
   INNER JOIN Tratamiento t ON t.ID_tratamiento = a.ID_Mascota;
 
-    SELECT * FROM animal;
+  SELECT * FROM animal;
   
   ALTER TABLE animal DROP COLUMN Vacuna; 
   ALTER TABLE animal DROP COLUMN Id_Vacuna; 
@@ -85,6 +85,55 @@ CREATE TABLE visita (
   UPDATE animal SET Nombre = "Azirafel", Edad = "2 años", Raza = "Común europeo", Peso = 4, Fecha_nac = "2020-07-30", Características = "Rubio"  
   WHERE ID_Mascota = 3;
   
+  CREATE TABLE Turno 
+  (
+  id_turno INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+  fecha_turno DATE NOT NULL,
+  especialidad VARCHAR(30) NOT NULL
+  );
+
+  CREATE TABLE Protege
+  (
+  id_Cliente1 INT NOT NULL,
+  id_Mascota1 INT NOT NULL,
+  FOREIGN KEY(id_Cliente1) REFERENCES usuario(Id_Cliente),
+  FOREIGN KEY(id_Mascota1) REFERENCES animal(ID_Mascota)
+  );
+
+  ALTER TABLE Turno
+  RENAME COLUMN id_turno TO ID_turno;  
+
+  ALTER TABLE Protege
+  RENAME COLUMN id_Cliente1 TO ID_Cliente1,
+  RENAME COLUMN id_Mascota1 TO ID_Mascota1; 
+
+  SELECT * FROM Protege;
+
+  SELECT * FROM Turno;
+
+  CREATE TABLE Profesional
+  (
+  ID_Profesional INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+  Nombre VARCHAR(100) NOT NULL,
+  Especialidad VARCHAR(30) NOT NULL
+  );
+
+  SELECT * FROM Profesional;
+
+  ALTER TABLE Profesional
+  MODIFY Especialidad VARCHAR(100);
+
+  INSERT INTO Profesional(Nombre, Especialidad)
+  VALUES("María Alejandra Del Pilar Ugarte Laclós", "Dermatología");
+
+  INSERT INTO Profesional(Nombre, Especialidad)
+  VALUES("Antonio Milisenda", "Diagnóstico por imágenes orientación radiología"),
+      ("Carolina Altamirano", "Clínica médica");
+
+
+
+
+
  /* No hay conexión entre tablas aun-
  SELECT animal.Nombre,Tratamiento.nombre_tratamiento
  FROM animal 
