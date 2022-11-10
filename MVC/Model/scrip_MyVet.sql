@@ -73,9 +73,17 @@ CREATE TABLE visita (
   ALTER TABLE animal DROP COLUMN Diagnostico;
   
   ALTER TABLE animal MODIFY Edad varchar(30);
+  ALTER TABLE animal ADD Especie varchar(15) AFTER Edad;
+  ALTER TABLE animal ADD Características varchar(200) AFTER Esterilizado;
 
-  INSERT INTO animal (Nombre, Edad, Raza,Peso,Sexo,Fecha_nac,Esterilizado)
-  VALUES ("Firulais","5 años","Pomerania",2,"Femenino","2017-08-05",True);
+  INSERT INTO animal (Nombre, Edad, Especie, Raza,Peso,Sexo,Fecha_nac,Esterilizado, Características)
+  VALUES ("Firulais","5 años", "Perro", "Pomerania",2,"Masculino","2017-08-05",True, "Tostado");
+  
+  INSERT INTO animal (Nombre, Edad, Especie, Raza,Peso,Sexo,Fecha_nac,Esterilizado, Características)
+  VALUES ("Sachiel", "13 años", "Gato", "Británico bicolor", 6, "Masculino", "2009-02-01", True, "Blanco y negro");
+  
+  UPDATE animal SET Nombre = "Azirafel", Edad = "2 años", Raza = "Común europeo", Peso = 4, Fecha_nac = "2020-07-30", Características = "Rubio"  
+  WHERE ID_Mascota = 3;
   
  /* No hay conexión entre tablas aun-
  SELECT animal.Nombre,Tratamiento.nombre_tratamiento
