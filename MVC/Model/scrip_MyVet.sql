@@ -90,3 +90,13 @@ CREATE TABLE visita (
  FROM animal 
  INNER JOIN Tratamiento ON animal.ID_Mascota = Tratamiento.ID_Mascota;
   */
+
+
+INSERT INTO animal (Nombre, Edad, Especie, Raza,Peso,Sexo,Fecha_nac,Esterilizado, Características)
+VALUES ("Marcelino","2 años", "Perro", "Caniche",4,"Femenino","2022-10-15",True, "Blanco");
+
+UPDATE animal
+SET Edad = 4, Sexo = "Masculino", Fecha_nac = "2018-10-15"
+WHERE Nombre = "Marcelino";
+
+SELECT * FROM animal;
