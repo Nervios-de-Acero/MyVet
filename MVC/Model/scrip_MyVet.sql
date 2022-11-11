@@ -54,6 +54,20 @@ CREATE TABLE visita (
   tipo varchar(100) NOT NULL,
   observaciones varchar(250)
   );
+
+  CREATE TABLE Solicita (
+  ID_Turno1 int NOT NULL,
+  ID_Mascota4 int NOT NULL,
+  foreign key(ID_Turno1) references Turno(ID_turno),
+  foreign key(ID_Mascota4) references animal(ID_Mascota)
+  );
+  
+  CREATE TABLE Atiende (
+  ID_Mascota5 int NOT NULL,
+  ID_Profesional4 int NOT NULL,
+  foreign key(ID_Mascota5) references animal(ID_Mascota),
+  foreign key(ID_Profesional4) references Profesional(ID_Profesional)
+  );
   
   select * from Tratamiento;
   
@@ -149,3 +163,10 @@ SET Edad = 4, Sexo = "Masculino", Fecha_nac = "2018-10-15"
 WHERE Nombre = "Marcelino";
 
 SELECT * FROM animal;
+
+INSERT INTO usuario (Nombre, Apellido, DNI, email, Direccion, Telefono)
+VALUES ("Aylen", "Gil", 38644396, "lag9512@gmail.com", "Calle Falsa 123", 1122334455);
+
+SELECT * FROM usuario;
+
+SELECT * FROM Protege;
