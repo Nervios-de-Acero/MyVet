@@ -145,6 +145,27 @@ CREATE TABLE visita (
       ("Carolina Altamirano", "Clínica médica");
 
 
+  SET @varID := (SELECT usuario.Id_Cliente FROM usuario 
+  WHERE usuario.DNI = 38644396);
+  SET @varIDanimal := (SELECT animal.ID_Mascota FROM animal 
+  WHERE animal.Nombre = "Azirafel");
+
+  INSERT INTO protege(ID_Cliente1, ID_Mascota1)
+  VALUES(@varID, @varIDanimal);
+
+  SELECT * FROM Protege;
+
+  SELECT Protege.ID_Cliente1 AS 'ID Cliente',
+  usuario.Nombre AS 'Nombre Cliente',
+  usuario.Apellido AS 'Apellido',
+  Protege.ID_Mascota1 AS 'ID Mascota',
+  animal.Nombre AS 'Nombre Animal'
+  FROM Protege
+  INNER JOIN usuario
+  ON Protege.ID_Cliente1 = usuario.Id_Cliente
+  INNER JOIN animal
+  ON Protege.ID_Mascota1 = animal.ID_Mascota;
+
 
 
 
