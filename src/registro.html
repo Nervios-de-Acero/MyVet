@@ -58,27 +58,42 @@
       <!-- <div class="form_registro"> -->
         <form id="register" action="?" method="post">
           <legend class="title">Registrate</legend>
-            <div class="inputContainer">
-              <input type="text" class="input" name="user_first_name" placeholder="a">
-              <label for="name" class="label">Nombre :</label>
+            <div class="inputSpanCtn">
+              <div class="inputContainer">
+                <input type="text" id="user_first_name" class="input" name="user_first_name" placeholder="a">
+                <label for="user_first_name" class="label">Nombre :</label>
+              </div>
+              <span class="warning">Ingrese su nombre</span>
             </div>
-            <div class="inputContainer">
-              <input type="text" class="input" name="user_last_name" placeholder="a">
-              <label for="name" class="label">Apellido:</label>
+            <div class="inputSpanCtn">
+              <div class="inputContainer">
+                <input type="text" id="user_last_name" class="input" name="user_last_name" placeholder="a">
+                <label for="user_last_name" class="label">Apellido:</label>
+              </div>
+              <span class="warning">Ingrese su apellido</span>
             </div>
-            <div class="inputContainer">
-              <input type="email" class="input" name="user_mail" placeholder="a">
-              <label for="mail" class="label">Correo electrónico:</label>
+            <div class="inputSpanCtn">
+              <div class="inputContainer">
+                <input type="email" id="user_mail" class="input" name="user_mail" placeholder="a">
+                <label for="user_mail" class="label">Correo electrónico:</label>
+              </div>
+              <span class="warning">Email inválido</span>
             </div>
-            <div class="inputContainer">
-              <input type="password" class="input" id="password1" name="user_password" minlength="6" maxlength="15" placeholder="a">
-              <label for="password1" class="label">Contraseña:</label>
+            <div class="inputSpanCtn">
+              <div class="inputContainer">
+                <input type="password" class="input" id="user_password" name="user_password" minlength="6" maxlength="15" placeholder="a">
+                <label for="user_password" class="label">Contraseña:</label>
+              </div>
+              <span class="warning">La contraseña debe contener mínimo 8 caracteres, una mayúscula, una minúscula, un número y un caracter especial</span>
             </div>
-            <div class="inputContainer">
-              <input type="password" class="input" id="password2" name="user_password2" minlength="6" maxlength="15" placeholder="a">
-              <label for="password2" class="label">Confirmar contraseña:</label>
+            <div class="inputSpanCtn">
+              <div class="inputContainer">
+                <input type="password" class="input" id="user_password2" name="user_password2" minlength="6" maxlength="15" placeholder="a">
+                <label for="user_password2" class="label">Confirmar contraseña:</label>
+              </div>
+              <span class="warning">El password no coincide</span>
             </div>
-            <input type="submit" value="Registrarse" class="btn_registro">
+            <input type="submit" id="registerSubmit"value="Registrarse" class="btn_registro">
         </form>
       <!-- </div> -->
     </main>
@@ -93,7 +108,7 @@
               </figure>
           </div>
           <div class="box">
-             
+
               <div class="red-social">
                 <a href="https://www.facebook.com" class="fa fa-facebook" target="_blank"></a>
                 <a href="https://www.instagram.com" class="fa fa-instagram" target="_blank"></a>
