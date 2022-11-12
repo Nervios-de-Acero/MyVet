@@ -46,7 +46,7 @@ submitBtn.addEventListener('click', async function getFormData(e) {
   if((formNod.id === 'contactForm' && count < 6) || (formNod.id === 'register' && count < 5)){
     for(el of falseValues) {
       document.getElementById(el).className += ' warningBorder';
-      //CORREGIR ESTO, NO FUNCIONA EN REGISTER
+
       if(formNod.id === 'contactForm'){
         let element = document.getElementById(el)
         element.nextElementSibling.className += ' warningMessage';
@@ -65,7 +65,7 @@ submitBtn.addEventListener('click', async function getFormData(e) {
       //Código para enviar datos al backend
 /* const response = await fetch(e.target.id === 'contactForm'? 'url para contactForm' : 'url para register', {
       method: 'POST',
-      body: formData
+      body: formData --> CAMBIARLO, ASI PYTHON NO LO LEE
   });
 
   if(response.ok){
