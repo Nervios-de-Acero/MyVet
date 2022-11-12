@@ -18,13 +18,35 @@
     padding-left: 10px;
   }
   
-  .contacto div > *:not([type="submit"]) {
+  #contactForm .contactInput {
     border: 2px solid black;
     background: rgb(189, 188, 188,0.25);
   }
   
   .contacto textarea {
     padding-top:5px;
+  }
+
+  .inputSpanCtn {
+    display: flex;
+    flex-direction: column;
+    padding:0;
+  }
+
+  .warning {
+    font-size: 14px;
+    font-weight: 100;
+    font-family: Arial, Helvetica, sans-serif;
+    color:rgb(178, 16, 16);
+    display: none;
+  }
+
+  .warningBorder {
+    border: 2px solid rgb(178, 16, 16) !important;
+  }
+
+  .warningMessage {
+    display:block;
   }
   
   /*Esto es para que no se ponga de un color feo cuando se usa el autocompletado de Chrome, parece que no funciona usar transparencia*/
@@ -118,6 +140,7 @@ footer{
   text-align: center; 
   color: black
 }
+
 
 @media screen and (max-width:800px){
   .social-buttons .grupo-1{
