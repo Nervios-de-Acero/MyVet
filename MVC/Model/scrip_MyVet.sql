@@ -131,6 +131,25 @@ CREATE TABLE visita (
     FOREIGN KEY(ID_Profesional1) REFERENCES Profesional(ID_Profesional)
   );
 
+  CREATE TABLE Otorga
+(
+ID_Visita2 INT NOT NULL ,
+ID_Profesional3 INT NOT NULL ,
+foreign key(ID_Visita2) references visita(ID_visita),
+foreign key(ID_Profesional3) references Profesional(ID_Profesional)
+
+);
+
+CREATE TABLE Recibe
+(
+Id_Mascota3 INT NOT NULL ,
+Id_Visita1 INT NOT NULL ,
+Id_Tratamiento1 INT NOT NULL,
+foreign key(Id_Mascota3) references Animal(ID_Mascota),
+foreign key(Id_Visita1) references visita(ID_visita),
+foreign key(Id_Tratamiento1) references Tratamiento(ID_tratamiento)
+);
+
 
   select * from Tratamiento;
   
@@ -189,14 +208,6 @@ CREATE TABLE visita (
 
 
 
-
- /* No hay conexión entre tablas aun-
- SELECT animal.Nombre,Tratamiento.nombre_tratamiento
- FROM animal 
- INNER JOIN Tratamiento ON animal.ID_Mascota = Tratamiento.ID_Mascota;
-  */
-
-
 INSERT INTO animal (Nombre, Edad, Especie, Raza,Peso,Sexo,Fecha_nac,Esterilizado, Características)
 VALUES ("Marcelino","2 años", "Perro", "Caniche",4,"Femenino","2022-10-15",True, "Blanco");
 
@@ -215,21 +226,3 @@ SELECT * FROM Protege;
 
 INSERT INTO animal (Nombre, Edad, Especie, Raza,Peso,Sexo,Fecha_nac,Esterilizado, Características)
 VALUES ("Bills","5 años", "Gato", "Común Europeo",6,"Masculino","2017-03-30",True, "Blanco con manchas atigradas marrones y negras");
-CREATE TABLE Otorga
-(
-ID_Visita2 INT NOT NULL ,
-ID_Profesional3 INT NOT NULL ,
-foreign key(ID_Visita2) references visita(ID_visita),
-foreign key(ID_Profesional3) references Profesional(ID_Profesional)
-
-);
-
-CREATE TABLE Recibe
-(
-Id_Mascota3 INT NOT NULL ,
-Id_Visita1 INT NOT NULL ,
-Id_Tratamiento1 INT NOT NULL,
-foreign key(Id_Mascota3) references Animal(ID_Mascota),
-foreign key(Id_Visita1) references visita(ID_visita),
-foreign key(Id_Tratamiento1) references Tratamiento(ID_tratamiento)
-);
