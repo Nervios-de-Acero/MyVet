@@ -226,3 +226,28 @@ SELECT * FROM Protege;
 
 INSERT INTO animal (Nombre, Edad, Especie, Raza,Peso,Sexo,Fecha_nac,Esterilizado, Características)
 VALUES ("Bills","5 años", "Gato", "Común Europeo",6,"Masculino","2017-03-30",True, "Blanco con manchas atigradas marrones y negras");
+
+INSERT INTO usuario (Nombre, Apellido, DNI, email, Direccion, Telefono)
+VALUES ('Paula', 'Leyes', 28183532,'paulavleyes@gmail.com','Callesinfin 3434',29441477);
+
+INSERT INTO usuario (Nombre, Apellido, DNI, email, Direccion, Telefono)
+VALUES ('Carola', 'Perez', 25911899,'caritobella@gmail.com','Reconquista 103',298146767);
+
+INSERT INTO usuario (Nombre, Apellido, DNI, email, Direccion, Telefono)
+VALUES ('Roberto', 'Guzmán', 33888111,'roberguzman@gmail.com','Nomeolvides 25',29441512);
+
+INSERT INTO usuario (Nombre, Apellido, DNI, email, Direccion, Telefono)
+VALUES ('Leandro', 'Paz', 34777345,'leopaz23@gmail.com','Rosales 454',29841523);
+
+INSERT INTO usuario  (Nombre, Apellido, DNI, email, Direccion, Telefono)
+VALUES ('Pía', 'Paz', 32565766,'piapaz2022@gmail.com','Rosales 454',29841454);
+
+UPDATE usuario
+SET Nombre='Leonardo'
+WHERE DNI=34777345;
+
+SELECT Nombre,Apellido
+FROM usuario;
+
+DELETE FROM usuario
+WHERE DNI=33888111;
