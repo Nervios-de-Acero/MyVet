@@ -1,0 +1,217 @@
+/*REGISTRO*/
+
+.form_registro{
+display: flex;
+justify-content: center;
+align-items: center;
+
+}
+
+
+form {
+width: 400px;
+border-radius: 8px;
+padding: 20px 40px;
+margin-bottom: 30px;
+box-shadow: 0 10px 25px rgba(92, 99, 105, .2);
+backdrop-filter: blur(10px);
+background: rgb(189, 188, 188,0.5)
+}
+
+.title {
+font-size: 40px;
+margin-bottom: 30px;
+text-align: center;
+color: #080800;
+}
+
+.inputContainer {
+position: relative;
+height: 45px;
+width: 90%;
+margin: auto;
+margin-top: 30px;
+
+
+}
+
+.input {
+position: absolute;
+top: 0px;
+left: 0px;
+height: 100%;
+width: 100%;
+border: 2px solid black;
+border-radius: 7px;
+font-size: 16px;
+padding: 0 10px;
+outline: none;
+background: rgb(189, 188, 188,0.25);
+z-index: 1;
+
+}
+
+.input:focus + .label {
+top: -16px;
+left: 3px;
+z-index: 10;
+font-size: 13px;
+color: black;
+}
+
+.input:not(:placeholder-shown)+ .label {
+top: -16px;
+left: 3px;
+z-index: 10;
+font-size: 13px;
+}
+
+::placeholder {
+color: transparent;
+}
+
+.label {
+position: absolute;
+top: 15px;
+left: 15px;
+padding: 0 4px;
+color: #080800;
+font-size: 16px;
+transition: 0.5s;
+z-index: 0;
+}
+
+.btn_registro {
+display: block;
+margin-left: auto;
+padding: 15px 30px;
+border: 1px solid black;
+background-color: #d9f87d;
+color: black;
+border-radius: 6px;
+cursor: pointer;
+font-size: 16px;
+margin:auto;
+margin-top: 20px;
+}
+
+.btn_registro:hover {
+color: white;
+border: 1px solid #d9f87d;
+background-color: transparent;
+transition: all .4s ease-in-out;
+}
+
+@media (max-width= 480px) {
+.form_registro{
+  width: 100%;
+}
+}
+
+/*FOOTER*/
+
+footer{
+  position: absolute;
+  height: 20%;
+}
+
+.social-buttons{
+  width: 100%;
+  background-color: rgb(189, 188, 188,0.5);
+}
+
+.social-buttons .grupo-1{
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 50px;
+  padding: 45px 0 px;
+}
+
+.social-buttons .grupo-1 .box figure{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin-left: 20px;
+}
+
+.social-buttons .grupo-1 .box figure img{
+  width: 60px;
+}
+
+.social-buttons .grupo-1 h2 {
+  color : rgb(0, 0, 0);
+  margin-bottom: 15px;
+  font-size: 18px;
+  text-align: center;
+}
+
+.red-social {
+  text-align: right;
+  
+}
+
+.social-buttons .grupo-1 .red-social a {
+  display: inline-block;
+  text-decoration: none;
+  width: 40px;
+  height: 40px;
+  line-height: 45px;
+  color: black;
+  margin-right: 10px;
+  margin-top: 20px;
+  text-align: center;
+  transition: all 300mx ease;
+}
+
+.social-buttons .grupo-1 .red-social a:hover{
+  color: #d9f87d;
+  
+  
+}
+
+.social-buttons .grupo-2 {
+  background-color:rgba(189, 188, 188, 0.507) ;
+  padding: 15 px 10 px;
+  text-align: center; 
+  color: black
+}
+
+.inputSpanCtn {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+}
+
+.warning {
+  font-size: 14px;
+  font-weight: 100;
+  font-family: Arial, Helvetica, sans-serif;
+  color:rgb(178, 16, 16);
+  display: none;
+}
+
+.warningBorder {
+  border: 2px solid rgb(178, 16, 16) !important;
+}
+
+.warningMessage {
+  display:block;
+}
+
+
+@media screen and (max-width:800px){
+  .social-buttons .grupo-1{
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 50px;
+    padding: 45px 0 px;
+  }
+}
