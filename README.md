@@ -10,9 +10,8 @@ Se trata de una aplicación en la cual los usuarios podrán crear una cuenta que
 - [Lorena Aylen Gil](http://github.com/Loreaylen "Lorena Aylen Gil")
 - [Florencia Itatí Ríos](http://github.com/FlorenciaItati "Florencia Itatí Ríos")
 - [Jeremias Uriel Diaz](http://github.com/Uriel-98 "Jeremias Uriel Diaz")
-- [Jeanette Soledad Stranieri](http://github.com/janu-ss "Jeanette Soledad Stranieri")
+- [Santiago Peironi](https://github.com/santipeironi "Santiago Peironi")
 - [Emilia Rodríguez Moreno](http://github.com/MundoViolento "Emilia Rodríguez Moreno")
-- [Aldana Lourdes Garrone](https://github.com/4ldana "Aldana Lourdes Garrone")
 - [Hernán Rodrigo Torres](http://github.com/HernanRT "Hernán Rodrigo Torres")
 - [Yanina Soledad Unrein](http://github.com/Yanina-Unrein "Yanina Soledad Unrein")
 -------------
