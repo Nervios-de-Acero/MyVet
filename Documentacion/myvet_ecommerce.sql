@@ -2,6 +2,18 @@ CREATE DATABASE myvet_ecommerce;
 
 USE myvet_ecommerce;
 
+CREATE TABLE usuario(
+id_usuario INT PRIMARY KEY AUTO_INCREMENT,
+nombre VARCHAR(50) NOT NULL,
+apellido VARCHAR(50),
+telefono VARCHAR(15) NOT NULL,
+email VARCHAR(150) NOT NULL,
+contrasena VARCHAR(15) NOT NULL,
+dni VARCHAR(8) NOT NULL,
+direccion VARCHAR(50) NOT NULL,
+FOREIGN KEY (direccion) REFERENCES direccion (id_direccion)
+);
+
 CREATE TABLE sucursales (
 id_sucursales INT AUTO_INCREMENT PRIMARY KEY,
 nombre VARCHAR(50) NOT NULL,
