@@ -2,7 +2,7 @@ CREATE DATABASE myvet_ecommerce;
 
 USE myvet_ecommerce;
 
-CREATE TABLE usuario(
+CREATE TABLE usuario (
 id_usuario INT PRIMARY KEY AUTO_INCREMENT,
 nombre VARCHAR(50) NOT NULL,
 apellido VARCHAR(50),
@@ -34,6 +34,17 @@ CREATE TABLE producto_categoria (
   id_producto INT NOT NULL,
   FOREIGN KEY (id_categoria) REFERENCES categorias (id_categoria),
   FOREIGN KEY (id_producto) REFERENCES productos (id_producto)
+);
+
+CREATE TABLE venta (
+id_venta INT PRIMARY KEY AUTO_INCREMENT,
+fecha_venta DATETIME NOT NULL,
+estado VARCHAR(12) NOT NULL,
+total INT NOT NULL,
+metodo_pago VARCHAR(12) NOT NULL,
+id_usuario INT NOT NULL,
+FOREIGN KEY(metodo_pago) REFERENCES medios_pago(id_pagos),
+FOREIGN KEY(id_usuario) REFERENCES usuario(id_usuario)
 );
 
 CREATE TABLE detalle_venta (
