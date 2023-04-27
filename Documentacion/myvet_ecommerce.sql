@@ -26,7 +26,7 @@ id_usuario INT NOT NULL,
 FOREIGN KEY(id_usuario) REFERENCES usuario(id_usuario)
 );
 
-CREATE TABLE Productos(
+CREATE TABLE productos(
 id_producto INT PRIMARY KEY AUTO_INCREMENT,
 nombre_producto VARCHAR(50) NOT NULL,
 descripcion TEXT,
