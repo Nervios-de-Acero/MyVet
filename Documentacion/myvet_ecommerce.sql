@@ -14,6 +14,18 @@ direccion VARCHAR(50) NOT NULL,
 FOREIGN KEY (direccion) REFERENCES direccion (id_direccion)
 );
 
+CREATE TABLE tarjeta_de_pago(
+id_tarjeta INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+nombre_titular VARCHAR(50) NOT NULL,
+apellido_titular VARCHAR(50) NOT NULL,
+dni_titular VARCHAR(8) NOT NULL,
+fecha_vencimiento DATETIME NOT NULL,
+numero_tarjeta VARCHAR(18) NOT NULL,
+codigo_seguridad VARCHAR(4) NOT NULL,
+id_usuario INT NOT NULL,
+FOREIGN KEY(id_usuario) REFERENCES usuario(id_usuario)
+);
+
 CREATE TABLE sucursales (
 id_sucursales INT AUTO_INCREMENT PRIMARY KEY,
 nombre VARCHAR(50) NOT NULL,
