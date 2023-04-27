@@ -26,6 +26,20 @@ id_usuario INT NOT NULL,
 FOREIGN KEY(id_usuario) REFERENCES usuario(id_usuario)
 );
 
+CREATE TABLE Productos(
+id_producto INT PRIMARY KEY AUTO_INCREMENT,
+nombre_producto VARCHAR(50) NOT NULL,
+descripcion TEXT,
+precio DECIMAL (10,2) NOT NULL,
+marca VARCHAR(50),
+cantidad INT NOT NULL,
+categoria VARCHAR(50),
+imagen_url VARCHAR(100),
+fecha_ingreso DATE NOT NULL,
+fecha_modificacion DATE,
+activo BIT DEFAULT 1
+);
+
 CREATE TABLE sucursales (
 id_sucursales INT AUTO_INCREMENT PRIMARY KEY,
 nombre VARCHAR(50) NOT NULL,
