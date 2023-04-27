@@ -48,6 +48,15 @@ CREATE TABLE producto_categoria (
   FOREIGN KEY (id_producto) REFERENCES productos (id_producto)
 );
 
+CREATE TABLE producto_sucursales (
+id_producto_sucursales INT PRIMARY KEY AUTO_INCREMENT,
+id_sucursales INT NOT NULL,
+id_producto INT NOT NULL,
+stock INT NOT NULL,
+FOREIGN KEY (id_sucursales) REFERENCES sucursales(id_sucursales),
+FOREIGN KEY (id_producto) REFERENCES productos(id_producto)
+);
+
 CREATE TABLE venta (
 id_venta INT PRIMARY KEY AUTO_INCREMENT,
 fecha_venta DATETIME NOT NULL,
