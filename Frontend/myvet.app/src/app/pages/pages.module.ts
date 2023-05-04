@@ -4,6 +4,7 @@ import { SucursalesComponent } from './sucursales/sucursales.component';
 import { PetshopComponent } from './petshop/petshop.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { ContactoComponent } from './contacto/contacto.component';
+import { QuienesSomosComponent } from './quienes-somos/quienes-somos.component';
 
 
 
@@ -12,7 +13,8 @@ import { ContactoComponent } from './contacto/contacto.component';
     InicioComponent,
     SucursalesComponent,
     PetshopComponent,
-    ContactoComponent
+    ContactoComponent,
+    QuienesSomosComponent
   ],
   imports: [
     CommonModule
