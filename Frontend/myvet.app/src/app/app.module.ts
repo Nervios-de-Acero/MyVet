@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SucursalesComponent } from './pages/sucursales/sucursales.component';
+import { PetshopComponent } from './pages/petshop/petshop.component';
 import { PagesModule } from './pages/pages.module';
 
 @NgModule({
