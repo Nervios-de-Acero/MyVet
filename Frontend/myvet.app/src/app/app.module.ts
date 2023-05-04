@@ -3,6 +3,9 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { SucursalesComponent } from './pages/sucursales/sucursales.component';
+import { PetshopComponent } from './pages/petshop/petshop.component';
+import { InicioComponent } from './pages/inicio/inicio.component';
 import { PagesModule } from './pages/pages.module';
 
 @NgModule({
@@ -13,6 +16,7 @@ import { PagesModule } from './pages/pages.module';
     BrowserModule,
     AppRoutingModule,
     PagesModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
