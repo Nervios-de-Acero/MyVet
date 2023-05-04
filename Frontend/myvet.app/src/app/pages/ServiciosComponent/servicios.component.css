@@ -1,0 +1,66 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Questrial', sans-serif ;
+}
+
+body {
+  background-image: url(../../../assets/img/Main.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+main{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.servicios-container {
+display: flex;
+column-gap: 15px;
+overflow-x: auto;
+overscroll-behavior-x: contain;
+scroll-snap-type: x mandatory;
+min-height: 500px;
+}
+
+.card-container {
+scroll-snap-align: center;
+}
+.card{
+  margin: 10px;
+  max-width:380px;
+  min-width: 300px;
+  height: 438px;
+}
+
+.card:hover {
+  transition: all 0.3s ease-out;
+  box-shadow: rgba(247, 242, 242, 0.74) 0px 5px 15px;
+  border: 1px solid #111111;
+}
+
+.card-body{
+  background: #d9f87da9;
+  overflow: hidden;
+  padding-bottom:10px;
+}
+
+.card-body p {
+display: -webkit-box;
+-webkit-line-clamp: 5;
+-webkit-box-orient: vertical;  
+overflow: hidden;
+}
+
+
+
+@media screen and (max-width:800px){
+.social-buttons .grupo-1{
+  width: 100%;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 50px;
+  padding: 45px 0 px;
+}
+}
