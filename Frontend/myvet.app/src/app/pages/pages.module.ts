@@ -1,10 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { QuienesSomosComponent } from './quienes-somos/quienes-somos.component';
 
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    QuienesSomosComponent
+  ],
   imports: [
     CommonModule
   ]
