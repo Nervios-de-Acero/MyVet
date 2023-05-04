@@ -1,0 +1,51 @@
+.proximamente {
+    background-image: url(../../../assets/img/proximamente.jpg);
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+}
+  
+main{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+  
+  
+.btnProx{
+    font-size: 20px;
+    text-align: center;
+    max-width: 200px;
+    height: 50px;
+    border-radius: 50px;
+    color: #d9f87d;
+}
+  
+.customReg{
+    font-size: 20px ;
+    text-align: center;
+    width: 350px;
+    height: 50px;
+    border-radius: 50px;
+    color: #d9f87d;
+    border: none;
+}
+  
+.customReg:hover{
+    color: white;
+    border: 5px solid #d9f87d;
+    background-color: transparent;
+    transition: all .4s ease-in-out;
+}
+  
+.volverCtn {
+    height: 150px;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
