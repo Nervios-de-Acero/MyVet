@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { SucursalesComponent } from './pages/sucursales/sucursales.component';
 import { PetshopComponent } from './pages/petshop/petshop.component';
 import { InicioComponent } from './pages/inicio/inicio.component';
+import { ContactoComponent } from './pages/contacto/contacto.component';
 import { PagesModule } from './pages/pages.module';
 
 @NgModule({
