@@ -3,7 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { PagesModule } from './pages/pages.module'; 
+import { SucursalesComponent } from './pages/sucursales/sucursales.component';
+import { PetshopComponent } from './pages/petshop/petshop.component';
+import { InicioComponent } from './pages/inicio/inicio.component';
+import { ContactoComponent } from './pages/contacto/contacto.component';
+import { QuienesSomosComponent } from './pages/quienes-somos/quienes-somos.component';
+import { PagesModule } from './pages/pages.module';
 
 @NgModule({
   declarations: [
@@ -13,6 +18,7 @@ import { PagesModule } from './pages/pages.module';
     BrowserModule,
     AppRoutingModule,
     PagesModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
