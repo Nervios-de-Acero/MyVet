@@ -1,10 +1,16 @@
  /*main*/     /*ojo los main de las demas paginas*/
+
  main{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     height: 80vh;
+   /*  background-image: url(../../../assets/img/Main.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;  */
   }
   
   .btn-container{
