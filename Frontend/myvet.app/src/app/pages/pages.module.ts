@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ServiciosComponent } from './ServiciosComponent/servicios.component';
 import { SucursalesComponent } from './sucursales/sucursales.component';
 import { PetshopComponent } from './petshop/petshop.component';
 import { InicioComponent } from './inicio/inicio.component';
@@ -15,6 +16,7 @@ import { RouterModule } from '@angular/router';
     SucursalesComponent,
     PetshopComponent,
     ContactoComponent,
+    ServiciosComponent,
     QuienesSomosComponent
   ],
   imports: [

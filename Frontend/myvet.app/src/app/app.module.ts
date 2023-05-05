@@ -1,13 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { SucursalesComponent } from './pages/sucursales/sucursales.component';
-import { PetshopComponent } from './pages/petshop/petshop.component';
-import { InicioComponent } from './pages/inicio/inicio.component';
-import { ContactoComponent } from './pages/contacto/contacto.component';
-import { QuienesSomosComponent } from './pages/quienes-somos/quienes-somos.component';
 import { PagesModule } from './pages/pages.module';
 import { RouterModule, Routes } from '@angular/router';
 import { SharedModule } from "./shared/shared.module";
