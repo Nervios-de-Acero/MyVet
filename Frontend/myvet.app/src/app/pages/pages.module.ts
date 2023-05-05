@@ -28,7 +28,8 @@ import { RouterModule } from '@angular/router';
     SucursalesComponent,
     PetshopComponent,
     ContactoComponent,
-    QuienesSomosComponent
+    QuienesSomosComponent,
+    ServiciosComponent
   ]
 })
 export class PagesModule { }
