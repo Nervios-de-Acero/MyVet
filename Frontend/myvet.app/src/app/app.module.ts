@@ -9,18 +9,30 @@ import { InicioComponent } from './pages/inicio/inicio.component';
 import { ContactoComponent } from './pages/contacto/contacto.component';
 import { QuienesSomosComponent } from './pages/quienes-somos/quienes-somos.component';
 import { PagesModule } from './pages/pages.module';
+import { RouterModule, Routes } from '@angular/router';
+import { SharedModule } from "./shared/shared.module";
+
+const routes: Routes = [
+    {path:'', component:InicioComponent},
+    {path:'quienes-somos', component:QuienesSomosComponent},
+    {path:'petshop', component:PetshopComponent},
+    {path:'contacto', component:ContactoComponent},
+    {path:'sucursales', component:SucursalesComponent}
+];
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    PagesModule
-    
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent
+    ],
+    providers: [],
+    bootstrap: [AppComponent],
+    exports: [RouterModule],
+    imports: [
+        BrowserModule,
+        RouterModule.forRoot(routes),
+        AppRoutingModule,
+        PagesModule,
+        SharedModule
+    ]
 })
 export class AppModule { }

@@ -5,10 +5,14 @@ import { PetshopComponent } from './pages/petshop/petshop.component';
 import { InicioComponent } from './pages/inicio/inicio.component';
 import { ContactoComponent } from './pages/contacto/contacto.component';
 import { QuienesSomosComponent } from './pages/quienes-somos/quienes-somos.component';
+import { NavbarComponent } from './shared/navbar/navbar.component';
 
 const routes: Routes = [
-  // {path:"sucursales", component:SucursalesComponent
-  // }
+  {path:'', component:InicioComponent},
+  {path:'quienes-somos', component:QuienesSomosComponent},
+  {path:'petshop', component:PetshopComponent},
+  {path:'contacto', component:ContactoComponent},
+  {path:'sucursales', component:SucursalesComponent}
 ];
 
 @NgModule({

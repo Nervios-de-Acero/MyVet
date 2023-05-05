@@ -5,6 +5,7 @@ import { PetshopComponent } from './petshop/petshop.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { ContactoComponent } from './contacto/contacto.component';
 import { QuienesSomosComponent } from './quienes-somos/quienes-somos.component';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -17,7 +18,15 @@ import { QuienesSomosComponent } from './quienes-somos/quienes-somos.component';
     QuienesSomosComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
+  ],
+  exports:[
+    InicioComponent,
+    SucursalesComponent,
+    PetshopComponent,
+    ContactoComponent,
+    QuienesSomosComponent
   ]
 })
 export class PagesModule { }
