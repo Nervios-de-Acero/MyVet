@@ -1,12 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { CatalogoComponent } from './catalogo/catalogo.component';
 
 //subo este comment para hacer un nuevo push, luego lo borramos//
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    CatalogoComponent,
+  ],
   imports: [
     CommonModule
+  ],
+  exports : [
+    CatalogoComponent
   ]
 })
 export class EcommerceModule { }
