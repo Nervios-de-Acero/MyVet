@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NavbarComponent } from './navbar/navbar.component';
+import { PromocionesBancariasComponent } from '../shared/promociones-bancarias/promociones-bancarias.component';
 import { RouterModule } from '@angular/router';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
@@ -12,7 +13,8 @@ import { HeaderComponent } from './header/header.component';
   declarations: [
     NavbarComponent,
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
+    PromocionesBancariasComponent,
   ],
   imports: [
     CommonModule,
