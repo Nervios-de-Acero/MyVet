@@ -1,13 +1,13 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { CatalogoComponent } from './catalogo/catalogo.component';
-import { ProductoComponent } from './producto/producto.component';
 import { BannerComponent } from './banner/banner.component';
-import { VistaDetalladaComponent } from './vista-detallada/vista-detallada.component';
-import { RouterModule } from '@angular/router';
 import { BuscarAnimalesComponent } from './buscar-animales/buscar-animales.component';
+import { CatalogoComponent } from './catalogo/catalogo.component';
 import { CategoriasComponent } from './categorias/categorias.component';
-
+import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
+import { ProductoComponent } from './producto/producto.component';
+import { PromocionesBancariasComponent } from './promociones-bancarias/promociones-bancarias.component';
+import { RouterModule } from '@angular/router';
+import { VistaDetalladaComponent } from './vista-detallada/vista-detallada.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +16,8 @@ import { CategoriasComponent } from './categorias/categorias.component';
     BannerComponent,
     VistaDetalladaComponent,
     BuscarAnimalesComponent,
-    CategoriasComponent
+    CategoriasComponent,
+    PromocionesBancariasComponent
   ],
   imports: [
     CommonModule
@@ -25,7 +26,8 @@ import { CategoriasComponent } from './categorias/categorias.component';
     CatalogoComponent,
     BannerComponent,
     BuscarAnimalesComponent,
-    CategoriasComponent
+    CategoriasComponent,
+    PromocionesBancariasComponent
   ]
 })
 export class EcommerceModule { }
