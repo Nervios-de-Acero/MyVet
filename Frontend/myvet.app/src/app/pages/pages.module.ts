@@ -12,6 +12,7 @@ import { EcommerceModule } from '../ecommerce/ecommerce.module';
 
 
 
+
 @NgModule({
   declarations: [
     InicioComponent,
@@ -20,10 +21,11 @@ import { EcommerceModule } from '../ecommerce/ecommerce.module';
     ContactoComponent,
     ServiciosComponent,
     QuienesSomosComponent
-
   ],
   imports: [
     CommonModule,
+    RouterModule,
+    EcommerceModule,
     RouterModule,
     EcommerceModule
   ],
