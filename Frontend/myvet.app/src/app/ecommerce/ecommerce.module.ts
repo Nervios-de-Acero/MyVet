@@ -6,6 +6,7 @@ import { BannerComponent } from './banner/banner.component';
 import { VistaDetalladaComponent } from './vista-detallada/vista-detallada.component';
 import { RouterModule } from '@angular/router';
 import { BuscarAnimalesComponent } from './buscar-animales/buscar-animales.component';
+import { CategoriasComponent } from './categorias/categorias.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { BuscarAnimalesComponent } from './buscar-animales/buscar-animales.compo
     ProductoComponent,
     BannerComponent,
     VistaDetalladaComponent,
-    BuscarAnimalesComponent
+    BuscarAnimalesComponent,
+    CategoriasComponent
   ],
   imports: [
     CommonModule
@@ -22,7 +24,8 @@ import { BuscarAnimalesComponent } from './buscar-animales/buscar-animales.compo
   exports : [
     CatalogoComponent,
     BannerComponent,
-    BuscarAnimalesComponent
+    BuscarAnimalesComponent,
+    CategoriasComponent
   ]
 })
 export class EcommerceModule { }
