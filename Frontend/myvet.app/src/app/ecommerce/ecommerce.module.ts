@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { CatalogoComponent } from './catalogo/catalogo.component';
 import { ProductoComponent } from './producto/producto.component';
 import { BannerComponent } from './banner/banner.component';
+import { VistaDetalladaComponent } from './vista-detallada/vista-detallada.component';
 import { RouterModule } from '@angular/router';
 
 
@@ -10,7 +11,8 @@ import { RouterModule } from '@angular/router';
   declarations: [
     CatalogoComponent,
     ProductoComponent,
-    BannerComponent
+    BannerComponent,
+    VistaDetalladaComponent
   ],
   imports: [
     CommonModule
