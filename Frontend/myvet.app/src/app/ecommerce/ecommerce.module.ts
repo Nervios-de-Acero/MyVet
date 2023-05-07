@@ -5,6 +5,7 @@ import { ProductoComponent } from './producto/producto.component';
 import { BannerComponent } from './banner/banner.component';
 import { VistaDetalladaComponent } from './vista-detallada/vista-detallada.component';
 import { RouterModule } from '@angular/router';
+import { BuscarAnimalesComponent } from './buscar-animales/buscar-animales.component';
 
 
 @NgModule({
@@ -12,14 +13,16 @@ import { RouterModule } from '@angular/router';
     CatalogoComponent,
     ProductoComponent,
     BannerComponent,
-    VistaDetalladaComponent
+    VistaDetalladaComponent,
+    BuscarAnimalesComponent
   ],
   imports: [
     CommonModule
   ],
   exports : [
     CatalogoComponent,
-    BannerComponent
+    BannerComponent,
+    BuscarAnimalesComponent
   ]
 })
 export class EcommerceModule { }
