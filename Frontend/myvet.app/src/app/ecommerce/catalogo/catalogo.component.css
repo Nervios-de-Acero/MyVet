@@ -1,4 +1,13 @@
 #ContenedorCatalogo {
-  width: 100%;
+  margin: auto;
+  max-width: 1300px;
   background-color: #fff;
+  height: auto;
+  padding: 10px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  row-gap: 25px;
+  column-gap: 10px;
 }
