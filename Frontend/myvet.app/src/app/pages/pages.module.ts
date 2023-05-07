@@ -7,6 +7,8 @@ import { InicioComponent } from './inicio/inicio.component';
 import { ContactoComponent } from './contacto/contacto.component';
 import { QuienesSomosComponent } from './quienes-somos/quienes-somos.component';
 import { RouterModule } from '@angular/router';
+import { EcommerceModule } from '../ecommerce/ecommerce.module';
+
 
 
 
@@ -18,10 +20,12 @@ import { RouterModule } from '@angular/router';
     ContactoComponent,
     ServiciosComponent,
     QuienesSomosComponent
+
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    EcommerceModule
   ],
   exports:[
     InicioComponent,
