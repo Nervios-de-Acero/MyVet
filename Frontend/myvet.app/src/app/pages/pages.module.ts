@@ -22,7 +22,6 @@ import { SucursalesComponent } from './sucursales/sucursales.component';
     CommonModule,
     RouterModule,
     EcommerceModule
-
   ],
   exports:[
     InicioComponent,
