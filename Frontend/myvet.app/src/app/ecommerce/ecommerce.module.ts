@@ -8,13 +8,13 @@ import { ProductoComponent } from './producto/producto.component';
 @NgModule({
   declarations: [
     CatalogoComponent,
-    ProductoComponent,
+    ProductoComponent
   ],
   imports: [
     CommonModule
   ],
   exports : [
-    CatalogoComponent,
+    CatalogoComponent
   ]
 })
 export class EcommerceModule { }
