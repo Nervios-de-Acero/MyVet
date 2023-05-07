@@ -11,8 +11,7 @@ import { InicioComponent } from './pages/inicio/inicio.component';
 import { ContactoComponent } from './pages/contacto/contacto.component';
 import { QuienesSomosComponent } from './pages/quienes-somos/quienes-somos.component';
 import { ServiciosComponent } from './pages/ServiciosComponent/servicios.component';
-import { NavbarComponent } from './shared/navbar/navbar.component';
-import { EcommerceModule } from './ecommerce/ecommerce.module';
+
 
 
 const routes: Routes = [
@@ -36,8 +35,7 @@ const routes: Routes = [
         RouterModule.forRoot(routes),
         AppRoutingModule,
         PagesModule,
-        SharedModule,
-        EcommerceModule
+        SharedModule
     ]
 })
 export class AppModule { }

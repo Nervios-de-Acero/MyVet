@@ -18,7 +18,7 @@ import { EcommerceModule } from '../ecommerce/ecommerce.module';
     PetshopComponent,
     ContactoComponent,
     ServiciosComponent,
-    QuienesSomosComponent
+    QuienesSomosComponent,
   ],
   imports: [
     CommonModule,
