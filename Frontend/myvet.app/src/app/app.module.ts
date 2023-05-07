@@ -12,6 +12,8 @@ import { ContactoComponent } from './pages/contacto/contacto.component';
 import { QuienesSomosComponent } from './pages/quienes-somos/quienes-somos.component';
 import { ServiciosComponent } from './pages/ServiciosComponent/servicios.component';
 
+
+
 const routes: Routes = [
     {path:'', component:InicioComponent},
     {path:'quienes-somos', component:QuienesSomosComponent},
