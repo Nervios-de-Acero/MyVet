@@ -1,0 +1,12 @@
+body {
+    background: #fff;
+  }
+  
+  .promociones-bancarias {
+    text-align: center;
+  }
+  .promociones-bancarias h2,
+  .promociones-bancarias p,
+  .promociones-bancarias a {
+    text-align: center;
+  }
