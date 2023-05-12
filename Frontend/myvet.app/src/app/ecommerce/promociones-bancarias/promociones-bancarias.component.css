@@ -1,0 +1,29 @@
+.promociones-bancarias {
+    background-color: #f2f2f2;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .promociones-bancarias h2 {
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .promociones-bancarias p {
+    font-size: 16px;
+    color: #666;
+  }
+  
+  .btn-promociones {
+    display: inline-block;
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+  }
