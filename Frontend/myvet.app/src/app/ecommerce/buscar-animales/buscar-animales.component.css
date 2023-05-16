@@ -1,24 +1,25 @@
 .categories-buscarAnimales{
     display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
-    height: auto;
+    height: 150px;
     width: 100%;
     background: #fff;
-    margin: 20px 0;
-    overflow-x: auto;
-    overscroll-behavior-x: contain;
-    scroll-snap-type: x mandatory;
+    
 }
-
 .carousel-flex{
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    gap: 10px;
+    width: 100%; 
+    margin: 10px;
+}
+.card-container-wrapper{
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    overscroll-behavior-x: contain;
+    padding: 10px;
+    margin: 10px;
 }
 
 .card-container{
@@ -48,35 +49,54 @@
     text-align: center;
 }
 
+@media screen and (max-width:374px){
+    .card-container-wrapper {
+        margin-left: -10px;
+        margin-right: -10px;
+    }
+    .card-container {
+        width: calc(100% - 20px);
+    }
+}
+
+@media screen and (min-width: 375px) {
+    .card-container-wrapper {
+      justify-content: flex-start;
+      padding-left: 0;
+    }
+  
+    .card-container:first-child {
+      margin-left: 20px;
+    }
+  
+    .card-container:last-child {
+      margin-right: 20px;
+    }
+}
+
 @media screen and (min-width: 768px) {
-    .carousel-flex{
+    .card-container-wrapper{
         justify-content: space-between;
+        width: 100%;
     }
    .card-container{
     width: auto;
-    height: 200px;
-   }
-   .card-img{
-    width: 90px;
-    height: 90px;
+    height: auto;
+    padding: 0;
    }
 }
 
 @media screen and (min-width: 992px) {
-    .carousel-flex{
+    .card-container-wrapper{
         justify-content: space-between;
+        padding: 10px;
     }
     .card-container{
         width: auto;
-        height: 200px;
-    }
-    .card-img{
-        width: 100px;
-        height: 100px;
+        height: auto;
     }
     .img-card{
         width: 100%;
         height: 100%;
     }
-
 }
