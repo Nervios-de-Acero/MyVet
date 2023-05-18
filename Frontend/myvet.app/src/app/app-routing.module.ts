@@ -8,6 +8,9 @@ import { QuienesSomosComponent } from './pages/quienes-somos/quienes-somos.compo
 import { ServiciosComponent } from './pages/ServiciosComponent/servicios.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { EcommerceModule } from './ecommerce/ecommerce.module';
+import { FormsModule } from './forms/forms.module';
+import { InicioSesionComponent } from './forms/inicio-sesion/inicio-sesion.component';
+import { RegistrarseComponent } from './forms/registrarse/registrarse.component';
 
 const routes: Routes = [
   {path:'', component:InicioComponent},
@@ -15,7 +18,9 @@ const routes: Routes = [
   {path:'petshop', component:PetshopComponent},
   {path:'contacto', component:ContactoComponent},
   {path:'sucursales', component:SucursalesComponent},
-  {path:'servicios', component:ServiciosComponent}
+  {path:'servicios', component:ServiciosComponent},
+  {path:'inicio-sesion', component:InicioSesionComponent},
+  {path:'registrarse', component:RegistrarseComponent}
 ];
 
 @NgModule({
