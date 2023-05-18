@@ -8,6 +8,7 @@ import { QuienesSomosComponent } from './quienes-somos/quienes-somos.component';
 import { RouterModule } from '@angular/router';
 import { ServiciosComponent } from './ServiciosComponent/servicios.component';
 import { SucursalesComponent } from './sucursales/sucursales.component';
+import { FormsModule } from '../forms/forms.module';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { SucursalesComponent } from './sucursales/sucursales.component';
   imports: [
     CommonModule,
     RouterModule,
-    EcommerceModule
+    EcommerceModule,
+    FormsModule
   ],
   exports:[
     InicioComponent,
