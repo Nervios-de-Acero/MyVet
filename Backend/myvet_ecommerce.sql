@@ -14,6 +14,18 @@ direccion VARCHAR(50) NOT NULL,
 FOREIGN KEY (direccion) REFERENCES direccion (id_direccion)
 );
 
+CREATE TABLE direccion (
+id_direccion INT PRIMARY KEY AUTO_INCREMENT,
+calle VARCHAR(50) NOT NULL,
+altura VARCHAR(5) NOT NULL,
+piso VARCHAR(2),
+departamento CHAR(1),
+cod_postal CHAR(4) NOT NULL,
+observaciones TEXT,
+id_usuario INT NOT NULL,
+FOREIGN KEY(id_usuario) REFERENCES usuario(id_usuario)
+);
+
 CREATE TABLE tarjeta_de_pago(
 id_tarjeta INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
 nombre_titular VARCHAR(50) NOT NULL,
@@ -34,6 +46,7 @@ precio DECIMAL (10,2) NOT NULL,
 marca VARCHAR(50),
 cantidad INT NOT NULL,
 categoria VARCHAR(50),
+tipo_animal VARCHAR(50),
 imagen_url VARCHAR(100),
 fecha_ingreso DATE NOT NULL,
 fecha_modificacion DATE,
