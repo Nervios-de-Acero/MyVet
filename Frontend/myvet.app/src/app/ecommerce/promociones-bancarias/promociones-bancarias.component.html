@@ -1,12 +1,19 @@
+<style>
+  .modal.transparent .modal-content {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    box-shadow: none;
+  }
+</style>
+
 <div class="promociones-bancarias">
-  <button type="button" class="btn btn-promociones" data-bs-toggle="modal" data-bs-target="#exampleModal">Promociones
-    bancarias</button>
-  <button class="btn-promociones">Retiro gratis en cualquiera de nuestras sucursales</button>
-  <button class="btn-promociones">Envío en el día en CABA y GBA</button>
+  <button type="button" class="btn btn-promociones" data-bs-toggle="modal" data-bs-target="#modalPromociones">Promociones bancarias</button>
+  <button class="btn btn-promociones" data-bs-toggle="modal" data-bs-target="#modalRetiro">Retiro gratis en cualquiera de nuestras sucursales</button>
+  <button class="btn btn-promociones" data-bs-toggle="modal" data-bs-target="#modalEnvio">Envío en el día en CABA y GBA</button>
 </div>
 
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<!-- Modal de Promociones -->
+<div class="modal fade transparent" id="modalPromociones" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
@@ -15,18 +22,49 @@
       </div>
       <div class="modal-body">
         <h3>Promociones Bancarias en Argentina</h3>
-        <p>¡Descubre las increíbles promociones bancarias que tenemos para ti en Argentina!</p>
-        <ul>
-          <li>Obtén descuentos exclusivos en compras con tarjetas de crédito y débito.</li>
-          <li>Aprovecha tasas preferenciales en préstamos personales y créditos hipotecarios.</li>
-          <li>Disfruta de bonificaciones en servicios y seguros contratados a través de tu banco.</li>
-        </ul>
-        <p>No pierdas la oportunidad de aprovechar estas ofertas especiales. Visita nuestras sucursales o accede a
-          nuestro sitio web para conocer más detalles.</p>
+        <p>Descubre las increíbles promociones bancarias que tenemos para ti en Argentina. Descubre las increíbles promociones bancarias que tenemos para ti en Argentina. Descubre las increíbles promociones bancarias que tenemos para ti en Argentina. </p>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
       </div>
     </div>
   </div>
+</div>
+
+<!-- Modal de Retiro -->
+<div class="modal fade transparent" id="modalRetiro" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Retiro Gratis</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h3>Retiro Gratis en Sucursales</h3>
+        <p>Aprovecha nuestra promoción de retiro gratuito en cualquiera de nuestras sucursales. Aprovecha nuestra promoción de retiro gratuito en cualquiera de nuestras sucursales. Aprovecha nuestra promoción de retiro gratuito en cualquiera de nuestras sucursales.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal de Envío -->
+<div class="modal fade transparent" id="modalEnvio" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Envío en el Día</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h3>Envío en el Día en CABA y GBA</h3>
+        <p>Aprovecha nuestro servicio de envío rápido en CABA y GBA. Aprovecha nuestro servicio de envío rápido en CABA y GBA. Aprovecha nuestro servicio de envío rápido en CABA y GBA.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>  
 </div>
