@@ -11,6 +11,7 @@ import { InicioComponent } from './pages/inicio/inicio.component';
 import { ContactoComponent } from './pages/contacto/contacto.component';
 import { QuienesSomosComponent } from './pages/quienes-somos/quienes-somos.component';
 import { ServiciosComponent } from './pages/ServiciosComponent/servicios.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -35,7 +36,8 @@ const routes: Routes = [
         RouterModule.forRoot(routes),
         AppRoutingModule,
         PagesModule,
-        SharedModule
+        SharedModule,
+        HttpClientModule
     ]
 })
 export class AppModule { }
