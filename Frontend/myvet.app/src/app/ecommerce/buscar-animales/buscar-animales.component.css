@@ -31,6 +31,7 @@
     height: auto;
     padding: 10px;
     scroll-snap-align: center;
+    transition: 0.5s;
 }
 .card-img{
     width: 80px;
@@ -47,6 +48,9 @@
     margin: 10px;
     font-size: 0.90rem;
     text-align: center;
+}
+.card-container:hover{
+    transform: translateY(-10px);
 }
 
 @media screen and (max-width:374px){
