@@ -11,10 +11,12 @@ import { InicioComponent } from './pages/inicio/inicio.component';
 import { ContactoComponent } from './pages/contacto/contacto.component';
 import { QuienesSomosComponent } from './pages/quienes-somos/quienes-somos.component';
 import { ServiciosComponent } from './pages/ServiciosComponent/servicios.component';
+import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from './forms/forms.module';
 import { InicioSesionComponent } from './forms/inicio-sesion/inicio-sesion.component';
 import { RegistrarseComponent } from './forms/registrarse/registrarse.component';
+
 
 
 
@@ -29,6 +31,7 @@ const routes: Routes = [
     {path:'registrarse', component:RegistrarseComponent}
 ];
 
+
 @NgModule({
     declarations: [
         AppComponent
@@ -42,8 +45,10 @@ const routes: Routes = [
         AppRoutingModule,
         PagesModule,
         SharedModule,
+        HttpClientModule,
         ReactiveFormsModule,
         FormsModule
+
     ]
 })
 export class AppModule { }
