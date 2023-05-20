@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-import { ProductosService } from './productos.service';
-
 
 @Component({
   selector: 'app-root',
@@ -8,13 +6,6 @@ import { ProductosService } from './productos.service';
   styleUrls: ['./app.component.css']
 })
 
-
 export class AppComponent {
   title = 'myvet.app'
-  constructor(public json: ProductosService) {}
-  ngOnInit(): void {
-  this.json.getProductos().subscribe((res: object) => {
-    console.log(res)
-  })
-  }
 } 
