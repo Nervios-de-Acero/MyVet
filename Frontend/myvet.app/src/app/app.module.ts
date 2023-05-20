@@ -12,6 +12,12 @@ import { ContactoComponent } from './pages/contacto/contacto.component';
 import { QuienesSomosComponent } from './pages/quienes-somos/quienes-somos.component';
 import { ServiciosComponent } from './pages/ServiciosComponent/servicios.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from './forms/forms.module';
+import { InicioSesionComponent } from './forms/inicio-sesion/inicio-sesion.component';
+import { RegistrarseComponent } from './forms/registrarse/registrarse.component';
+
+
 
 
 const routes: Routes = [
@@ -20,7 +26,9 @@ const routes: Routes = [
     {path:'petshop', component:PetshopComponent},
     {path:'contacto', component:ContactoComponent},
     {path:'sucursales', component:SucursalesComponent},
-    {path:'servicios', component:ServiciosComponent}
+    {path:'servicios', component:ServiciosComponent},
+    {path:'inicio-sesion', component:InicioSesionComponent},
+    {path:'registrarse', component:RegistrarseComponent}
 ];
 
 
@@ -37,7 +45,10 @@ const routes: Routes = [
         AppRoutingModule,
         PagesModule,
         SharedModule,
-        HttpClientModule
+        HttpClientModule,
+        ReactiveFormsModule,
+        FormsModule
+
     ]
 })
 export class AppModule { }

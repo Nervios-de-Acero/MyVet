@@ -8,6 +8,8 @@ import { ProductoComponent } from './producto/producto.component';
 import { PromocionesBancariasComponent } from './promociones-bancarias/promociones-bancarias.component';
 import { RouterModule } from '@angular/router';
 import { VistaDetalladaComponent } from './vista-detallada/vista-detallada.component';
+import { ListaDeDeseosComponent } from './lista-de-deseos/lista-de-deseos.component';
+import { FormsModule } from '../forms/forms.module'; 
 
 @NgModule({
   declarations: [
@@ -17,17 +19,20 @@ import { VistaDetalladaComponent } from './vista-detallada/vista-detallada.compo
     VistaDetalladaComponent,
     BuscarAnimalesComponent,
     CategoriasComponent,
-    PromocionesBancariasComponent
+    PromocionesBancariasComponent,
+    ListaDeDeseosComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule
   ],
   exports : [
     CatalogoComponent,
     BannerComponent,
     BuscarAnimalesComponent,
     CategoriasComponent,
-    PromocionesBancariasComponent
+    PromocionesBancariasComponent, 
+    ListaDeDeseosComponent
   ]
 })
 export class EcommerceModule { }
