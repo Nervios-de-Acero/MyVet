@@ -1,8 +1,8 @@
 <div class="producto">
-  <div class="imagenProducto"><img src="../../../assets/img/bolsa_comida_perro.jpg" alt="Comida de perro"></div>
+  <div class="imagenProducto"><img [src]="objetoProducto.imagen_url" [alt]="objetoProducto.nombre_producto"></div>
   <div class="info">
-      <h3>Bolsa de 1kg comida de perro adulto Mockup</h3>
-      <h2>$1670</h2>
+      <h3>{{ objetoProducto.nombre_producto }}</h3>
+      <h2>{{objetoProducto.precio | currency}}</h2>
   </div>
   <button class="verMas">Ver más</button>
 </div>

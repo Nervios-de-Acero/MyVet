@@ -17,7 +17,4 @@ export class AppComponent {
     console.log(res)
   })
   }
-
-   
-
 } 
