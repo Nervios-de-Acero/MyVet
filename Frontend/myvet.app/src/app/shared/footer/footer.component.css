@@ -1,69 +1,66 @@
-footer{
-    width: 100%;
+.btn_container_emerg{
     display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-  }
-
-  #emerg{
-    display:none;
-  
-  }
-  
-  .social-buttons {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    background-color: aliceblue;
-   }
-
-  footer a{
-    text-decoration: none;
-    cursor: pointer;
-  }
-  footer a:hover{
-    box-shadow:inset 0 0 20px rgba(255, 255, 255, .5), 0 0 20px rgba(255, 255, 255, .2) ;
-    outline-color: rgba(255, 255, 255, 0);
-    outline-offset: 15px;
-    text-shadow: 1px 1px 2px #427388;
-  }
-  
-  footer span{
-    display: block;
-    text-align:center;
-  }
-
-  #logo_emerg{
-    width: 113px;
-    height: 113px;
-  }
-
-  .logo {
-    width: 95px;
-    height: 95px;
-
-
+    justify-content: center;
+    align-content: center;
+    padding: 20px;
   }
 
   .btn-emergencia{
     height:50px ;
     width: 200px;
     font-size:20px;
+    
   }
-  
-  
-  @media screen and (min-width:577px){
-    .btn-emergencia{
-      display: none;
-    }
-  
-    #emerg{
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      width: 120px;
-      height:100%;
-    }
+  .footer-personalizado{
+    display: flex;
+    flex-wrap: wrap;
   }
+
+  .logo{
+    width: 150px;
+    height: 150px;
+  }
+  .container{
+    width: 80%;
+  }
+
+  .icon-redes{
+    justify-content: center;
+    align-content: center;
+    margin-top: 20px;
+  }
+
+
+  .btn-twitter{
+    background-color: #55acee;
+
+  }
+  .btn-google{
+    background-color: #dd4b39;
+  }
+
+  .btn-instagram{
+    background-color: #ac2bac;
+  }
+
+  .btn-linkedin{
+    background-color: #0082ca;
+  }
+
+  .btn-github{
+    background-color: #333333;
+  }
+
+  .btn{
+    transition: 0.5s;
+  }
+
+  .btn:hover{
+    transform: translateY(-10px);
+}
+
+.text-center{
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
