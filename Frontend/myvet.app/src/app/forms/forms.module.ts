@@ -3,11 +3,13 @@ import { CommonModule } from '@angular/common';
 import { RegistrarseComponent } from './registrarse/registrarse.component';
 import { InicioSesionComponent } from './inicio-sesion/inicio-sesion.component';
 import { RouterModule } from '@angular/router';
+import { DatosTarjetaComponent } from './datos-tarjeta/datos-tarjeta.component';
 
 @NgModule({
   declarations: [
     RegistrarseComponent,
-    InicioSesionComponent
+    InicioSesionComponent,
+    DatosTarjetaComponent
   ],
   imports: [
     CommonModule,
@@ -15,7 +17,8 @@ import { RouterModule } from '@angular/router';
   ],
   exports: [
     RegistrarseComponent,
-    InicioSesionComponent
+    InicioSesionComponent,
+    DatosTarjetaComponent
   ]
 })
 export class FormsModule { }
