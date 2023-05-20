@@ -14,7 +14,6 @@ import { ServiciosComponent } from './pages/ServiciosComponent/servicios.compone
 import { HttpClientModule } from '@angular/common/http';
 
 
-
 const routes: Routes = [
     {path:'', component:InicioComponent},
     {path:'quienes-somos', component:QuienesSomosComponent},
@@ -23,6 +22,7 @@ const routes: Routes = [
     {path:'sucursales', component:SucursalesComponent},
     {path:'servicios', component:ServiciosComponent}
 ];
+
 
 @NgModule({
     declarations: [

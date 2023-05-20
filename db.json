@@ -1,19 +1,263 @@
-{
-  "posts": [
-    {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
-    {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
-    }
-  ],
-  "profile": {
-    "name": "typicode"
+{"productos":[
+  {
+    "id": 1,
+    "nombre_producto": "Piedra calefactora para terrario N°2",
+    "descripcion": "Piedra calefactora de primera calidad para terrarios. Mantiene la temperatura tibia y constante, ideal para el animal. Medidas: 30 x 19 cm.",
+    "precio": 1699.99,
+    "marca": "New Pet",
+    "categoria": ["peceras", "accesorios"],
+    "tipo_animal": "exoticos",
+    "imagen_url": "https://naturallife.vtexassets.com/arquivos/ids/155455-300-300?v=1764900520&width=300&height=300&aspect=true"
+  },
+  {
+      "id": 2,
+    "nombre_producto": "Juguete Para Cachorros Zeus Mojo Trp/ Rope Ring 16 Cm",
+    "descripcion": "Set de tres aros de caucho y cuerda entrelazados para cachorros",
+    "precio": 1250.00,
+    "marca": "Zeus Mojo",
+    "categoria":["accesorios"],
+    "tipo_animal": "perro",
+  "imagen_url":"https://catycanar.vtexassets.com/arquivos/ids/164262-600-auto?v=637786422765670000&width=600&height=auto&aspect=true"
+  },
+  {
+    "id": 3,
+    "nombre_producto": "Pro Plan Gato Adulto X 7.5 Kg",
+    "descripcion": "Purina Pro Plan con OptiPrebio es un alimento balanceado para gatos adultos de 1 a 7 años de edad. Ayuda a optimizar la digestión mediante la correcta absorción de nutrientes; promueve la salud e higiene oral de tu mascota mediante la reducción del sarro dental; también protege la salud del tracto urinario y, al contener pollo fresco como uno de sus principales ingredientes, provee una fuente ideal de proteínas y aminoácidos.",
+    "precio": 17145,
+    "marca": "Purina",
+    "categoria": ["alimentos"],
+    "tipo_animal": "gato",
+    "imagen_url": "https://catycanar.vtexassets.com/arquivos/ids/155443-800-auto?v=637732963243970000&width=800&height=auto&aspect=true"
+  },
+  {
+    "id": 4,
+    "nombre_producto": "Transport. Catit Carrier Roja Med (56.5X37.5X31Cm) H/ 8 Kg",
+    "descripcion": "Transportadora para gatos Med (56.5X37.5X31Cm) H/ 8 Kg",
+    "precio": 16014,
+    "marca": "Catit Carrier",
+    "categoria": ["accesorios"],
+    "tipo_animal": "gato",
+    "imagen_url": "https://catycanar.vtexassets.com/arquivos/ids/164422-800-auto?v=637786424746700000&width=800&height=auto&aspect=true"
+  },
+  {
+    "id": 5,
+    "nombre_producto": "Alimento para peces 200gr",
+    "descripcion": "Alimento para peces en forma de láminas finitas.",
+    "precio": 399.99,
+    "marca": "Tetra",
+    "categoria": ["alimentos"],
+    "tipo_animal": "pez",
+    "imagen_url": "https://catycanar.vtexassets.com/arquivos/ids/161339-1200-auto?v=637762996594500000&width=1200&height=auto&aspect=true"
+  },
+  
+  {
+    "id": 6,
+    "nombre_producto": "Esfera para hámster",
+    "descripcion": "Esfera de acrílico para hámster. Mayor diversión y libertad de movimiento. Con agujeros y ventilación. Tamaño: 19cm",
+    "precio": 1300.25,
+    "marca": "Pet-Dome",
+    "categoria": ["accesorios"],
+    "tipo_animal": "pequeño",
+    "imagen_url": "https://catycanar.vtexassets.com/arquivos/ids/162686-1200-auto?v=637786402143470000&width=1200&height=auto&aspect=true"
+  },
+  
+  {
+    "id": 7 ,
+    "nombre_producto": "Agility Cats En Lata Sabor Pollo X 340 Gr",
+    "descripcion": "Agility Adultos Wet es una alternativa saludable y completa para la dieta del gato, basada en 5 sabores que ofrecen experiencias diferentes para satisfacer los paladares más exigentes. Sus fórmulas contienen fibras naturales que ayudan a eliminar las bolas de pelo y un aporte ideal de macro y micronutrientes que promueven un bienestar general.",
+    "precio": 567,
+    "marca": "Agility Cats",
+    "categoria": ["alimento"],
+    "tipo_animal": "gato",
+    "imagen_url": "https://catycanar.vtexassets.com/arquivos/ids/158363-1600-auto?v=637732979670870000&width=1600&height=auto&aspect=true"
+  },
+  
+  {
+    "id": 8,
+    "nombre_producto": "Cucha para perro huevo",
+    "descripcion": "Cuchas térmicas de poliestireno de alta durabilidad que brindan la sensación ideal de refugio para tu mascota, debido a su novedoso diseño ovoide. La elevación del piso logra un mejor efecto aislante contra humedad y frío. Ideal para perros chicos y medianos de hasta 15 kg de peso. Incluye almohadón con funda lavable. Disponible en vibrantes colores protegidos por filtro UV, que mantienen su intensidad a lo largo del tiempo. Medidas: 80 x 50 x 50 cm. Hueco de acceso: 37 x 48 cm. Peso: 9 kg.",
+    "precio": 22000.00,
+    "marca": "Eggys",
+    "categoria": ["camas e indumentaria", "casas y cuchas"],
+    "tipo_animal": "perro",
+    "imagen_url": "https://catycanar.vtexassets.com/arquivos/ids/163374-1200-auto?v=637786410746570000&width=1200&height=auto&aspect=true"
+  },
+  
+  
+  {
+    "id": 9,
+    "nombre_producto": "Jaula Grande Hamster",
+    "descripcion": "Jaula para pequeños animales de arco elevado y de gran amplitud. Medidas aproximadas:35CMX28CMX36CM",
+    "precio": 18000.00,
+    "marca": "Cute Cage",
+    "categoria": ["casas y cuchas, accesorios"],
+    "tipo_animal": "pequeño",
+    "imagen_url": "https://catycanar.vtexassets.com/arquivos/ids/167488-800-auto?v=638089710927270000&width=800&height=auto&aspect=true"
+  },
+  {
+    "id": 10,
+    "nombre_producto":"Royal Canin Perro Veterinary Cardiaco X 10 Kg",
+    "descripcion": "Royal Canin Early Cardiac es un alimento corrector dietario para perros adultos, destinado a ayudar a la función cardíaca deteriorada. Este alimento contiene un bajo nivel de sodio. Indicaciones: insuficiencia/enfermedad cardíaca (fase 4), Insuficiencia/enfermedad cardíaca (fases 1 a 3). Contraindicaciones: gestación, lactancia, crecimiento, pancreatitis y hiperlipidemia. La dieta deberá instaurarse desde el inicio de los síntomas de insuficiencia cardíaca. El tratamiento dietético se podrá continuar durante toda la vida del perro.",
+    "precio": 20132.00,
+    "marca": "Royal Canin",
+    "categoria": ["alimentos"],
+    "tipo_animal": "perro",
+    "image_url": "https://catycanar.vtexassets.com/arquivos/ids/155543-600-auto?v=637732964262830000&width=600&height=auto&aspect=true"
+  },
+  {
+    "id": 11,
+    "nombre_producto": "Abrigo The Mandalorian Para Perro Med",
+    "descripcion": "Abrigo The Mandalorian de la saga Star Wars para perros de tamaño mediano. Posee la figura del mini yoda en el lomo del buzo con orejas sobresalientes al costado. Posee elástico ajustable en las piernas para mayor comodidad. La tela es de poliéster y algodón es respirable y cómoda al mismo tiempo que al ser térmico mantiene a tu mascota calentita en el días fríos. Medidas aproximadas: Pecho 58 cm cede hasta 66 cm, largo 36 cm.",
+    "precio": 11169.00,
+    "marca": "kute Dog",
+    "categoria": ["accesorios"],
+    "tipo_animal": "perro",
+    "imagen_url": "https://catycanar.vtexassets.com/arquivos/ids/166239-800-auto?v=637944504239800000&width=800&height=auto&aspect=true"
+  },
+  {
+    "id": 12,
+    "nombre_producto": "Barco para pecera",
+    "descripcion": "Barco de plástico para decorar pecera. Incluye manguera de plástico para tirar burbujas.",
+    "precio": 5000.00,
+    "marca": "Penn Plax",
+    "categoria": ["accesorios", "peceras, acuarios y accesorios"],
+    "tipo_animal": "pez",
+    "imagen_url": "https://catycanar.vtexassets.com/arquivos/ids/159044-1200-auto?v=637732985894130000&width=1200&height=auto&aspect=true"
+  },
+  {
+    "id": 13 ,
+    "nombre_producto": "Tortuguera Isla Mini C/Palmera",
+    "descripcion": "Tanque de tortuga multifuncional. Sirve también para anfibios, posee desniveles para facilitar la implementación de sectores terrestres y acuáticos. Medida: 43X32X16cm",
+    "precio": 1515.00,
+    "marca": "Ninja Turtles",
+    "categoria": ["peceras, acuarios, accesorios"],
+    "tipo_animal": "exotico",
+    "imagen_url": "https://catycanar.vtexassets.com/arquivos/ids/162735-800-auto?v=637786402669170000&width=800&height=auto&aspect=true"
+  },
+  
+  {
+    "id": 14,
+    "nombre_producto": "Pecera Deluxe",
+    "descripcion": "Pecera grande de 38l",
+    "precio": 49891,
+    "marca": "Marina",
+    "categoria": ["peceras, acuarios y accesorios"],
+    "tipo_animal": "pez, exotico",
+    "imagen_url": "https://catycanar.vtexassets.com/arquivos/ids/158670-800-auto?v=637732982432800000&width=800&height=auto&aspect=true"
+  },
+  
+  
+  {
+    "id": 15 ,
+    "nombre_producto": "Juguete Para Perro Koala Almohadon Gigwi",
+    "descripcion": "Juguete tipo peluche con costura reforzada y parches de ecocuero para perros",
+    "precio": 19860.00,
+    "marca": "Gigwi",
+    "categoria": ["accesorios"],
+    "tipo_animal": "perros",
+    "imagen_url": "https://catycanar.vtexassets.com/arquivos/ids/159945-800-auto?v=637733199261100000&width=800&height=auto&aspect=true"
+  },
+  {
+    "id": 16,
+    "nombre_producto": "Chapita cheta para perros",
+    "descripcion": "Chapitas identificatorias esmaltadas en bronce y embellecidas con brillantes resplandecientes. Cada medalla es una pequeña joya realizada con materiales hipoalergénicos. Este producto se puede personalizar hasta con 4 líneas de 15 caracteres cada una en su parte posterior. Ideal si sos un perro de Recoleta.",
+    "precio": 20000.00,
+    "marca": "Chapín",
+    "categoria": ["accesorios"],
+    "tipo_animal": "perro",
+    "imagen_url": "https://naturallife.vtexassets.com/arquivos/ids/157454-300-300?v=1768185372&width=300&height=300&aspect=true"
+  },
+  
+  {
+    "id": 17 ,
+    "nombre_producto": "Juguete Para Perro Koala Almohadon Gigwi",
+    "descripcion": "Juguete tipo peluche con costura reforzada y parches de ecocuero para perros",
+    "precio": 19860.00,
+    "marca": "Gigwi",
+    "categoria": ["accesorios"],
+    "tipo_animal": "perros",
+    "imagen_url": "https://catycanar.vtexassets.com/arquivos/ids/159945-800-auto?v=637733199261100000&width=800&height=auto&aspect=true"
+  },
+  {
+    "id": 18,
+    "nombre_producto": "Chapita cheta para gatos",
+    "descripcion": "Estas medallas identificatorias reproducen las principales razas de perros y gatos. Cada chapa está esmaltada a mano y realizada con materiales analérgicos. Se puede personalizar con 3 líneas de 15 caracteres cada una en su parte posterior.",
+    "precio": 3000.00,
+    "marca": "Chapín",
+    "categoria": ["accesorios"],
+    "tipo_animal": "gato",
+    "imagen_url": "https://catycanar.vtexassets.com/arquivos/ids/157610-1200-auto?v=637732975877030000&width=1200&height=auto&aspect=true"
+  },
+  {
+    "id": 19,
+    "nombre_producto": "Pipeta Advantage Gatos De 4 A 8 Kg",
+    "descripcion": "Advantage es para gatos de 8 kg. Es una solución tópica compuesta de un insecticida ectoparasiticida y un ingrediente para usarse en perros y gatos eliminando larvas y parasitos.",
+    "precio": 1112.00,
+    "marca": "Advantage",
+    "categoria": ["salud"],
+    "tipo_animal": "gato",
+    "imagen_url": "https://catycanar.vtexassets.com/arquivos/ids/156018-800-auto?v=637732967441000000&width=800&height=auto&aspect=true"
+  },
+  
+  {
+    "id": 20,
+    "nombre_producto": "Comprimido Antipulgas Y Garrapatas Perro 25,1 A 50 Kg Nexgard",
+    "descripcion": "Tratamiento y prevención de infestación por: pulgas, garrapatas, sarna demodéctica, sarna sarcóptica, sarna otodéctica y miasis. Elimina las garrapatas hasta un mes después de la toma. El baño frecuente no altera su eficacia. Excelente palatabilidad que asegura un óptimo cumplimiento. NexGard está disponible en cuatro presentaciones de tabletas masticables con sabor a carne: para perros de 2 a 4 kg, de 4 a 10 kg, de 10 a 25 kg y de 25 a 50 kg. Por encima de 50 kg se debe administrar la combinación adecuada de NexGard.",
+    "precio": 3816.00,
+    "marca": "NexGard",
+    "categoria": ["salud"],
+    "tipo_animal": "perro",
+    "imagen_url": "https://catycanar.vtexassets.com/arquivos/ids/163027-800-auto?v=637786405998100000&width=800&height=auto&aspect=true"
+  },
+  
+  {
+    "id": 21,
+    "nombre_producto": "Shampoo Perro Perfumado C/Alantoina X 250 Cc Osspret",
+    "descripcion": "Shampoo perfumado mix frutal de higiene en general, hipoalergénico, perfuma y desororiza durante un lapso prolongado. Cicatrizante para caninos y felinos.",
+    "precio":1381.00,
+    "marca": "Osspret",
+    "categoria": ["higiene"],
+    "tipo_animal": "perros",
+    "imagen_url": "https://catycanar.vtexassets.com/arquivos/ids/162705-600-auto?v=637786402334200000&width=600&height=auto&aspect=true"
+  },
+  
+  {
+    "id": 22 ,
+    "nombre_producto": "Fuente Catit Acero Max X 2 Lt",
+    "descripcion": "El bebedero de acero inoxidable Catit es una fuente que proporciona constantemente agua y la filtra dejando un agradable sabor.",
+    "precio": 13936.00,
+    "marca": "Catit",
+    "categoria": ["bebederos"],
+    "tipo_animal": "gato",
+    "imagen_url": "https://catycanar.vtexassets.com/arquivos/ids/158973-1600-auto?v=637732985338070000&width=1600&height=auto&aspect=true"
+  },
+  
+  
+  {
+    "id": 23,
+    "nombre_producto": "Catnip Ball",
+    "descripcion": "Estimulador para gatos Catnip. Puede lamerlo y morderlo ya que es 100% orgánico y no posee ningún tipo de químicos ni pesticidas.",
+    "precio": 3000,
+    "marca": "Catnip",
+    "categoria": ["accesorios"],
+    "tipo_animal": "gato",
+    "imagen_url": "https://catycanar.vtexassets.com/arquivos/ids/158358-800-auto?v=637732979633900000&width=800&height=auto&aspect=true"
+  },
+  {
+    "id": 24,
+    "nombre_producto": "Arnés para perro o gato pequeño",
+    "descripcion": "Este arnés para perros es suave y contiene una cinta plana hecha de malla transpirable. Es cómodo de llevar y completamente ajustable al abdomen.",
+    "precio": 1000,
+    "marca": "Trixie",
+    "categoria": ["accesorios"],
+    "tipo_animal": "perro",
+    "imagen_url": "https://catycanar.vtexassets.com/arquivos/ids/158120-1200-auto?v=637732978186100000&width=1200&height=auto&aspect=true"
   }
+  
+  ]
+
 }
+  
+  
+  
+  
