@@ -1,20 +1,24 @@
-import { Component } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { FiltroService } from 'src/app/filtro.service';
+
 
 @Component({
     selector: 'app-buscar-animales',
     templateUrl: './buscar-animales.component.html',
     styleUrls: ['./buscar-animales.component.css']
-  })
+})
   export class BuscarAnimalesComponent {
-    constructor(private filtroService: FiltroService) { }
+   /*  animal: string = 'todos'
+    constructor(private productosService: ProductosService) {}
 
-    ngOnInit() {
-    }
-  
-    filtrarPorAnimal(animal: string) {
-      this.filtroService.animalSeleccionado = animal;
-      this.filtroService.productosFiltrados = this.filtroService.filtrarProductosPorAnimal(this.filtroService.productos, animal);
-    }
-}
+  ngOnInit(): void {
+    this.productosService.mandarAnimalObservable.subscribe(animal =>{this.animal = animal})
+  }
+
+    /*filtrarPorAnimal(tipoAnimal: string): void {
+      this.productosService.filtrarProductos('todos', tipoAnimal);
+    } */
+    //   filtrarPorAnimal(tipoAnimal: string): void {
+    //   this.productosService.conseguirAnimal(tipoAnimal);
+    // }  
+  }

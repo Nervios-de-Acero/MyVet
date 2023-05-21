@@ -16,6 +16,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from './forms/forms.module';
 import { InicioSesionComponent } from './forms/inicio-sesion/inicio-sesion.component';
 import { RegistrarseComponent } from './forms/registrarse/registrarse.component';
+import { ProductosService } from './Services/productos.service';
+import { FiltroService } from './Services/filtro.service';
 
 
 
@@ -36,7 +38,7 @@ const routes: Routes = [
     declarations: [
         AppComponent
     ],
-    providers: [],
+    providers: [ProductosService, FiltroService],
     bootstrap: [AppComponent],
     exports: [RouterModule],
     imports: [
@@ -48,7 +50,6 @@ const routes: Routes = [
         HttpClientModule,
         ReactiveFormsModule,
         FormsModule
-
     ]
 })
 export class AppModule { }

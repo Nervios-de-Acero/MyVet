@@ -10,6 +10,7 @@ import { ServiciosComponent } from './ServiciosComponent/servicios.component';
 import { SucursalesComponent } from './sucursales/sucursales.component';
 import { FormsModule } from '../forms/forms.module';
 
+
 @NgModule({
   declarations: [
     InicioComponent,

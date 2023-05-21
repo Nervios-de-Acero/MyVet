@@ -1,6 +1,8 @@
-import { Component } from '@angular/core';
+import { Component} from '@angular/core';
 import { Router } from '@angular/router';
-import { CatalogoComponent } from 'src/app/ecommerce/catalogo/catalogo.component';
+import { EcommerceModule } from 'src/app/ecommerce/ecommerce.module';
+
+
 
 @Component({
   selector: 'app-petshop',
@@ -8,5 +10,5 @@ import { CatalogoComponent } from 'src/app/ecommerce/catalogo/catalogo.component
   styleUrls: ['./petshop.component.css']
 })
 export class PetshopComponent {
-
+ 
 }

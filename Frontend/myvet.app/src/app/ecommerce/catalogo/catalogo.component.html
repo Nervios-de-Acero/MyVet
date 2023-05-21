@@ -1,12 +1,6 @@
 <section id="ContenedorCatalogo">
-  <app-producto></app-producto>
-  <app-producto></app-producto>
-  <app-producto></app-producto>
-  <app-producto></app-producto>
-  <app-producto></app-producto>
-  <app-producto></app-producto>
-  <app-producto></app-producto>
-  <app-producto></app-producto>
+  <app-producto *ngFor="let producto of productos;" [objetoProducto] = 'producto'></app-producto>
   <app-vista-detallada></app-vista-detallada>
   <app-datos-tarjeta></app-datos-tarjeta>
 </section>
+
