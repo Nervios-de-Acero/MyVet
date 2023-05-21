@@ -12,7 +12,7 @@ import { PromocionesBancariasComponent } from './promociones-bancarias/promocion
 import { RouterModule } from '@angular/router';
 import { VistaDetalladaComponent } from './vista-detallada/vista-detallada.component';
 import { ListaDeDeseosComponent } from './lista-de-deseos/lista-de-deseos.component';
-import { FormsModule } from '../forms/forms.module'; 
+import { FormulariosModule } from '../forms/forms.module'; 
 
 @NgModule({
   declarations: [
@@ -28,9 +28,8 @@ import { FormsModule } from '../forms/forms.module';
   ],
   imports: [
     CommonModule,
-    FormsModule,
-    ReactiveFormsModule,
-    RouterModule 
+    RouterModule,
+    FormulariosModule
   ],
   exports: [
     CatalogoComponent,
