@@ -8,7 +8,7 @@ import { QuienesSomosComponent } from './quienes-somos/quienes-somos.component';
 import { RouterModule } from '@angular/router';
 import { ServiciosComponent } from './ServiciosComponent/servicios.component';
 import { SucursalesComponent } from './sucursales/sucursales.component';
-import { FormsModule } from '../forms/forms.module';
+import { FormulariosModule } from '../forms/forms.module';
 
 
 @NgModule({
@@ -24,7 +24,7 @@ import { FormsModule } from '../forms/forms.module';
     CommonModule,
     RouterModule,
     EcommerceModule,
-    FormsModule
+    FormulariosModule
   ],
   exports:[
     InicioComponent,
