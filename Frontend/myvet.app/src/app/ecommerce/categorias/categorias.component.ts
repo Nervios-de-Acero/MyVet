@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+
+
 
 @Component({
   selector: 'app-categorias',
@@ -6,5 +8,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./categorias.component.css']
 })
 export class CategoriasComponent {
+  /* constructor(private productosService: ProductosService) {}
 
+  ngOnInit(): void {}
+
+  filtrarPorCategoria(categoria: string): void {
+    this.productosService.filtrarProductos(categoria, 'todos');
+  } */
 }
+

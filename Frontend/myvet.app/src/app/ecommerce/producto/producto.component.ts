@@ -12,6 +12,6 @@ export class ProductoComponent implements OnInit{
   @Input() objetoProducto!:ProductModel; 
 
   ngOnInit(): void {
-console.log('componente PRODUCTO: ', this.objetoProducto)
+    // console.log('componente PRODUCTO: ', this.objetoProducto)
   };
 }
