@@ -1,3 +1,9 @@
+.modal.transparent .modal-content {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: none;
+  box-shadow: none;
+}
+
 .promociones-bancarias {
   background-color: #f2f2f2;
   border: 1px solid #ddd;
@@ -18,4 +24,28 @@
   margin: 10px;
   border: none;
   cursor: pointer;
+}
+
+/* Estilos para dispositivos móviles */
+@media screen and (max-width: 480px) {
+  .promociones-bancarias {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn-promociones {
+    width: 100%;
+  }
+}
+
+/* Estilos para iPad Air */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .promociones-bancarias {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn-promociones {
+    width: 100%;
+  }
 }
