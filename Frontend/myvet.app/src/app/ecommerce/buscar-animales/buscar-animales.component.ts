@@ -7,5 +7,4 @@ import { HttpClient } from '@angular/common/http';
     styleUrls: ['./buscar-animales.component.css']
   })
   export class BuscarAnimalesComponent {
-
 }
