@@ -24,8 +24,6 @@ import { FormulariosModule } from '../forms/forms.module';
   ],
   imports: [
     CommonModule,
-    FormsModule,
-    ReactiveFormsModule,
     RouterModule,
     FormulariosModule
   ],
