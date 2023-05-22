@@ -17,14 +17,10 @@ class Producto(models.Model):
     descripcion = models.TextField()
     precio = models.DecimalField(max_digits=10, decimal_places=2)
     marca = models.CharField(max_length=50)
-    cantidad = models.IntegerField()
     categoria = models.CharField(max_length=50)
     tipo_animal = models.CharField(max_length=50)
     imagen_url = models.CharField(max_length=100)
-    fecha_ingreso = models.DateField()
-    fecha_modificacion = models.DateField(null=True)
-    activo = models.BooleanField(default=True)
-
+    
     def __str__(self):
         return self.nombre_producto
 

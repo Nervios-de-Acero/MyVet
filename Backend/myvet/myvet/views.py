@@ -1,17 +1,6 @@
 from django.views.generic import ListView, CreateView, UpdateView, DeleteView
 from .models import Producto
 
-def producto_list(request)
-    return render(request, "producto_register/producto_list.html")
-def producto_form(request)
-    return render(request, "producto_register/producto_form.html")
-def producto_delete(request)
-    return
-
-
-
-
-
 class ProductoListView(ListView):
     model = Producto
     template_name = 'producto_list.html'  # Plantilla para mostrar la lista de productos
