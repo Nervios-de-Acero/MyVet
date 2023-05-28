@@ -1,0 +1,62 @@
+<section>
+    <form>
+            <div class="form-row">
+                <label for="numerot">Número de tarjeta</label>
+                <input type="text" id="numerot">
+            </div>
+            <div class="form-row">
+                <label for="fechav">Fecha de vencimiento</label>
+                <input type="date" id="fechav">
+            </div>
+            <div class="form-row">
+                <label for="cvv">CVV</label>
+                <input type="text" id="cvv">
+            </div>
+            <div class="form-row">
+                <label for="nombre">Nombre completo como aparece en la tarjeta</label>
+                <input type="text" id="nombre">
+            </div>
+            <div class="form-row">
+                <label for="numerodni">DNI del titular</label>
+                <input type="text" id="numerodni">
+            </div>
+            <div class="form-row">
+                <label for="tipot">Tipo de tarjeta</label>
+                <select name="" id="tipot">
+                    <option value="debito">Débito</option>
+                    <option value="credito">Crédito</option>
+                </select>
+            </div>
+            <div class="form-row">
+                <label for="banco">Banco</label>
+                <select name="" id="">
+                    <option value="nacion">Banco Nación</option>
+                    <option value="provincia">Banco Provincia</option>
+                    <option value="santander">Santander Río</option>
+                    <option value="patagonia">Banco Patagonia</option>
+                    <option value="hipotecario">Banco Hipotecario</option>
+                    <option value="frances">BBVA Francés</option>
+                    <option value="hsbc">Banco HSBC</option>
+                    <option value="icbc">Banco ICBC</option>
+                    <option value="galicia">Banco Galicia</option>
+                    <option value="naranja">Tarjeta Naranja</option>
+                    <option value="uala">Uala</option>
+                    <option value="mercadoPago">Mercado Pago</option>
+                </select>
+            </div>
+            <div class="form-row form-radio">
+                <legend>Cuotas</legend>
+                <input type="radio" id="cuota1" value="cuota_1" class="radio-item" name="cuota">
+                <label for="cuota1" class="radio-item item-text">1 Cuota</label><br>
+                <input type="radio" id="cuota3" value="cuota_3" class="radio-item" name="cuota">
+                <label for="cuota3" class="radio-item item-text">3 Cuotas</label><br>
+                <input type="radio" id="cuota6" value="cuota_6" class="radio-item" name="cuota">
+                <label for="cuota6" class="radio-item item-text">6 Cuotas</label><br>
+            </div>
+            <div class="form-row">
+                <button class="btn-form">Atrás</button>
+                <button class="btn-form">Siguiente</button>
+                <button class="btn-form cancel">Cancelar</button>
+            </div>
+    </form>
+</section>
