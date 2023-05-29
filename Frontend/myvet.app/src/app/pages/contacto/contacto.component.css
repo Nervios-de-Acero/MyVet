@@ -1,0 +1,70 @@
+.contacto {
+    background: rgb(189, 188, 188,0.5);
+    box-shadow: 0 10px 25px rgba(92, 99, 105, .2);
+    backdrop-filter: blur(10px);
+    border-radius: 5px;
+    font-family: 'Questrial', sans-serif;
+    max-width: 600px;
+  }
+  
+  .contacto input, select {
+    height: 40px;
+  }
+  
+  .contacto *{
+    border-radius: 10px;
+    padding-left: 10px;
+  }
+  
+  #contactForm .contactInput {
+    border: 2px solid black;
+    background: rgb(189, 188, 188,0.25);
+  }
+  
+  .contacto textarea {
+    padding-top:5px;
+  }
+
+  .inputSpanCtn {
+    display: flex;
+    flex-direction: column;
+    padding:0;
+  }
+
+  .warning {
+    font-size: 14px;
+    font-weight: 100;
+    font-family: Arial, Helvetica, sans-serif;
+    color:rgb(178, 16, 16);
+    display: none;
+  }
+
+  .warningBorder {
+    border: 2px solid rgb(178, 16, 16) !important;
+  }
+
+  .warningMessage {
+    display:block;
+  }
+  
+  /*Esto es para que no se ponga de un color feo cuando se usa el autocompletado de Chrome, parece que no funciona usar transparencia*/
+  .contacto input:-webkit-autofill,
+  .contacto input:-webkit-autofill:hover,
+  .contacto input:-webkit-autofill:focus,
+  .contacto input:-webkit-autofill:active {
+    box-shadow: 0 0 0 30px rgb(158, 156, 156) inset;
+    -webkit-box-shadow: 0 0 0 30px rgb(158, 156, 156) inset !important;
+  }
+  
+  .contacto input::placeholder, .contacto textarea::placeholder {
+    color:black;
+  }
+  
+  .contacto input:focus, textarea:focus {
+    outline: none;
+  }
+  
+  .btnSubmit {
+    background: #d9f87d;
+    border: none;
+  }
