@@ -1,0 +1,48 @@
+.producto {
+  max-width: 300px;
+  height: auto;
+  border: 2px solid black;
+  padding: 5px 10px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.imagenProducto {
+  width: 90%;
+  height: auto;
+}
+
+.imagenProducto img {
+  width: 100%;
+  height: auto;
+}
+
+.info {
+  text-align: center;
+}
+
+.info > * {
+  padding: 10px 0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: 100;
+}
+
+.info h2 {
+  color: rgb(27, 27, 170);
+  font-weight: 600;
+}
+
+.verMas {
+ margin: 10px 0;
+ height: 40px;
+ width: 120px;
+ background-color: #fff;
+ border: 3px solid  rgb(27, 27, 170);
+ color:  rgb(27, 27, 170);
+ border-radius: 10px;
+ font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+ font-size: 16px;
+ font-weight: bolder;
+}

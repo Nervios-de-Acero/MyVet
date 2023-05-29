@@ -1,0 +1,46 @@
+.header{
+    display: flex;
+    padding: 0 10px;
+    width: 100%;
+    gap: 25px;
+   
+}
+#logo {
+    height: 100px; 
+    width: 100px;
+  }
+
+nav {
+    position: relative;
+    z-index: 999;
+}
+  
+@media screen and (max-width: 576px) {
+  
+    .collapse-custom {
+      position: absolute;
+      top: 75%;
+      right: 5px;
+      background: rgba(63,56,72,1);
+      width:150px;
+    }
+  
+    .collapse-custom ul li {
+      text-align: center;
+    }
+}
+  
+@media only screen and (min-width: 800px) {
+  .header{
+    justify-content: space-evenly;
+  }
+  #logo{
+    margin-right: 20px;
+  }
+}
+
+@media only screen and (min-width: 970px) {
+  .header{
+    justify-content: space-between;
+  }
+}

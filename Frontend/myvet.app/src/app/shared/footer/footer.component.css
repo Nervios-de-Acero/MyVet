@@ -1,0 +1,66 @@
+.btn_container_emerg{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 20px;
+  }
+
+  .btn-emergencia{
+    height:50px ;
+    width: 200px;
+    font-size:20px;
+    
+  }
+  .footer-personalizado{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .logo{
+    width: 150px;
+    height: 150px;
+  }
+  .container{
+    width: 80%;
+  }
+
+  .icon-redes{
+    justify-content: center;
+    align-content: center;
+    margin-top: 20px;
+  }
+
+
+  .btn-twitter{
+    background-color: #55acee;
+
+  }
+  .btn-google{
+    background-color: #dd4b39;
+  }
+
+  .btn-instagram{
+    background-color: #ac2bac;
+  }
+
+  .btn-linkedin{
+    background-color: #0082ca;
+  }
+
+  .btn-github{
+    background-color: #333333;
+  }
+
+  .btn{
+    transition: 0.5s;
+  }
+
+  .btn:hover{
+    transform: translateY(-10px);
+}
+
+.text-center{
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+

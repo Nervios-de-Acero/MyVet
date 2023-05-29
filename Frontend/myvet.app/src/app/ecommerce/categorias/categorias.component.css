@@ -1,0 +1,30 @@
+.navbar{
+    width: 100%;
+    height: auto;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.navbar-nav{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    gap: 20px;
+    margin: 10px;
+}
+
+.nav-item{
+    font-size: 15px;
+    text-align: center;
+    color: #050000;
+    border: none;
+    padding: 5px;
+}
+
+.nav-item:hover{
+    color: rgb(21, 138, 40);
+    border: 2px solid #d9f87d;
+    transition: all .4s ease-in-out;
+}
