@@ -1,6 +1,6 @@
 import { Component, OnInit} from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { ProductosService } from 'src/app/productos.service';
+import { ProductosService } from 'src/servicios/productos.service';
 import { ProductModel } from 'src/app/models/productos.model';
 
 @Component({

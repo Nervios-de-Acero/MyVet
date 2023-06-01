@@ -1,7 +1,7 @@
 import { Component} from '@angular/core';
 import { Router } from '@angular/router';
 import { EcommerceModule } from 'src/app/ecommerce/ecommerce.module';
-import { ProductosService } from 'src/app/productos.service';
+import { ProductosService } from 'src/servicios/productos.service';
 import { ProductModel } from 'src/app/models/productos.model';
 
 
