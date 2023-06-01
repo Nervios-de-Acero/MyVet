@@ -16,7 +16,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { FormulariosModule } from './forms/forms.module';
 import { InicioSesionComponent } from './forms/inicio-sesion/inicio-sesion.component';
 import { RegistrarseComponent } from './forms/registrarse/registrarse.component';
-import { ProductosService } from './productos.service';
+import { ProductosService } from '../servicios/productos.service';
 
 
 
