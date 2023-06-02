@@ -112,3 +112,12 @@ main {
     }
     }
     
+
+    .invalid {
+      border: 2px solid red;
+    }
+
+    .warning {
+      color: red;
+      font-size: 15px;
+    }

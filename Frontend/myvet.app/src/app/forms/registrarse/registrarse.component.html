@@ -1,41 +1,46 @@
 <main>
-    <form id="register" action="?" method="post">
+    <form id="register" [formGroup]="formRegistro" (ngSubmit)="onSubmit()">
     <legend class="title">Registrate</legend>
       <div class="inputSpanCtn">
         <div class="inputContainer">
-          <input type="text" id="user_first_name" class="input" name="user_first_name" placeholder="a">
+          <input type="text" id="user_first_name" class="input" name="user_first_name" formControlName="nombre" [class.invalid]="esInvalido('nombre')">
           <label for="user_first_name" class="label">Nombre :</label>
         </div>
-        <span class="warning">Ingrese su nombre</span>
+        <span class="warning" *ngIf="mostrarError('nombre', 'required')">Campo obligatorio</span>
+        <span class="warning" *ngIf="mostrarError('nombre', 'pattern')">Campo inválido. Omita números o caracteres especiales</span>
       </div>
       <div class="inputSpanCtn">
         <div class="inputContainer">
-          <input type="text" id="user_last_name" class="input" name="user_last_name" placeholder="a">
+          <input type="text" id="user_last_name" class="input" name="user_last_name" formControlName="apellido" [class.invalid]="esInvalido('apellido')">
           <label for="user_last_name" class="label">Apellido:</label>
         </div>
-        <span class="warning">Ingrese su apellido</span>
+        <span class="warning" *ngIf="mostrarError('apellido', 'required')">Campo obligatorio</span>
+        <span class="warning" *ngIf="mostrarError('apellido', 'pattern')">Campo inválido. Omita números o caracteres especiales</span>
       </div>
       <div class="inputSpanCtn">
         <div class="inputContainer">
-          <input type="email" id="user_mail" class="input" name="user_mail" placeholder="a">
+          <input type="email" id="user_mail" class="input" name="user_mail" formControlName="email" [class.invalid]="esInvalido('email')">
           <label for="user_mail" class="label">Correo electrónico:</label>
         </div>
-        <span class="warning">Email inválido</span>
+        <span class="warning" *ngIf="mostrarError('email', 'email')">Email inválido</span>
+        <span class="warning" *ngIf="mostrarError('email', 'required')">Campo obligatorio</span>
       </div>
       <div class="inputSpanCtn">
         <div class="inputContainer">
-          <input type="password" class="input" id="user_password" name="user_password" minlength="6" maxlength="15" placeholder="a">
+          <input type="password" class="input" id="user_password" name="user_password" formControlName="pass" [class.invalid]="esInvalido('pass')">
           <label for="user_password" class="label">Contraseña:</label>
         </div>
-        <span class="warning">La contraseña debe contener mínimo 8 caracteres, una mayúscula, una minúscula, un número y un caracter especial</span>
+        <span class="warning" *ngIf="mostrarError('pass', 'pattern')">La contraseña debe contener mínimo 8 caracteres, una mayúscula, una minúscula, un número y un caracter especial</span>
+        <span class="warning" *ngIf="mostrarError('pass', 'required')">Campo obligatorio</span>
       </div>
       <div class="inputSpanCtn">
         <div class="inputContainer">
-          <input type="password" class="input" id="user_password2" name="user_password2" minlength="6" maxlength="15" placeholder="a">
+          <input type="password" class="input" id="user_password2" name="user_password2" minlength="6" maxlength="15" formControlName="pass2" [class.invalid]="esInvalido('pass2')">
           <label for="user_password2" class="label">Confirmar contraseña:</label>
         </div>
         <span class="warning">La contraseña no coincide</span>
+        <span class="warning" *ngIf="mostrarError('pass2', 'required')">Campo obligatorio</span>
       </div>
-      <input type="submit" id="registerSubmit"value="Registrarse" class="btn_registro">
+      <input type="submit" id="registerSubmit" value="Registrarse" class="btn_registro">
   </form>
 </main>
