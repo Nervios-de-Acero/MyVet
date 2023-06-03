@@ -6,7 +6,7 @@
     "precio": 1699.99,
     "marca": "New Pet",
     "categoria": ["peceras", "accesorios"],
-    "tipo_animal": "exoticos",
+    "tipo_animal": "exotico",
     "imagen_url": "https://naturallife.vtexassets.com/arquivos/ids/155455-300-300?v=1764900520&width=300&height=300&aspect=true"
   },
   {
@@ -49,7 +49,6 @@
     "tipo_animal": "pez",
     "imagen_url": "https://catycanar.vtexassets.com/arquivos/ids/161339-1200-auto?v=637762996594500000&width=1200&height=auto&aspect=true"
   },
-  
   {
     "id": 6,
     "nombre_producto": "Esfera para hámster",
@@ -59,38 +58,34 @@
     "categoria": ["accesorios"],
     "tipo_animal": "pequeño",
     "imagen_url": "https://catycanar.vtexassets.com/arquivos/ids/162686-1200-auto?v=637786402143470000&width=1200&height=auto&aspect=true"
-  },
-  
+  },  
   {
     "id": 7 ,
     "nombre_producto": "Agility Cats En Lata Sabor Pollo X 340 Gr",
     "descripcion": "Agility Adultos Wet es una alternativa saludable y completa para la dieta del gato, basada en 5 sabores que ofrecen experiencias diferentes para satisfacer los paladares más exigentes. Sus fórmulas contienen fibras naturales que ayudan a eliminar las bolas de pelo y un aporte ideal de macro y micronutrientes que promueven un bienestar general.",
     "precio": 567,
     "marca": "Agility Cats",
-    "categoria": ["alimento"],
+    "categoria": ["alimentos"],
     "tipo_animal": "gato",
     "imagen_url": "https://catycanar.vtexassets.com/arquivos/ids/158363-1600-auto?v=637732979670870000&width=1600&height=auto&aspect=true"
-  },
-  
+  }, 
   {
     "id": 8,
     "nombre_producto": "Cucha para perro huevo",
     "descripcion": "Cuchas térmicas de poliestireno de alta durabilidad que brindan la sensación ideal de refugio para tu mascota, debido a su novedoso diseño ovoide. La elevación del piso logra un mejor efecto aislante contra humedad y frío. Ideal para perros chicos y medianos de hasta 15 kg de peso. Incluye almohadón con funda lavable. Disponible en vibrantes colores protegidos por filtro UV, que mantienen su intensidad a lo largo del tiempo. Medidas: 80 x 50 x 50 cm. Hueco de acceso: 37 x 48 cm. Peso: 9 kg.",
     "precio": 22000.00,
     "marca": "Eggys",
-    "categoria": ["camas e indumentaria", "casas y cuchas"],
+    "categoria": ["camas", "indumentaria", "casas", "cuchas"],
     "tipo_animal": "perro",
     "imagen_url": "https://catycanar.vtexassets.com/arquivos/ids/163374-1200-auto?v=637786410746570000&width=1200&height=auto&aspect=true"
-  },
-  
-  
+  }, 
   {
     "id": 9,
     "nombre_producto": "Jaula Grande Hamster",
     "descripcion": "Jaula para pequeños animales de arco elevado y de gran amplitud. Medidas aproximadas:35CMX28CMX36CM",
     "precio": 18000.00,
     "marca": "Cute Cage",
-    "categoria": ["casas y cuchas, accesorios"],
+    "categoria": ["casas", "cuchas", "accesorios"],
     "tipo_animal": "pequeño",
     "imagen_url": "https://catycanar.vtexassets.com/arquivos/ids/167488-800-auto?v=638089710927270000&width=800&height=auto&aspect=true"
   },
@@ -120,7 +115,7 @@
     "descripcion": "Barco de plástico para decorar pecera. Incluye manguera de plástico para tirar burbujas.",
     "precio": 5000.00,
     "marca": "Penn Plax",
-    "categoria": ["accesorios", "peceras, acuarios y accesorios"],
+    "categoria": ["accesorios", "peceras", "acuarios"],
     "tipo_animal": "pez",
     "imagen_url": "https://catycanar.vtexassets.com/arquivos/ids/159044-1200-auto?v=637732985894130000&width=1200&height=auto&aspect=true"
   },
@@ -130,31 +125,28 @@
     "descripcion": "Tanque de tortuga multifuncional. Sirve también para anfibios, posee desniveles para facilitar la implementación de sectores terrestres y acuáticos. Medida: 43X32X16cm",
     "precio": 1515.00,
     "marca": "Ninja Turtles",
-    "categoria": ["peceras, acuarios, accesorios"],
+    "categoria": ["peceras", "acuarios", "accesorios"],
     "tipo_animal": "exotico",
     "imagen_url": "https://catycanar.vtexassets.com/arquivos/ids/162735-800-auto?v=637786402669170000&width=800&height=auto&aspect=true"
-  },
-  
+  }, 
   {
     "id": 14,
     "nombre_producto": "Pecera Deluxe",
     "descripcion": "Pecera grande de 38l",
     "precio": 49891,
     "marca": "Marina",
-    "categoria": ["peceras, acuarios y accesorios"],
-    "tipo_animal": "pez, exotico",
+    "categoria": ["peceras", "acuarios", "accesorios"],
+    "tipo_animal": "pez",
     "imagen_url": "https://catycanar.vtexassets.com/arquivos/ids/158670-800-auto?v=637732982432800000&width=800&height=auto&aspect=true"
-  },
-  
-  
+  }, 
   {
     "id": 15 ,
     "nombre_producto": "Juguete Para Perro Koala Almohadon Gigwi",
     "descripcion": "Juguete tipo peluche con costura reforzada y parches de ecocuero para perros",
     "precio": 19860.00,
     "marca": "Gigwi",
-    "categoria": ["accesorios"],
-    "tipo_animal": "perros",
+    "categoria": ["accesorios", "juguetes"],
+    "tipo_animal": "perro",
     "imagen_url": "https://catycanar.vtexassets.com/arquivos/ids/159945-800-auto?v=637733199261100000&width=800&height=auto&aspect=true"
   },
   {
@@ -163,19 +155,18 @@
     "descripcion": "Chapitas identificatorias esmaltadas en bronce y embellecidas con brillantes resplandecientes. Cada medalla es una pequeña joya realizada con materiales hipoalergénicos. Este producto se puede personalizar hasta con 4 líneas de 15 caracteres cada una en su parte posterior. Ideal si sos un perro de Recoleta.",
     "precio": 20000.00,
     "marca": "Chapín",
-    "categoria": ["accesorios"],
+    "categoria": ["accesorios", "indumentaria"],
     "tipo_animal": "perro",
     "imagen_url": "https://naturallife.vtexassets.com/arquivos/ids/157454-300-300?v=1768185372&width=300&height=300&aspect=true"
-  },
-  
+  },  
   {
     "id": 17 ,
     "nombre_producto": "Juguete Para Perro Koala Almohadon Gigwi",
     "descripcion": "Juguete tipo peluche con costura reforzada y parches de ecocuero para perros",
     "precio": 19860.00,
     "marca": "Gigwi",
-    "categoria": ["accesorios"],
-    "tipo_animal": "perros",
+    "categoria": ["accesorios", "juguetes"],
+    "tipo_animal": "perro",
     "imagen_url": "https://catycanar.vtexassets.com/arquivos/ids/159945-800-auto?v=637733199261100000&width=800&height=auto&aspect=true"
   },
   {
@@ -184,7 +175,7 @@
     "descripcion": "Estas medallas identificatorias reproducen las principales razas de perros y gatos. Cada chapa está esmaltada a mano y realizada con materiales analérgicos. Se puede personalizar con 3 líneas de 15 caracteres cada una en su parte posterior.",
     "precio": 3000.00,
     "marca": "Chapín",
-    "categoria": ["accesorios"],
+    "categoria": ["accesorios", "indumentaria"],
     "tipo_animal": "gato",
     "imagen_url": "https://catycanar.vtexassets.com/arquivos/ids/157610-1200-auto?v=637732975877030000&width=1200&height=auto&aspect=true"
   },
@@ -197,8 +188,7 @@
     "categoria": ["salud"],
     "tipo_animal": "gato",
     "imagen_url": "https://catycanar.vtexassets.com/arquivos/ids/156018-800-auto?v=637732967441000000&width=800&height=auto&aspect=true"
-  },
-  
+  }, 
   {
     "id": 20,
     "nombre_producto": "Comprimido Antipulgas Y Garrapatas Perro 25,1 A 50 Kg Nexgard",
@@ -208,8 +198,7 @@
     "categoria": ["salud"],
     "tipo_animal": "perro",
     "imagen_url": "https://catycanar.vtexassets.com/arquivos/ids/163027-800-auto?v=637786405998100000&width=800&height=auto&aspect=true"
-  },
-  
+  },  
   {
     "id": 21,
     "nombre_producto": "Shampoo Perro Perfumado C/Alantoina X 250 Cc Osspret",
@@ -217,10 +206,9 @@
     "precio":1381.00,
     "marca": "Osspret",
     "categoria": ["higiene"],
-    "tipo_animal": "perros",
+    "tipo_animal": "perro",
     "imagen_url": "https://catycanar.vtexassets.com/arquivos/ids/162705-600-auto?v=637786402334200000&width=600&height=auto&aspect=true"
   },
-  
   {
     "id": 22 ,
     "nombre_producto": "Fuente Catit Acero Max X 2 Lt",
@@ -230,16 +218,14 @@
     "categoria": ["bebederos"],
     "tipo_animal": "gato",
     "imagen_url": "https://catycanar.vtexassets.com/arquivos/ids/158973-1600-auto?v=637732985338070000&width=1600&height=auto&aspect=true"
-  },
-  
-  
+  }, 
   {
     "id": 23,
     "nombre_producto": "Catnip Ball",
     "descripcion": "Estimulador para gatos Catnip. Puede lamerlo y morderlo ya que es 100% orgánico y no posee ningún tipo de químicos ni pesticidas.",
     "precio": 3000,
     "marca": "Catnip",
-    "categoria": ["accesorios"],
+    "categoria": ["accesorios", "juguetes"],
     "tipo_animal": "gato",
     "imagen_url": "https://catycanar.vtexassets.com/arquivos/ids/158358-800-auto?v=637732979633900000&width=800&height=auto&aspect=true"
   },
@@ -249,13 +235,13 @@
     "descripcion": "Este arnés para perros es suave y contiene una cinta plana hecha de malla transpirable. Es cómodo de llevar y completamente ajustable al abdomen.",
     "precio": 1000,
     "marca": "Trixie",
-    "categoria": ["accesorios"],
+    "categoria": ["accesorios", "indumentaria"],
     "tipo_animal": "perro",
     "imagen_url": "https://catycanar.vtexassets.com/arquivos/ids/158120-1200-auto?v=637732978186100000&width=1200&height=auto&aspect=true"
   }
-  
-  ]
-
+  ],
+  "categorias": ["alimentos", "juguetes", "indumentaria", "accesorios", "salud", "peceras", "acuarios", "comederos", "bebederos", "camas", "cuchas", "casas", "higiene"],
+  "tipo_animal": ["gato", "perro", "ave", "pez", "pequeño", "exotico"]
 }
   
   

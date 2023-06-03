@@ -9,7 +9,7 @@ import { DatosTarjetaComponent } from './datos-tarjeta/datos-tarjeta.component';
   declarations: [
     RegistrarseComponent,
     InicioSesionComponent,
-    DatosTarjetaComponent
+    DatosTarjetaComponent,
   ],
   imports: [
     CommonModule,
@@ -21,4 +21,4 @@ import { DatosTarjetaComponent } from './datos-tarjeta/datos-tarjeta.component';
     DatosTarjetaComponent
   ]
 })
-export class FormsModule { }
+export class FormulariosModule { }

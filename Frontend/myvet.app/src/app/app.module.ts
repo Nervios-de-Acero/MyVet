@@ -13,10 +13,10 @@ import { QuienesSomosComponent } from './pages/quienes-somos/quienes-somos.compo
 import { ServiciosComponent } from './pages/ServiciosComponent/servicios.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
-import { FormsModule } from './forms/forms.module';
+import { FormulariosModule } from './forms/forms.module';
 import { InicioSesionComponent } from './forms/inicio-sesion/inicio-sesion.component';
 import { RegistrarseComponent } from './forms/registrarse/registrarse.component';
-import { ProductosService } from './productos.service';
+import { ProductosService } from '../servicios/productos.service';
 
 
 
@@ -48,7 +48,7 @@ const routes: Routes = [
         SharedModule,
         HttpClientModule,
         ReactiveFormsModule,
-        FormsModule
+        FormulariosModule
 
     ]
 })
