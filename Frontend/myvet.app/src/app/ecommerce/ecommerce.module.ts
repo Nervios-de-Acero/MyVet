@@ -1,5 +1,4 @@
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
 import { BannerComponent } from './banner/banner.component';
 import { BuscarAnimalesComponent } from './buscar-animales/buscar-animales.component';
 import { CatalogoComponent } from './catalogo/catalogo.component';
