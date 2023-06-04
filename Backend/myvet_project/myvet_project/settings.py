@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'productos',
     "crispy_forms",
-    "crispy_bootstrap5"
+    "crispy_bootstrap5",
 ]
 
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
@@ -85,7 +85,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'myvetdb',
         'USER': 'root',
-        'PASSWORD': 'eym72bqr',
+        'PASSWORD': 'root',
         'HOST': 'localhost',
         'PORT': '3306',
     }

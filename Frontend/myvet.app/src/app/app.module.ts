@@ -15,11 +15,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormulariosModule } from './forms/forms.module';
 import { InicioSesionComponent } from './forms/inicio-sesion/inicio-sesion.component';
+import { ProductosService } from 'src/servicios/productos.service';
 import { RegistrarseComponent } from './forms/registrarse/registrarse.component';
-import { ProductosService } from '../servicios/productos.service';
-
-
-
 
 const routes: Routes = [
     {path:'', component:InicioComponent},
@@ -49,7 +46,6 @@ const routes: Routes = [
         HttpClientModule,
         ReactiveFormsModule,
         FormulariosModule
-
     ]
 })
 export class AppModule { }
