@@ -111,4 +111,19 @@ main {
       width: 100%;
     }
     }
-    
+
+    .warning {
+      color: red;
+      font-size: 15px;
+    }
+
+    .errorEnvio {
+      font-size: 18px;
+      text-shadow: 1px 1px 3px black;
+    }
+
+    .enviado {
+      font-size: 18px;
+      text-shadow: 1px 1px 3px black;
+      color: green;
+    }
