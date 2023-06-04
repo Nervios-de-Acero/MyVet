@@ -5,7 +5,7 @@
     <legend class="title">Registrate</legend>
       <div class="inputSpanCtn">
         <div class="inputContainer">
-          <input type="text" id="user_first_name" class="input" name="user_first_name" formControlName="nombre" [class.invalid]="esInvalido('nombre')">
+          <input type="text" id="user_first_name" class="input" name="user_first_name" formControlName="nombre" [class.border-danger]="esInvalido('nombre')">
           <label for="user_first_name" class="label">Nombre :</label>
         </div>
         <span class="warning" *ngIf="mostrarError('nombre', 'required')">Campo obligatorio</span>
@@ -13,7 +13,7 @@
       </div>
       <div class="inputSpanCtn">
         <div class="inputContainer">
-          <input type="text" id="user_last_name" class="input" name="user_last_name" formControlName="apellido" [class.invalid]="esInvalido('apellido')">
+          <input type="text" id="user_last_name" class="input" name="user_last_name" formControlName="apellido" [class.border-danger]="esInvalido('apellido')">
           <label for="user_last_name" class="label">Apellido:</label>
         </div>
         <span class="warning" *ngIf="mostrarError('apellido', 'required')">Campo obligatorio</span>
@@ -21,7 +21,7 @@
       </div>
       <div class="inputSpanCtn">
         <div class="inputContainer">
-          <input type="email" id="user_mail" class="input" name="user_mail" formControlName="email" [class.invalid]="esInvalido('email')">
+          <input type="email" id="user_mail" class="input" name="user_mail" formControlName="email" [class.border-danger]="esInvalido('email')">
           <label for="user_mail" class="label">Correo electrónico:</label>
         </div>
         <span class="warning" *ngIf="mostrarError('email', 'email')">Email inválido</span>
@@ -29,7 +29,7 @@
       </div>
       <div class="inputSpanCtn">
         <div class="inputContainer">
-          <input type="password" class="input" id="user_password" name="user_password" formControlName="pass" [class.invalid]="esInvalido('pass')" (blur)="obtenerPassword()">
+          <input type="password" class="input" id="user_password" name="user_password" formControlName="pass" [class.border-danger]="esInvalido('pass')" (blur)="obtenerPassword()">
           <label for="user_password" class="label">Contraseña:</label>
         </div>
         <span class="warning" *ngIf="mostrarError('pass', 'pattern')">La contraseña debe contener mínimo 8 caracteres, una mayúscula, una minúscula, un número y un caracter especial</span>
@@ -37,7 +37,7 @@
       </div>
       <div class="inputSpanCtn">
         <div class="inputContainer">
-          <input type="password" class="input" id="user_password2" name="user_password2" minlength="6" maxlength="15" formControlName="pass2" [class.invalid]="esInvalido('pass2')" (blur)="compararPass()">
+          <input type="password" class="input" id="user_password2" name="user_password2" minlength="6" maxlength="15" formControlName="pass2" [class.border-danger]="esInvalido('pass2')" (blur)="compararPass()">
           <label for="user_password2" class="label">Confirmar contraseña:</label>
         </div>
         <span class="warning" *ngIf="confirmacionInvalida && formRegistro.get('pass2')?.value">La contraseña no coincide</span>
