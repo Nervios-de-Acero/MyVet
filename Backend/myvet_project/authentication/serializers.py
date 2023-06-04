@@ -8,11 +8,14 @@ from .models import *
 class UserSerializer(serializers.ModelSerializer):
     email = serializers.EmailField(required=True)
     username = serializers.CharField(required=True)
+    nombre = serializers.CharField(required=True)
+    apellido = serializers.CharField(required=True)
     password = serializers.CharField(min_length=8, write_only=True)
+    avatar = serializers.ImageField(required=False, allow_null=True)
    
     class Meta:
         model = get_user_model()
-        fields = ('email', 'username', 'password')
+        fields = ('email', 'username','password', 'nombre', 'apellido', 'telefono', 'dni', 'direccion', 'avatar')
     
     def validate_password(self, value):
         return make_password(value)
@@ -42,7 +45,6 @@ class UserSerializer(serializers.ModelSerializer):
         return super().update(instance, validated_data)  # seguimos la ejecución
 
      
-
 
 
 

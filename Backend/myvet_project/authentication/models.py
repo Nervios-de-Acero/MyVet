@@ -12,31 +12,42 @@ def path_to_avatar(instance, filename):
 class CustomUser(AbstractUser):
     email = models.EmailField(max_length=150, unique=True)
     USERNAME_FIELD = 'email'  # new
-    REQUIRED_FIELDS = ['username', 'password']
+    REQUIRED_FIELDS = ['username','password']
+    nombre = models.CharField(max_length=50,  blank=True)
+    apellido = models.CharField(max_length=50, blank=True, null=True)
+    telefono = models.CharField(max_length=15,  null=True)
+    dni = models.CharField(max_length=8, null=True)
+    direccion = models.CharField(max_length=255, default="Sin dirección")
     avatar = models.ImageField(upload_to= path_to_avatar, null=True, blank=True)
     
     def __str__(self):
-        return self.username
+        return "{} {} {} {} {} {}".format(self.nombre, self.apellido, self.telefono,
+                                             self.dni, self.direccion, self.avatar)
  
-    
-""" class Usuario(models.Model):
-    id_usuario = models.OneToOneField(CustomUser, on_delete=models.CASCADE, related_name='perfil')
-    nombre = models.CharField(max_length=50)
-    apellido = models.CharField(max_length=50, blank=True, null=True)
-    telefono = models.CharField(max_length=15)
-    dni = models.CharField(max_length=8)
-    direccion = models.CharField(max_length=50)
- 
-    def getEmail(self):
-        return f"{self.id_usuario.email}"
-    
-    class Meta:
-         db_table = 'usuario' # Le doy de nombre 'usuario' a nuestra tabla en la Base de Datos
+
     
     
-    def __str__(self):
-         return "{} {} {} {} {}".format(self.nombre, self.apellido, self.telefono,
-                                             self.dni, self.direccion) """
+
+"""     class Usuario(models.Model):
+        id_usuario = models.OneToOneField(CustomUser, on_delete=models.CASCADE, related_name='perfil')
+        nombre = models.CharField(max_length=50)
+        apellido = models.CharField(max_length=50, blank=True, null=True)
+        telefono = models.CharField(max_length=15)
+        dni = models.CharField(max_length=8)
+        direccion = models.CharField(max_length=50)
+    
+        def getEmail(self):
+            return f"{self.id_usuario.email}"
+        
+        class Meta:
+            db_table = 'usuario' # Le doy de nombre 'usuario' a nuestra tabla en la Base de Datos
+        
+        
+        def __str__(self):
+            return "{} {} {} {} {}".format(self.nombre, self.apellido, self.telefono,
+                                                self.dni, self.direccion)  """
+
+
 """
 class TarjetaDePago(models.Model):
     id_tarjeta = models.AutoField(primary_key=True)

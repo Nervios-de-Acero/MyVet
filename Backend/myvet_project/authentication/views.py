@@ -1,9 +1,11 @@
-from django.contrib.auth import authenticate, login, logout
-from django.contrib.auth import get_user_model
-from rest_framework import status, generics
+from django.contrib.auth import authenticate, login, logout, get_user_model
+from django.contrib import messages
+from django.shortcuts import redirect, render
+from rest_framework import status, generics, viewsets
 from rest_framework.response import Response
+from rest_framework.permissions import IsAdminUser, AllowAny, IsAuthenticated
 from rest_framework.views import APIView
-from .serializers import UserSerializer
+from .serializers import *
 
 from django.dispatch import receiver
 from django_rest_passwordreset.signals import reset_password_token_created
@@ -25,6 +27,7 @@ class LoginView(APIView):
 
 
 class LogoutView(APIView):
+    permission_classes = [AllowAny] 
     def post(self, request):
         # Borramos de la request la información de sesión
         logout(request)
@@ -34,7 +37,8 @@ class LogoutView(APIView):
 
 class SignupView(generics.CreateAPIView):
     serializer_class = UserSerializer
-
+ 
+    
 @receiver(reset_password_token_created)
 def password_reset_token_created(sender, instance, reset_password_token, *args, **kwargs):
     # Aquí deberíamos mandar un correo al cliente...
@@ -44,12 +48,43 @@ def password_reset_token_created(sender, instance, reset_password_token, *args, 
         f"También puedes hacerlo directamente desde el cliente web en http://localhost:3000/new-password/?token={reset_password_token.key}.\n")
 
 class ProfileView(generics.RetrieveUpdateAPIView):
+    permission_classes = [IsAuthenticated] #Solo usuarios logueados pueden ver.
     serializer_class = UserSerializer
     http_method_names = ['get', 'patch']
-
     def get_object(self):
         if self.request.user.is_authenticated:
             return self.request.user
+        
+class ListarUsuarios(generics.ListCreateAPIView):
+    queryset = CustomUser.objects.all()
+    serializer_class = UserSerializer
+    http_method_names = ['get']
+    permission_classes = [IsAdminUser]
+    def list(self, request):
+        queryset = self.get_queryset()
+        serializer = UserSerializer(queryset, many=True)
+        if self.request.user.is_authenticated:
+            return Response(serializer.data)
+
+class UpdateUserView(APIView):
+    permission_classes = [IsAuthenticated]
+    
+    def patch(self, request):
+        user = request.user
+        serializer = UserSerializer(user, data=request.data, partial=True)
+        
+        if serializer.is_valid():
+            # Si se envía una nueva contraseña, la actualizamos explícitamente
+            password = request.data.get('password')
+            if password:
+                user.set_password(password)
+            
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_200_OK)
+        
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
 
 """     def perform_create(self, serializer):
         user = serializer.save()
