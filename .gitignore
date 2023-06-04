@@ -49,3 +49,12 @@ MANIFEST
 #  before PyInstaller builds the exe, so as to inject date/other infos into it.
 *.manifest
 *.spec
+
+*.log
+*.pot
+*.pyc
+__pycache__/
+local_settings.py
+
+#entorno vitual
+myvet_proyect_virtual
