@@ -1,4 +1,5 @@
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 import { BannerComponent } from './banner/banner.component';
 import { BuscarAnimalesComponent } from './buscar-animales/buscar-animales.component';
 import { CatalogoComponent } from './catalogo/catalogo.component';
@@ -11,11 +12,6 @@ import { ProductoComponent } from './producto/producto.component';
 import { PromocionesBancariasComponent } from './promociones-bancarias/promociones-bancarias.component';
 import { RouterModule } from '@angular/router';
 import { VistaDetalladaComponent } from './vista-detallada/vista-detallada.component';
-<<<<<<< HEAD
-=======
-import { ListaDeDeseosComponent } from './lista-de-deseos/lista-de-deseos.component';
-import { FormulariosModule } from '../forms/forms.module'; 
->>>>>>> Develop
 
 @NgModule({
   declarations: [
@@ -32,7 +28,6 @@ import { FormulariosModule } from '../forms/forms.module';
   imports: [
     CommonModule,
     RouterModule,
-    FormulariosModule
   ],
   exports: [
     CatalogoComponent,
