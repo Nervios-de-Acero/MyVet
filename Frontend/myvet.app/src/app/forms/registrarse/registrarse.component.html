@@ -1,5 +1,7 @@
 <main>
     <form id="register" [formGroup]="formRegistro" (ngSubmit)="onSubmit()">
+      <span class="warning errorEnvio" *ngIf="invalido">Error: Algunos campos son inválidos. Revise los datos antes de enviarlos.</span>
+      <span class="enviado" *ngIf="enviado && invalido === false">¡Formulario enviado exitosamente!</span>
     <legend class="title">Registrate</legend>
       <div class="inputSpanCtn">
         <div class="inputContainer">
@@ -27,7 +29,7 @@
       </div>
       <div class="inputSpanCtn">
         <div class="inputContainer">
-          <input type="password" class="input" id="user_password" name="user_password" formControlName="pass" [class.invalid]="esInvalido('pass')">
+          <input type="password" class="input" id="user_password" name="user_password" formControlName="pass" [class.invalid]="esInvalido('pass')" (blur)="obtenerPassword()">
           <label for="user_password" class="label">Contraseña:</label>
         </div>
         <span class="warning" *ngIf="mostrarError('pass', 'pattern')">La contraseña debe contener mínimo 8 caracteres, una mayúscula, una minúscula, un número y un caracter especial</span>
@@ -35,10 +37,10 @@
       </div>
       <div class="inputSpanCtn">
         <div class="inputContainer">
-          <input type="password" class="input" id="user_password2" name="user_password2" minlength="6" maxlength="15" formControlName="pass2" [class.invalid]="esInvalido('pass2')">
+          <input type="password" class="input" id="user_password2" name="user_password2" minlength="6" maxlength="15" formControlName="pass2" [class.invalid]="esInvalido('pass2')" (blur)="compararPass()">
           <label for="user_password2" class="label">Confirmar contraseña:</label>
         </div>
-        <span class="warning">La contraseña no coincide</span>
+        <span class="warning" *ngIf="confirmacionInvalida && formRegistro.get('pass2')?.value">La contraseña no coincide</span>
         <span class="warning" *ngIf="mostrarError('pass2', 'required')">Campo obligatorio</span>
       </div>
       <input type="submit" id="registerSubmit" value="Registrarse" class="btn_registro">

@@ -16,14 +16,11 @@ export class RegistrarseComponent {
   })
 
   enviado = false;
+  valorPass: string | undefined | null;
+  confirmacionInvalida = false;
+  invalido = false;
 
   constructor(private fb: FormBuilder) {}
-  onSubmit() {
-    console.log('Se envió el form')
-    console.log(this.formRegistro.value)
-    console.log(this.formRegistro.invalid)
-    this.enviado = true
-  }
 
   esInvalido(nombre: string) {
   return this.formRegistro.get(nombre)?.invalid &&
@@ -33,5 +30,28 @@ export class RegistrarseComponent {
   mostrarError(nombre:string, error:string){
   return this.formRegistro.get(nombre)?.hasError(error) &&
     ( this.formRegistro.get(nombre)?.touched || this.enviado)
+  }
+
+  obtenerPassword() {
+    this.valorPass = this.formRegistro.get('pass')?.value 
+  }
+
+  compararPass(){
+    const confirmacion = this.formRegistro.get('pass2')?.value
+    this.confirmacionInvalida = this.valorPass !== confirmacion 
+  }
+
+  onSubmit() {
+    this.enviado = true
+
+    if(this.formRegistro.invalid) {
+      this.invalido = true
+      return
+    }
+    else {
+      this.invalido = false
+      console.log(this.formRegistro.value) 
+      // INYECTAR SERVICIO CON MÉTODO POST
+    }
   }
 }
