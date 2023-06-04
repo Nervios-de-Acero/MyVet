@@ -85,7 +85,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'myvetdb',
         'USER': 'root',
-        'PASSWORD': 'eym72bqr',
+        'PASSWORD': 'root',
         'HOST': 'localhost',
         'PORT': '3306',
     }
