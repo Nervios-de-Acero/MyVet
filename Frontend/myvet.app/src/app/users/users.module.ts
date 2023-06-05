@@ -3,8 +3,6 @@ import { CommonModule } from '@angular/common';
 import { PerfilComponent } from './perfil/perfil.component';
 import { MenuComponent } from './menu/menu.component';
 
-
-
 @NgModule({
   declarations: [
     PerfilComponent,
