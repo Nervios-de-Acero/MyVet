@@ -6,6 +6,7 @@ import { CatalogoComponent } from './catalogo/catalogo.component';
 import { CategoriasComponent } from './categorias/categorias.component';
 import { CommonModule } from '@angular/common';
 import { FormularioEnvioComponent } from './formulario-envio/formulario-envio.component';
+import { FormulariosModule } from "../forms/forms.module";
 import { ListaDeDeseosComponent } from './lista-de-deseos/lista-de-deseos.component';
 import { NgModule } from '@angular/core';
 import { ProductoComponent } from './producto/producto.component';
@@ -14,28 +15,29 @@ import { RouterModule } from '@angular/router';
 import { VistaDetalladaComponent } from './vista-detallada/vista-detallada.component';
 
 @NgModule({
-  declarations: [
-    CatalogoComponent,
-    ProductoComponent,
-    BannerComponent,
-    VistaDetalladaComponent,
-    BuscarAnimalesComponent,
-    CategoriasComponent,
-    PromocionesBancariasComponent,
-    FormularioEnvioComponent,
-    ListaDeDeseosComponent
-  ],
-  imports: [
-    CommonModule,
-    RouterModule,
-  ],
-  exports: [
-    CatalogoComponent,
-    BannerComponent,
-    BuscarAnimalesComponent,
-    CategoriasComponent,
-    PromocionesBancariasComponent, 
-    ListaDeDeseosComponent
-  ]
+    declarations: [
+        CatalogoComponent,
+        ProductoComponent,
+        BannerComponent,
+        VistaDetalladaComponent,
+        BuscarAnimalesComponent,
+        CategoriasComponent,
+        PromocionesBancariasComponent,
+        FormularioEnvioComponent,
+        ListaDeDeseosComponent
+    ],
+    exports: [
+        CatalogoComponent,
+        BannerComponent,
+        BuscarAnimalesComponent,
+        CategoriasComponent,
+        PromocionesBancariasComponent,
+        ListaDeDeseosComponent
+    ],
+    imports: [
+        CommonModule,
+        RouterModule,
+        FormulariosModule
+    ]
 })
 export class EcommerceModule { } 
