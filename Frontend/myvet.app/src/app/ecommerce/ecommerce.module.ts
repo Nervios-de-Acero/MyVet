@@ -11,11 +11,8 @@ import { ProductoComponent } from './producto/producto.component';
 import { PromocionesBancariasComponent } from './promociones-bancarias/promociones-bancarias.component';
 import { RouterModule } from '@angular/router';
 import { VistaDetalladaComponent } from './vista-detallada/vista-detallada.component';
-<<<<<<< HEAD
-=======
 import { ListaDeDeseosComponent } from './lista-de-deseos/lista-de-deseos.component';
 import { FormulariosModule } from '../forms/forms.module'; 
->>>>>>> Develop
 
 @NgModule({
   declarations: [
