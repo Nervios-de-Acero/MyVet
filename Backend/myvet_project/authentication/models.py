@@ -17,7 +17,7 @@ class CustomUser(AbstractUser):
     apellido = models.CharField(max_length=50, blank=True, null=True)
     telefono = models.CharField(max_length=15,  null=True)
     dni = models.CharField(max_length=8, null=True)
-    direccion = models.CharField(max_length=255, default="Sin dirección")
+    direccion = models.CharField(max_length=255, null=True)
     avatar = models.ImageField(upload_to= path_to_avatar, null=True, blank=True)
     
     def __str__(self):
