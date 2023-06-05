@@ -1,4 +1,4 @@
-.form_registro{
+.form_login{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -188,4 +188,10 @@
         grid-gap: 50px;
         padding: 45px 0 px;
       }
+    }
+
+    .warning{
+      color:red;
+      font-size: 15px;
+
     }
