@@ -1,15 +1,18 @@
 <main>
-    <div class="form_registro">
-    <form action="?" method="post">
+    <div class="form_login">
+    <form action="?" method="post" [formGroup]="formLogin" (ngSubmit)="onSubmit()">
       <legend class="title">Iniciar Sesión</legend>
         <div class="inputContainer">
-          <input type="email" class="input" name="user_mail" placeholder="a">
+          <input type="email" class="input" name="user_mail" placeholder="a" formControlName="email" [class.border-danger]="invalido">
           <label for="mail" class="label">Correo electrónico:</label>
         </div>
+        <span class="warning" *ngIf="mostrarError('email','email')">Email inválido</span>
+        <span class="warning" *ngIf="mostrarError('email','required')">Campo obligatorio</span>
         <div class="inputContainer">
-          <input type="password" class="input" id="password1" name="user_password" minlength="6" maxlength="15" placeholder="a">
+          <input type="password" class="input" id="password1" name="user_password" minlength="6" maxlength="15" placeholder="a" formControlName="password" [class.border-danger]="invalido">
           <label for="password1" class="label">Contraseña:</label>
         </div>
+        <span class="warning" *ngIf="mostrarError('password','required')">Campo obligatorio</span>
         <input type="submit" value="Iniciar Sesión" class="btn_registro">
         <a href="">¿Olvidaste tu contraseña?</a>
     </form>
