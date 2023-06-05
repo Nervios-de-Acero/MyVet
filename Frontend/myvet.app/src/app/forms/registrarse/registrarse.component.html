@@ -29,6 +29,13 @@
       </div>
       <div class="inputSpanCtn">
         <div class="inputContainer">
+          <input type="text" id="user_username" class="input" name="user_username" formControlName="username" [class.border-danger]="esInvalido('username')">
+          <label for="user_username" class="label">Nombre de usuario:</label>
+        </div>
+        <span class="warning" *ngIf="mostrarError('username', 'required')">Campo obligatorio</span>
+      </div>
+      <div class="inputSpanCtn">
+        <div class="inputContainer">
           <input type="password" class="input" id="user_password" name="user_password" formControlName="pass" [class.border-danger]="esInvalido('pass')" (blur)="obtenerPassword()">
           <label for="user_password" class="label">Contraseña:</label>
         </div>
