@@ -38,8 +38,13 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'productos',
-    "crispy_forms",
-    "crispy_bootstrap5",
+    'rest_framework',
+    'authentication',
+    'django_rest_passwordreset',
+    'corsheaders',
+    #"crispy_forms",
+    #"crispy_bootstrap5",
+    'usuario',
 ]
 
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
@@ -54,6 +59,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'myvet_project.urls'
@@ -83,7 +89,7 @@ WSGI_APPLICATION = 'myvet_project.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'myvetdb',
+        'NAME': 'myvet',
         'USER': 'root',
         'PASSWORD': 'root',
         'HOST': 'localhost',
@@ -132,3 +138,11 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+#esto se agrega 
+AUTH_USER_MODEL = "authentication.CustomUser"
+
+# Configuración de CORS agregado
+CORS_ORIGIN_WHITELIST = ["http://localhost:3000"]
+
+CORS_ALLOW_CREDENTIALS = True
