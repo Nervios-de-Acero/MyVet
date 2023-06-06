@@ -15,29 +15,29 @@ import { RouterModule } from '@angular/router';
 import { VistaDetalladaComponent } from './vista-detallada/vista-detallada.component';
 
 @NgModule({
-    declarations: [
-        CatalogoComponent,
-        ProductoComponent,
-        BannerComponent,
-        VistaDetalladaComponent,
-        BuscarAnimalesComponent,
-        CategoriasComponent,
-        PromocionesBancariasComponent,
-        FormularioEnvioComponent,
-        ListaDeDeseosComponent
-    ],
-    exports: [
-        CatalogoComponent,
-        BannerComponent,
-        BuscarAnimalesComponent,
-        CategoriasComponent,
-        PromocionesBancariasComponent,
-        ListaDeDeseosComponent
-    ],
-    imports: [
-        CommonModule,
-        RouterModule,
-        FormulariosModule
-    ]
+  declarations: [
+    CatalogoComponent,
+    ProductoComponent,
+    BannerComponent,
+    VistaDetalladaComponent,
+    BuscarAnimalesComponent,
+    CategoriasComponent,
+    PromocionesBancariasComponent,
+    FormularioEnvioComponent,
+    ListaDeDeseosComponent
+  ],
+  imports: [
+    CommonModule,
+    RouterModule,
+    FormulariosModule
+  ],
+  exports: [
+    CatalogoComponent,
+    BannerComponent,
+    BuscarAnimalesComponent,
+    CategoriasComponent,
+    PromocionesBancariasComponent, 
+    ListaDeDeseosComponent
+  ]
 })
 export class EcommerceModule { } 
