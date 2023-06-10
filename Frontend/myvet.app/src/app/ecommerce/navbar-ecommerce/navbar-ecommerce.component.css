@@ -1,4 +1,3 @@
-/*Navbar*/ 
 .main-header{
     display: flex;
     align-items: center;
@@ -7,11 +6,14 @@
     padding: 10px;
     background-color: rgba(196, 241, 122, 0.849);
 }  
+.logo-container{
+    display: flex;
+    align-items: center;
+}
 .logo-img{
     max-width: 100%;
-    margin: 0;
-    height: 120px;
-    padding: 0;
+    height: 100px;
+    
 }
 .main-logo{
     color: #fff;
@@ -28,10 +30,9 @@
     top: 0;
     left: 0;
     height: 100vh;
-    width: 100%;
+    width: 70%;
     margin-left: -100%;
     transition: all .2s linear;
-    background-color: rgba(196, 241, 122, 0.849);
     z-index: 100;
 }  
 .main-nav.show{
@@ -41,7 +42,7 @@
     background-color: rgb(250,250,250);
     display: flex;
     flex-direction: column;
-    width: 70%;
+    width: 100%;
     height: 100%;
     align-items: center;
     justify-content: flex-start;
@@ -83,7 +84,7 @@
 .button-menu.close span {
     opacity: 1;
     transform: rotate(45deg) translate(0px, 0px);
-    background: #ffffff;
+    background: #fff;
 }
 .button-menu.close span:nth-child(2){
     transform: rotate(-45deg) translate(-8px, 5px);
@@ -101,7 +102,7 @@
     left: 0;
     width: 100%;
     height: 2px;
-    background: linear-gradient(to right, #b47dcd, #e878a2, #eb85ab);
+    background-color: rgba(196, 241, 122, 0.849);
     z-index: 1;
     transform: scaleX(0);
     transform-origin: left;
@@ -114,6 +115,7 @@
 .icon-navbar{
     display: none;
 }
+
 
 @media (min-width: 768px) {
     /* Estilos para tablet y dispositivos más grandes */
@@ -154,10 +156,8 @@
     }
     .main-nav{
         position: static;
-        margin-left: 0;
         flex-basis: 70%;
         height: 100%; 
-        background-color: rgba(196, 241, 122, 0.849);
     }
 }
 

@@ -4,6 +4,7 @@ footer{
     justify-content: space-evenly; 
     align-items: flex-start;
     background-color: rgba(196, 241, 122, 0.849);
+    background-image: none;
 }
 .marca-footer,
 .footer-links {
