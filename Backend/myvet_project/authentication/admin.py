@@ -8,6 +8,8 @@ from .models import *
 class CustomUserAdmin(UserAdmin):
     pass
 
+
+
 """ @admin.register(Usuario)
 class ClientAdmin(admin.ModelAdmin):
     list_display = ('nombre', 'apellido', Usuario.getEmail, 'telefono', 'dni', 'direccion_id', 'created_at')
