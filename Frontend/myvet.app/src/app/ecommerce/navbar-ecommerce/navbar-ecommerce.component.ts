@@ -33,6 +33,6 @@ export class NavbarEcommerceComponent implements OnInit {
   }
 
   openMenu() {
-    this.router.navigate(['/user/menu']);
+    this.router.navigate(['menu']);
   }
 }
