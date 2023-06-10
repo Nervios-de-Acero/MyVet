@@ -15,9 +15,10 @@
 }
 .card-container-wrapper{
     display: flex;
-    overflow-x: auto;
+    overflow-x: scroll;
     scroll-snap-type: x mandatory;
     overscroll-behavior-x: contain;
+    max-width: 100%;
     padding: 10px;
     margin: 10px;
 }
@@ -54,10 +55,10 @@
 }
 
 @media screen and (max-width:374px){
-    .card-container-wrapper {
+   /*  .card-container-wrapper {
         margin-left: -10px;
         margin-right: -10px;
-    }
+    } */
     .card-container {
         width: calc(100% - 20px);
     }
