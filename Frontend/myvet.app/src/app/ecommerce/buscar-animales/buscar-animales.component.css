@@ -15,12 +15,13 @@
 }
 .card-container-wrapper{
     display: flex;
-    overflow-x: scroll;
+    overflow-x: auto;
     scroll-snap-type: x mandatory;
     overscroll-behavior-x: contain;
     max-width: 100%;
     padding: 10px;
     margin: 10px;
+    overflow-y: hidden;
 }
 
 .card-container{

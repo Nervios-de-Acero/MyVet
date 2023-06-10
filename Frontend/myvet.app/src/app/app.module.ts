@@ -18,6 +18,7 @@ import { InicioSesionComponent } from './forms/inicio-sesion/inicio-sesion.compo
 import { ProductosService } from 'src/servicios/productos.service';
 import { RegistrarseComponent } from './forms/registrarse/registrarse.component';
 
+
 const routes: Routes = [
     {path:'', component:InicioComponent},
     {path:'quienes-somos', component:QuienesSomosComponent},
@@ -26,7 +27,8 @@ const routes: Routes = [
     {path:'sucursales', component:SucursalesComponent},
     {path:'servicios', component:ServiciosComponent},
     {path:'inicio-sesion', component:InicioSesionComponent},
-    {path:'registrarse', component:RegistrarseComponent}
+    {path:'registrarse', component:RegistrarseComponent},
+    // { path:'menu', component:  }
 ];
 
 

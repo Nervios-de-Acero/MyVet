@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar-ecommerce',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navbar-ecommerce.component.css']
 })
 export class NavbarEcommerceComponent implements OnInit {
+  constructor(private router: Router) { }
+
   toggleButton: HTMLElement | null | undefined;
   navWrapper: HTMLElement | null | undefined;
 
@@ -27,5 +30,9 @@ export class NavbarEcommerceComponent implements OnInit {
         }
       });
     }
+  }
+
+  openMenu() {
+    this.router.navigate(['/user/menu']);
   }
 }
