@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { ProductModel } from 'src/app/models/productos.model';
 import { DetalleProductoService } from 'src/servicios/detalle-producto.service';
 import { Router } from '@angular/router';
-import { Location } from '@angular/common';
+
 
 @Component({
   selector: 'app-producto',
@@ -10,11 +10,11 @@ import { Location } from '@angular/common';
   styleUrls: ['./producto.component.css']
 })
 
-export class ProductoComponent{
+export class ProductoComponent {
 
-  @Input() objetoProducto!:ProductModel; 
+@Input() objetoProducto!:ProductModel; 
 
-constructor(private dp: DetalleProductoService, private router: Router, private location: Location) {}
+constructor(private dp: DetalleProductoService, private router: Router) {}
 
 crearDetalle(producto: ProductModel): void {
   this.dp.setDetail(producto)

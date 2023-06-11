@@ -17,18 +17,14 @@ const routes: Routes = [
   {path:'', component:InicioComponent},
   {path:'quienes-somos', component:QuienesSomosComponent},
   {path:'petshop', 
-  component: PetshopComponent,
-  children: [
-    {path: '',
-    component: CatalogoComponent},
-    {path: 'producto/:id',
-    component: VistaDetalladaComponent}
-  ]},
+  component: PetshopComponent},
   {path:'contacto', component:ContactoComponent},
   {path:'sucursales', component:SucursalesComponent},
   {path:'servicios', component:ServiciosComponent},
   {path:'inicio-sesion', component:InicioSesionComponent},
-  {path:'registrarse', component:RegistrarseComponent}
+  {path:'registrarse', component:RegistrarseComponent},
+  {path: 'petshop/producto/:id',
+    component: VistaDetalladaComponent}
 ];
 
 @NgModule({
