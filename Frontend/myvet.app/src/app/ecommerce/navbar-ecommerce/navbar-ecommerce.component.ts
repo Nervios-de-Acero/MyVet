@@ -32,7 +32,9 @@ export class NavbarEcommerceComponent implements OnInit {
     }
   }
 
-  openMenu() {
-    this.router.navigate(['menu']);
+  showMenu = false;
+
+  toggleMenu() {
+    this.showMenu = !this.showMenu;
   }
 }

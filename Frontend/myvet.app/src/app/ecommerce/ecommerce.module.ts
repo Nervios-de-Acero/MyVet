@@ -14,6 +14,7 @@ import { ListaDeDeseosComponent } from './lista-de-deseos/lista-de-deseos.compon
 import { FormulariosModule } from '../forms/forms.module';
 import { NavbarEcommerceComponent } from './navbar-ecommerce/navbar-ecommerce.component';
 import { FooterEcommerceComponent } from './footer-ecommerce/footer-ecommerce.component'; 
+import { UsersModule } from '../users/users.module';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { FooterEcommerceComponent } from './footer-ecommerce/footer-ecommerce.co
   imports: [
     CommonModule,
     RouterModule,
-    FormulariosModule
+    FormulariosModule,
+    UsersModule
   ],
   exports: [
     CatalogoComponent,

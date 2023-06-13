@@ -12,7 +12,8 @@ import { PerfilComponent } from './perfil/perfil.component';
     CommonModule
   ],
   exports: [
-    PerfilComponent
+    PerfilComponent,
+    MenuComponent
   ]
 })
 export class UsersModule { }

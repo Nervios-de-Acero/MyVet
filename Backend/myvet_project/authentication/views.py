@@ -1,5 +1,96 @@
 from django.contrib.auth import authenticate, login, logout, get_user_model
 from django.contrib import messages
+from rest_framework import status, generics, viewsets
+from rest_framework.response import Response
+from rest_framework.permissions import IsAdminUser, AllowAny, IsAuthenticated
+from rest_framework.views import APIView
+from .serializers import *
+from rest_framework.permissions import IsAuthenticated
+from rest_framework_simplejwt.tokens import RefreshToken
+from django_rest_passwordreset.signals import reset_password_token_created
+from django.contrib.auth.forms import AuthenticationForm
+
+
+class UserRegistrationView(generics.CreateAPIView):
+    permission_classes = [AllowAny]
+    serializer_class = UsuarioSerializer
+
+    def post(self, request):
+        serializer = self.get_serializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+class UserLoginView(APIView):
+    permission_classes = [AllowAny]
+
+    def post(self, request):
+        email = request.data.get('email')
+        password = request.data.get('password')
+
+        user = authenticate(request, email=email, password=password)
+        if user is not None:
+            refresh = RefreshToken.for_user(user)
+            return Response({
+                'refresh': str(refresh),
+                'access': str(refresh.access_token),
+            }, status=status.HTTP_200_OK)
+        else:
+            return Response({'error': 'Invalid credentials'}, status=status.HTTP_401_UNAUTHORIZED)
+        
+class UserLogoutView(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def post(self, request):
+        refresh_token = request.data.get('refresh_token')
+        token = RefreshToken(refresh_token)
+        token.blacklist()
+        return Response(status=status.HTTP_204_NO_CONTENT)
+
+class UserListView(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def get(self, request):
+        users = Usuario.objects.all()
+        serializer = UsuarioSerializer(users, many=True)
+        return Response(serializer.data, status=status.HTTP_200_OK)
+
+class UserDetailView(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def get_object(self, pk):
+        try:
+            return Usuario.objects.get(pk=pk)
+        except Usuario.DoesNotExist:
+            raise status.HTTP_404_NOT_FOUND
+
+    def get(self, request, pk):
+        user = self.get_object(pk)
+        serializer = UsuarioSerializer(user)
+        return Response(serializer.data, status=status.HTTP_200_OK)
+
+    def put(self, request, pk):
+        user = self.get_object(pk)
+        serializer = UsuarioSerializer(user, data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_200_OK)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+
+
+
+
+
+
+
+
+
+
+""" from django.contrib.auth import authenticate, login, logout, get_user_model
+from django.contrib import messages
 from django.shortcuts import redirect, render
 from rest_framework import status, generics, viewsets
 from rest_framework.response import Response
@@ -83,7 +174,7 @@ class UpdateUserView(APIView):
             return Response(serializer.data, status=status.HTTP_200_OK)
         
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-
+ """
 
 
 """     def perform_create(self, serializer):
