@@ -1,4 +1,4 @@
-<section id="ContenedorCatalogo" *ngIf="!mostrarDetalle">
+<section id="ContenedorCatalogo" >
   <app-producto *ngFor="let producto of productos;" [objetoProducto] = 'producto'></app-producto>
   <app-datos-tarjeta></app-datos-tarjeta>
 </section>
