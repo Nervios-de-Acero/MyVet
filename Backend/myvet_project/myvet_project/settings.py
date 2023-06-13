@@ -116,6 +116,14 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+PASSWORD_HASHERS = [
+    'django.contrib.auth.hashers.Argon2PasswordHasher',
+    'django.contrib.auth.hashers.PBKDF2PasswordHasher',
+    'django.contrib.auth.hashers.BCryptSHA256PasswordHasher',
+    'django.contrib.auth.hashers.BCryptPasswordHasher',
+    'django.contrib.auth.hashers.PBKDF2PasswordHasher',
+]
+
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
@@ -140,7 +148,8 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 #esto se agrega 
-AUTH_USER_MODEL = "authentication.CustomUser"
+#AUTH_USER_MODEL = "authentication.CustomUser"
+AUTH_USER_MODEL = "authentication.Usuario"
 
 # Configuración de CORS agregado
 CORS_ORIGIN_WHITELIST = ["http://localhost:3000"]

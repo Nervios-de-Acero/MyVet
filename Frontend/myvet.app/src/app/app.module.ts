@@ -17,6 +17,8 @@ import { FormulariosModule } from './forms/forms.module';
 import { InicioSesionComponent } from './forms/inicio-sesion/inicio-sesion.component';
 import { ProductosService } from 'src/servicios/productos.service';
 import { RegistrarseComponent } from './forms/registrarse/registrarse.component';
+import { MenuComponent } from './users/menu/menu.component';
+
 
 const routes: Routes = [
     {path:'', component:InicioComponent},
@@ -26,7 +28,8 @@ const routes: Routes = [
     {path:'sucursales', component:SucursalesComponent},
     {path:'servicios', component:ServiciosComponent},
     {path:'inicio-sesion', component:InicioSesionComponent},
-    {path:'registrarse', component:RegistrarseComponent}
+    {path:'registrarse', component:RegistrarseComponent},
+    { path:'menu', component: MenuComponent }
 ];
 
 

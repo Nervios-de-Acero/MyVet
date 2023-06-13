@@ -1,0 +1,28 @@
+<header class="main-header" >
+  <div class="logo-container">
+    <a routerLink="/"><img class="logo-img" src="../../../assets/img/logo_1_transparente.png" alt="Logo MyVet"></a>  
+    <h1><a class="main-logo" routerLink="/">MyVet Petshop</a></h1>
+  </div>
+  <nav id="nav" class="main-nav">
+    <div class="nav-links" >
+      <a class="link-item" (click)="toggleMenu()">Usuario</a>
+      <div class="menu-container" *ngIf="showMenu">
+        <app-menu></app-menu>
+      </div>
+      <a class="link-item" href="" >Carrito</a>
+    </div>
+    <div class="icon-navbar">
+      <button class="btn-icon"><i class="bi bi-cart4"></i></button>
+      <button class="btn-icon" (click)="toggleMenu()"><i class="bi bi-person"></i></button>
+      <div class="menu-container" *ngIf="showMenu">
+        <app-menu></app-menu>
+      </div>
+      <!-- <button><i class="bi bi-person-circle"></i></button> -->
+    </div>
+  </nav>
+  <button id="button-menu" class="button-menu" >
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+</header>
