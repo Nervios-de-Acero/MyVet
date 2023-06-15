@@ -12,6 +12,8 @@ import { InicioSesionComponent } from './forms/inicio-sesion/inicio-sesion.compo
 import { RegistrarseComponent } from './forms/registrarse/registrarse.component';
 import { CatalogoComponent } from './ecommerce/catalogo/catalogo.component';
 import { VistaDetalladaComponent } from './ecommerce/vista-detallada/vista-detallada.component';
+import { MenuComponent } from './users/menu/menu.component'; 
+import { FavoritosComponent } from './ecommerce/favoritos/favoritos.component';
 
 const routes: Routes = [
   {path:'', component:InicioComponent},
@@ -24,7 +26,9 @@ const routes: Routes = [
   {path:'inicio-sesion', component:InicioSesionComponent},
   {path:'registrarse', component:RegistrarseComponent},
   {path: 'petshop/producto/:id',
-    component: VistaDetalladaComponent}
+    component: VistaDetalladaComponent},
+  { path:'menu', component: MenuComponent},
+  { path:'favoritos', component: FavoritosComponent}
 ];
 
 @NgModule({
