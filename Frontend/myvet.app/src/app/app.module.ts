@@ -20,6 +20,8 @@ import { RegistrarseComponent } from './forms/registrarse/registrarse.component'
 import { MenuComponent } from './users/menu/menu.component';
 import { DetalleProductoService } from 'src/servicios/detalle-producto.service';
 import { FavoritosComponent } from './ecommerce/favoritos/favoritos.component';
+import { NgxPayPalModule } from 'ngx-paypal';
+import { PaypalComponent } from './ecommerce/paypal/paypal.component';
 
 const routes: Routes = [
     {path:'', component:InicioComponent},
@@ -37,7 +39,8 @@ const routes: Routes = [
 
 @NgModule({
     declarations: [
-        AppComponent
+        AppComponent,
+        PaypalComponent
     ],
     providers: [ProductosService, DetalleProductoService],
     bootstrap: [AppComponent],
@@ -50,7 +53,8 @@ const routes: Routes = [
         SharedModule,
         HttpClientModule,
         ReactiveFormsModule,
-        FormulariosModule
+        FormulariosModule,
+        NgxPayPalModule
     ]
 })
 export class AppModule { }

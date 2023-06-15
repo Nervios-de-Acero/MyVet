@@ -12,7 +12,10 @@
       <a class="link-item" routerLink="/favoritos">Carrito</a>
     </div>
     <div class="icon-navbar">
-      <button class="btn-icon"><i class="bi bi-cart4"></i></button>
+      <button class="btn-icon" (click)="toggleMenuPaypal()"><i class="bi bi-cart4"></i></button>
+      <div class="menu-container" *ngIf="showMenuPaypal">
+        <app-paypal></app-paypal>
+      </div>
       <button class="btn-icon" (click)="toggleMenu()"><i class="bi bi-person"></i></button>
       <div class="menu-container" *ngIf="showMenu">
         <app-menu></app-menu>

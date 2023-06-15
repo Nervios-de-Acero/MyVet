@@ -37,4 +37,9 @@ export class NavbarEcommerceComponent implements OnInit {
   toggleMenu() {
     this.showMenu = !this.showMenu;
   }
+  showMenuPaypal = false;
+
+  toggleMenuPaypal() {
+    this.showMenu = !this.showMenu;
+  }
 }
