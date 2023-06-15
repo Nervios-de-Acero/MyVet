@@ -19,6 +19,7 @@ import { ProductosService } from 'src/servicios/productos.service';
 import { RegistrarseComponent } from './forms/registrarse/registrarse.component';
 import { MenuComponent } from './users/menu/menu.component';
 import { DetalleProductoService } from 'src/servicios/detalle-producto.service';
+import { FavoritosComponent } from './ecommerce/favoritos/favoritos.component';
 
 const routes: Routes = [
     {path:'', component:InicioComponent},
@@ -29,7 +30,8 @@ const routes: Routes = [
     {path:'servicios', component:ServiciosComponent},
     {path:'inicio-sesion', component:InicioSesionComponent},
     {path:'registrarse', component:RegistrarseComponent},
-    { path:'menu', component: MenuComponent }
+    { path:'menu', component: MenuComponent },
+    { path:'favoritos', component: FavoritosComponent }
 ];
 
 

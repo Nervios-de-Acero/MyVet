@@ -15,6 +15,7 @@ import { FormulariosModule } from '../forms/forms.module';
 import { NavbarEcommerceComponent } from './navbar-ecommerce/navbar-ecommerce.component';
 import { FooterEcommerceComponent } from './footer-ecommerce/footer-ecommerce.component'; 
 import { UsersModule } from '../users/users.module';
+import { FavoritosComponent } from './favoritos/favoritos.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { UsersModule } from '../users/users.module';
     FormularioEnvioComponent,
     ListaDeDeseosComponent,
     NavbarEcommerceComponent,
-    FooterEcommerceComponent
+    FooterEcommerceComponent,
+    FavoritosComponent
   ],
   imports: [
     CommonModule,
@@ -44,7 +46,8 @@ import { UsersModule } from '../users/users.module';
     PromocionesBancariasComponent, 
     ListaDeDeseosComponent,
     NavbarEcommerceComponent,
-    FooterEcommerceComponent
+    FooterEcommerceComponent,
+    FavoritosComponent
   ]
 })
 export class EcommerceModule { }
