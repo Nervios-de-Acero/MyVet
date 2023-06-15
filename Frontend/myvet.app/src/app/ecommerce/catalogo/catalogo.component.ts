@@ -11,21 +11,12 @@ import { DetalleProductoService } from 'src/servicios/detalle-producto.service';
 })
 export class CatalogoComponent implements OnInit{
   productos: ProductModel[] = []
-  wes: string = ''; // Declaración de la variable "wes" con un tipo de dato
+  
+  constructor (private productosService: ProductosService, private dp: DetalleProductoService) {}
 
-    constructor (private productosService: ProductosService, private dp: DetalleProductoService) {
-
-      this.wes = 'hola'; // Asignación de valor a la variable "wes"
-
-    }
-      ngOnInit(): void {
-          this.productosService.getProductos().subscribe((res: ProductModel[]) => {
-          return this.productos = res
-        }) 
-
-      /*  this.productosService.getProductos().subscribe((productos: ProductModel[]) => {
-          this.productos = productos;
-        }); */
-    
-      }
+  ngOnInit(): void {
+      this.productosService.getProductos().subscribe((res: ProductModel[]) => {
+      return this.productos = res
+    }) 
+  }
 }

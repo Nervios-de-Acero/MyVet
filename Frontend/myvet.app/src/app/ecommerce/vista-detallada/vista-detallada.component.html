@@ -3,10 +3,10 @@
     <div class="imagenProducto"><img [src]="objetoProducto.imagen_url" [alt]="objetoProducto.nombre_producto"></div>
     <div class="detalles">
         <div class="info">
-            <h2>{{ objetoProducto.nombre_producto }}</h2>
-            <p>{{objetoProducto.descripcion}}</p>
+            <h2>{{ objetoProducto.nombre_producto }}</h2> 
             <h3>{{objetoProducto.marca}}</h3>
             <h3>{{objetoProducto.precio | currency}}</h3>
+            <p>{{objetoProducto.descripcion}}</p>
         </div>
 
         <button class="favorito">Agregar a favoritos</button><button class="deseado">Producto deseado</button>
