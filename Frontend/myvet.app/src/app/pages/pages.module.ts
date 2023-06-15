@@ -24,9 +24,9 @@ import { SharedModule } from '../shared/shared.module';
   imports: [
     CommonModule,
     RouterModule,
-    EcommerceModule,
     FormulariosModule,
-    SharedModule
+    SharedModule,
+    EcommerceModule
   ],
   exports:[
     InicioComponent,

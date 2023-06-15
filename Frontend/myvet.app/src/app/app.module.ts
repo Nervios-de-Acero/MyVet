@@ -18,7 +18,7 @@ import { InicioSesionComponent } from './forms/inicio-sesion/inicio-sesion.compo
 import { ProductosService } from 'src/servicios/productos.service';
 import { RegistrarseComponent } from './forms/registrarse/registrarse.component';
 import { MenuComponent } from './users/menu/menu.component';
-
+import { DetalleProductoService } from 'src/servicios/detalle-producto.service';
 
 const routes: Routes = [
     {path:'', component:InicioComponent},
@@ -37,7 +37,7 @@ const routes: Routes = [
     declarations: [
         AppComponent
     ],
-    providers: [ProductosService],
+    providers: [ProductosService, DetalleProductoService],
     bootstrap: [AppComponent],
     exports: [RouterModule],
     imports: [

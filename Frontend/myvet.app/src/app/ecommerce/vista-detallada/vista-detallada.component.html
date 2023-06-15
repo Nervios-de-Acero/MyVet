@@ -1,23 +1,23 @@
 <div class="producto">
-  <div class="imagenProducto"><img src="../../../assets/img/bolsa_comida_perro.jpg" alt="Comida de perro"></div>
-  <div class="detalles">
-      <div class="info">
-          <h2>Bolsa de 1kg comida de perro adulto Mockup</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, veritatis voluptatibus? Dolore
-              et amet consectetur recusandae ducimus ut libero neque dolorum? Facilis quisquam provident
-              laboriosam, ducimus molestiae ullam dicta. Id.</p>
-          <h3>$1670</h3>
-      </div>
-      
-      <button class="favorito">Agregar a favoritos</button><button class="deseado">Producto deseado</button>
+    <div><button (click)="volver()">Volver</button></div>
+    <div class="imagenProducto"><img [src]="objetoProducto.imagen_url" [alt]="objetoProducto.nombre_producto"></div>
+    <div class="detalles">
+        <div class="info">
+            <h2>{{ objetoProducto.nombre_producto }}</h2> 
+            <h3>{{objetoProducto.marca}}</h3>
+            <h3>{{objetoProducto.precio | currency}}</h3>
+            <p>{{objetoProducto.descripcion}}</p>
+        </div>
 
-      <div class="elegirCantidad">
-          <button class="menos">-</button>
-          <div><span>2</span></div>
-          <button class="mas">+</button>
-      </div>
-      
-          <button class="agregarAlCarrito">Agregar al carrito</button>
+        <button class="favorito">Agregar a favoritos</button><button class="deseado">Producto deseado</button>
 
-  </div>
+        <div class="elegirCantidad">
+            <button class="menos">-</button>
+            <div><span>2</span></div>
+            <button class="mas">+</button>
+        </div>
+
+        <button class="agregarAlCarrito">Agregar al carrito</button>
+
+    </div>
 </div>
