@@ -1,5 +1,4 @@
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
 import { BannerComponent } from './banner/banner.component';
 import { BuscarAnimalesComponent } from './buscar-animales/buscar-animales.component';
 import { CatalogoComponent } from './catalogo/catalogo.component';
@@ -12,7 +11,10 @@ import { PromocionesBancariasComponent } from './promociones-bancarias/promocion
 import { RouterModule } from '@angular/router';
 import { VistaDetalladaComponent } from './vista-detallada/vista-detallada.component';
 import { ListaDeDeseosComponent } from './lista-de-deseos/lista-de-deseos.component';
-import { FormulariosModule } from '../forms/forms.module'; 
+import { FormulariosModule } from '../forms/forms.module';
+import { NavbarEcommerceComponent } from './navbar-ecommerce/navbar-ecommerce.component';
+import { FooterEcommerceComponent } from './footer-ecommerce/footer-ecommerce.component'; 
+import { UsersModule } from '../users/users.module';
 
 @NgModule({
   declarations: [
@@ -24,12 +26,15 @@ import { FormulariosModule } from '../forms/forms.module';
     CategoriasComponent,
     PromocionesBancariasComponent,
     FormularioEnvioComponent,
-    ListaDeDeseosComponent
+    ListaDeDeseosComponent,
+    NavbarEcommerceComponent,
+    FooterEcommerceComponent
   ],
   imports: [
     CommonModule,
     RouterModule,
-    FormulariosModule
+    FormulariosModule,
+    UsersModule
   ],
   exports: [
     CatalogoComponent,
@@ -37,7 +42,9 @@ import { FormulariosModule } from '../forms/forms.module';
     BuscarAnimalesComponent,
     CategoriasComponent,
     PromocionesBancariasComponent, 
-    ListaDeDeseosComponent
+    ListaDeDeseosComponent,
+    NavbarEcommerceComponent,
+    FooterEcommerceComponent
   ]
 })
 export class EcommerceModule { }

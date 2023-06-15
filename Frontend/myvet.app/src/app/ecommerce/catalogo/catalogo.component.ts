@@ -3,7 +3,6 @@ import { ProductModel } from 'src/app/models/productos.model';
 import { ProductosService } from 'src/servicios/productos.service';
 import { DetalleProductoService } from 'src/servicios/detalle-producto.service';
 
-
 @Component({
   selector: 'app-catalogo',
   templateUrl: './catalogo.component.html',

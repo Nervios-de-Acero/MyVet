@@ -1,4 +1,21 @@
 from rest_framework import serializers
+from .models import *
+
+class UsuarioSerializer(serializers.ModelSerializer):
+    email = serializers.EmailField(required=True)
+    first_name = serializers.CharField(required=True)
+    last_name = serializers.CharField(required=True)
+    password = serializers.CharField(min_length=8, write_only=True)
+    
+    class Meta:
+        model = Usuario
+        fields = ['password','email', 'first_name', 'last_name', 'telefono', 'dni', 'direccion', 'avatar']
+
+
+
+
+
+""" from rest_framework import serializers
 from django.contrib.auth import get_user_model
 from django.contrib.auth.hashers import make_password
 from .models import *
@@ -45,7 +62,7 @@ class UserSerializer(serializers.ModelSerializer):
         return super().update(instance, validated_data)  # seguimos la ejecución
 
      
-
+ """
 
 
 """ def update(self, instance, validated_data):

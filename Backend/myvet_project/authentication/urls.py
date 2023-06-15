@@ -3,6 +3,23 @@ from .views import *
 
 
 urlpatterns = [
+    path('register/', UserRegistrationView.as_view(), name='user-register'),
+    path('login/', UserLoginView.as_view(), name='user-login'),
+    path('logout/', UserLogoutView.as_view(), name='user-logout'),
+    path('users/', UserListView.as_view(), name='user-list'),
+    path('users/<int:pk>/', UserDetailView.as_view(), name='user-detail'),
+]
+
+
+
+
+
+
+""" from django.urls import path, include
+from .views import *
+
+
+urlpatterns = [
     # Auth views
     path('login/',
          LoginView.as_view(), name='auth_login'),
@@ -26,4 +43,4 @@ urlpatterns = [
     
      path('updateUser/',
          UpdateUserView.as_view(), name='auth_update') 
-]
+] """

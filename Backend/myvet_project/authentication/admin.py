@@ -1,4 +1,42 @@
 from django.contrib import admin
+from django.contrib.auth.admin import UserAdmin
+from .models import *
+
+""" 
+@admin.register(get_user_model())
+class CustomUserAdmin(UserAdmin):
+    pass """
+
+class CustomUserAdmin(UserAdmin):
+    model = Usuario
+    list_display = ['email', 'first_name', 'last_name', 'is_staff']
+    fieldsets = (
+        (None, {'fields': ('email', 'password')}),
+        ('Personal Info', {'fields': ('first_name', 'last_name', 'telefono', 'dni', 'direccion', 'avatar')}),
+        ('Permissions', {'fields': ('is_active', 'is_staff', 'is_superuser', 'groups', 'user_permissions')}),
+        ('Important dates', {'fields': ('last_login',)}),
+    )
+    add_fieldsets = (
+        (None, {
+            'classes': ('wide',),
+            'fields': ('email', 'password1', 'password2', 'first_name', 'last_name', 'telefono', 'dni', 'direccion', 'avatar'),
+        }),
+    )
+
+    ordering = ['email']
+    
+    def nombre(self, obj):
+        return obj.first_name
+    
+    nombre.short_description = 'Nombre'
+
+
+admin.site.register(Usuario, CustomUserAdmin)
+
+
+
+
+""" from django.contrib import admin
 from django.contrib.auth import get_user_model
 from django.contrib.auth.admin import UserAdmin
 from .models import *
@@ -7,6 +45,8 @@ from .models import *
 @admin.register(get_user_model())
 class CustomUserAdmin(UserAdmin):
     pass
+ """
+
 
 """ @admin.register(Usuario)
 class ClientAdmin(admin.ModelAdmin):

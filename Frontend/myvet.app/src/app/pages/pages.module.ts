@@ -9,6 +9,7 @@ import { RouterModule } from '@angular/router';
 import { ServiciosComponent } from './ServiciosComponent/servicios.component';
 import { SucursalesComponent } from './sucursales/sucursales.component';
 import { FormulariosModule } from '../forms/forms.module';
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
@@ -23,8 +24,9 @@ import { FormulariosModule } from '../forms/forms.module';
   imports: [
     CommonModule,
     RouterModule,
-    EcommerceModule,
-    FormulariosModule
+    FormulariosModule,
+    SharedModule,
+    EcommerceModule
   ],
   exports:[
     InicioComponent,
