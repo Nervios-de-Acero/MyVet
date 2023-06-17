@@ -10,6 +10,7 @@ export class MenuComponent {
 
   toggleMenu() {
     this.menuOpen = !this.menuOpen;
+    
   }
 
   closeMenu(event: MouseEvent) {
