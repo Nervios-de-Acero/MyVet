@@ -1,18 +1,34 @@
 from rest_framework import serializers
+from django.contrib.auth.hashers import make_password
 from .models import *
 
 class UsuarioSerializer(serializers.ModelSerializer):
-    email = serializers.EmailField(required=True)
-    first_name = serializers.CharField(required=True)
-    last_name = serializers.CharField(required=True)
     password = serializers.CharField(min_length=8, write_only=True)
-    
+
     class Meta:
         model = Usuario
-        fields = ['password','email', 'first_name', 'last_name', 'telefono', 'dni', 'direccion', 'avatar']
+        fields = ['password', 'email', 'first_name', 'last_name', 'telefono', 'dni', 'direccion', 'avatar']
+
+    def create(self, validated_data):
+        password = validated_data.pop('password')
+        hashed_password = make_password(password)  # Aplicar el algoritmo de hash a la contraseña
+
+        user = Usuario.objects.create(password=hashed_password, **validated_data)
+        return user
 
 
+# from rest_framework import serializers
+# from .models import *
 
+# class UsuarioSerializer(serializers.ModelSerializer):
+#     email = serializers.EmailField(required=True)
+#     first_name = serializers.CharField(required=True)
+#     last_name = serializers.CharField(required=True)
+#     password = serializers.CharField(min_length=8, write_only=True)
+    
+#     class Meta:
+#         model = Usuario
+#         fields = ['password','email', 'first_name', 'last_name', 'telefono', 'dni', 'direccion', 'avatar']
 
 
 """ from rest_framework import serializers
