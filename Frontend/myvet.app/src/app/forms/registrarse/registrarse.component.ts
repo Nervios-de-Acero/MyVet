@@ -67,13 +67,15 @@ export class RegistrarseComponent {
     else {
       const formFinal = this.formRegistro.value
       delete formFinal.pass2
-      console.log(formFinal)
       this.rs.registerUser(formFinal).subscribe({
       next: (res) => {
         this.invalido = false
         console.log('Usuario creado correctamente. Respuesta: ', res)
       },
-      error: (err) => console.log(err),
+      error: (err) => {
+        this.invalido = true
+        console.log(err)
+      },
       complete: () => console.log('Trabajo terminado')
       })
       // INYECTAR SERVICIO CON MÉTODO POST
