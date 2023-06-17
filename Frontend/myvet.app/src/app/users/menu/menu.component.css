@@ -1,0 +1,29 @@
+.menu-vertical {
+  width: 200px;
+  background-color: transparent; /* Cambiar el color de fondo a transparente */
+  padding: 10px;
+}
+
+.menu-vertical ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-vertical li {
+  margin-bottom: 5px;
+}
+
+.menu-vertical a {
+  display: block;
+  padding: 8px;
+  text-decoration: none;
+  color: #333;
+  background-color: rgba(196, 241, 122, 0.849);
+  border-radius: 5px;
+  text-transform: uppercase;
+}
+
+.menu-vertical a:hover {
+  background-color: #e0e0e0;
+}
