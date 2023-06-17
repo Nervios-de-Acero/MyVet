@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
-
 @Injectable({
   providedIn: 'root'
 })
@@ -11,7 +10,10 @@ export class LoginService {
   isLogged: boolean = false;
   userToken: string = '';
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {
+    const storedIsLogged = localStorage.getItem('isLogged');
+    this.isLogged = storedIsLogged ? JSON.parse(storedIsLogged) : false;
+  }
 
   loginUser(user:any): Observable<any>{
     return this.http.post("http://localhost:8000/api/login/", user);
@@ -19,5 +21,15 @@ export class LoginService {
 
   logout(token: string) {
     console.log(token)
+  }
+
+  setToken(token: string) {
+    this.userToken = token;
+  }
+
+  setIsLogged(val: boolean): void {
+    this.isLogged = val
+    const stringified = JSON.stringify(this.isLogged)
+    localStorage.setItem('isLogged', stringified)
   }
 }

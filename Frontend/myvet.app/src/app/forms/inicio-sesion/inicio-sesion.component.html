@@ -2,6 +2,7 @@
     <div class="form_login">
     <form action="?" method="post" [formGroup]="formLogin" (ngSubmit)="onSubmit()">
       <legend class="title">Iniciar Sesión</legend>
+      <span *ngIf='correcto' class="exito">LOGIN EXITOSO!</span>
         <div class="inputContainer">
           <input type="email" class="input" name="user_mail" placeholder="a" formControlName="email" [class.border-danger]="invalido">
           <label for="mail" class="label">Correo electrónico:</label>
