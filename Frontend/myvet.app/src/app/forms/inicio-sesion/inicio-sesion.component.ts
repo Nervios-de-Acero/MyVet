@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { LoginService } from 'src/servicios/login.service';
 
 @Component({
   selector: 'app-inicio-sesion',
@@ -15,7 +16,7 @@ export class InicioSesionComponent {
   invalido=false;
   enviado=false;
 
-  constructor(private fb: FormBuilder) {}
+  constructor(private fb: FormBuilder, private login: LoginService) {}
 
   mostrarError(nombre:string, error:string){
     return this.formLogin.get(nombre)?.hasError(error) &&
@@ -29,10 +30,18 @@ export class InicioSesionComponent {
         this.invalido = true
         return
       }
-      else {
-        this.invalido = false
-        console.log(this.formLogin.value) 
-        // INYECTAR SERVICIO CON MÉTODO GET
+      else { 
+        this.login.loginUser(this.formLogin.value).subscribe({
+          next: (res) => {
+            this.invalido = false
+            console.log('Login exitoso!, ', res)
+            this.login.userToken = res.access
+          },
+          error: (err) => {
+            this.invalido = true
+            console.log('No se pudo iniciar sesión ', err)
+          }
+        })
       }
     }
 
