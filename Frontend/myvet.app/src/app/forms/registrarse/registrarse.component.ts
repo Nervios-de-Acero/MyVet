@@ -78,7 +78,6 @@ export class RegistrarseComponent {
       },
       complete: () => console.log('Trabajo terminado')
       })
-      // INYECTAR SERVICIO CON MÉTODO POST
     }
   }
 }
