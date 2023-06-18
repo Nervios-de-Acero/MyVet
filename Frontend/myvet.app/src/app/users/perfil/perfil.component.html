@@ -1,1 +1,52 @@
-<p>perfil works!</p>
+<main>
+    <div class="titulo-perfil">
+        <h1>Mi perfil</h1>
+    </div>
+    <section class="avatar">
+        <div class="avatar-img">
+            <img src="" alt="" class="avatar-perfil">
+        </div>
+        <button class="cambiar-imagen">Cambiar imagen</button>
+    </section>
+    <section class="form-perfil">
+        <form>
+            <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="nombre" placeholder="Nombre">
+              </div>
+            <div class="mb-3">
+                <label for="apellido" class="form-label">Apellido</label>
+                <input type="text" class="form-control" id="apellido" placeholder="Apellido">
+              </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+              <div class="input-btn">
+                    <input type="password" class="form-control" id="exampleInputPassword1">
+                    <button class="btn btn-primary"><i class="bi bi-pencil-fill"></i></button>
+              </div>
+            </div>
+            <div class="mb-3">
+                <label for="telefono" class="form-label">Teléfono</label>
+                <div class="input-btn">
+                    <input type="text" class="form-control" id="telefono" placeholder="telefono">
+                    <button class="btn btn-primary"><i class="bi bi-pencil-fill"></i></button>
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="direccion" class="form-label">Dirección</label>
+                <div class="input-btn">
+                    <input type="text" class="form-control" id="direccion" placeholder="Dirección">
+                    <button class="btn btn-primary"><i class="bi bi-pencil-fill"></i></button>
+                </div>                
+              </div>
+          </form>
+    </section>
+    <section class="volver-btn">
+        <button class="btn btn-primary" routerLink="/petshop"><i class="bi bi-arrow-left-circle"></i></button>
+    </section>
+</main>
+
