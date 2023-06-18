@@ -1,5 +1,3 @@
-<section>
-    <button *ngIf="!showPaypalButtons" (click)="pay()">Pagar con paypal</button>
-    <ngx-paypal *ngIf="showPaypalButtons" [config]="payPalConfig"></ngx-paypal>
-    <button *ngIf="showPaypalButtons" (click)="back()">Volver atras</button>
-</section>
+<div>
+    <ngx-paypal [config]="payPalConfig"></ngx-paypal>
+</div>

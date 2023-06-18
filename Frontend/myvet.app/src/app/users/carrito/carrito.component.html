@@ -10,17 +10,17 @@
         </div>
         <button type="button" class="btn btn-ofert btn-primary">Descrube ofertas</button><!--Me lleva al catalogo-->
     </div>
-        <section class="compras" *ngFor="let producto of productosEnCarrito">
-          <article class="card-product">
-            <h2 class="title-product">{{ producto.nombre_producto }}</h2>
-            <div class="img-container">
-              <img class="img-product" [src]="producto.imagen_url" alt="">
-              <div class="buton-quantity">
-                <button class="remove-btn btn-primary" (click)="decrementQuantity()">-</button>
-                <span class="quantity"><!-- {{ producto.cantidad }}-->0</span>
-                <button class="add-btn btn-primary" (click)="incrementQuantity()">+</button>
-              </div>
-            </div>
+  <section class="compras" *ngFor="let producto of productosEnCarrito">
+    <article class="card-product">
+      <h2 class="title-product">{{ producto.nombre_producto }}</h2>
+      <div class="img-container">
+        <img class="img-product" [src]="producto.imagen_url" alt="">
+        <div class="buton-quantity">
+<button class="remove-btn btn-primary" (click)="decrementQuantity()">-</button>
+          <span class="quantity"><!-- {{ producto.cantidad }}-->0</span>
+          <button class="add-btn btn-primary" (click)="incrementQuantity()">+</button>
+        </div>
+      </div>
             <div>
               <span class="price">{{ producto.precio | currency }}</span>
             </div>
@@ -31,6 +31,9 @@
             <span class="price-span"><!-- {{ calcularPrecioTotal() | currency }}-->Precio</span>
           </div>
           <button type="button" class="btn btn-continue btn-primary">Continuar con la compra</button> <!--Me lleva a la pasarela de pagos-->
+          
+          <!--<ngx-paypal [config]="payPalConfig"></ngx-paypal>-->
+
         </section>
 </section>
 

@@ -16,7 +16,8 @@ import { NavbarEcommerceComponent } from './navbar-ecommerce/navbar-ecommerce.co
 import { FooterEcommerceComponent } from './footer-ecommerce/footer-ecommerce.component'; 
 import { UsersModule } from '../users/users.module';
 import { FavoritosComponent } from './favoritos/favoritos.component';
-import { PaypalComponent } from './paypal/paypal.component';
+//import { NgxPayPalModule } from 'ngx-paypal';
+//import { PaypalComponent } from './paypal/paypal.component';
 
 @NgModule({
   declarations: [
@@ -31,14 +32,15 @@ import { PaypalComponent } from './paypal/paypal.component';
     ListaDeDeseosComponent,
     NavbarEcommerceComponent,
     FooterEcommerceComponent,
-    FavoritosComponent,
-    PaypalComponent
+    FavoritosComponent
+    //PaypalComponent
   ],
   imports: [
     CommonModule,
     RouterModule,
     FormulariosModule,
     UsersModule
+    //NgxPayPalModule
   ],
   exports: [
     CatalogoComponent,

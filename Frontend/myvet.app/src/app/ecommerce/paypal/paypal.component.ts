@@ -16,18 +16,18 @@ export class PaypalComponent implements OnInit{
 
     private initConfig(): void {
       this.payPalConfig = {
-      currency: 'EUR',
+      currency: 'ARS',
       clientId: 'sb',
       createOrderOnClient: (_data) => <ICreateOrderRequest>{ //(data) <-- estaba de esta forma
         intent: 'CAPTURE',
         purchase_units: [
           {
             amount: {
-              currency_code: 'EUR',
+              currency_code: 'ARS',
               value: '9.99',
               breakdown: {
                 item_total: {
-                  currency_code: 'EUR',
+                  currency_code: 'ARS',
                   value: '9.99'
                 }
               }
@@ -38,7 +38,7 @@ export class PaypalComponent implements OnInit{
                 quantity: '1',
                 category: 'DIGITAL_GOODS',
                 unit_amount: {
-                  currency_code: 'EUR',
+                  currency_code: 'ARS',
                   value: '9.99',
                 },
               }
