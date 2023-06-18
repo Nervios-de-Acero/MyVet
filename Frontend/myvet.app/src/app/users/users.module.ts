@@ -4,6 +4,8 @@ import { NgModule } from '@angular/core';
 import { PerfilComponent } from './perfil/perfil.component';
 import { CarritoComponent } from './carrito/carrito.component';
 
+
+
 @NgModule({
   declarations: [
     PerfilComponent,
@@ -15,7 +17,8 @@ import { CarritoComponent } from './carrito/carrito.component';
   ],
   exports: [
     PerfilComponent,
-    MenuComponent
+    MenuComponent,
+    CarritoComponent
   ]
 })
 export class UsersModule { }

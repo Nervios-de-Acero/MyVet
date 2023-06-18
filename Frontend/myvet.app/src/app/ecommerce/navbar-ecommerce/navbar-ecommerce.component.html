@@ -9,10 +9,13 @@
       <div class="menu-container" *ngIf="showMenu">
         <app-menu></app-menu>
       </div>
-      <a class="link-item" routerLink="/favoritos">Carrito</a>
+      <a class="link-item" routerLink="/carrito">Carrito</a>
     </div>
     <div class="icon-navbar">
-      <button class="btn-icon"><i class="bi bi-cart4"></i></button>
+      <div>
+        <button class="btn-icon" (click)="redirigir()"><i class="bi bi-cart4"></i></button>
+        <span class="product-count">{{ cantidadProductos }}</span>
+      </div>
       <button class="btn-icon" (click)="toggleMenu()"><i class="bi bi-person"></i></button>
       <div class="menu-container" *ngIf="showMenu">
         <app-menu></app-menu>

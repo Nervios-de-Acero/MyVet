@@ -14,6 +14,7 @@ import { CatalogoComponent } from './ecommerce/catalogo/catalogo.component';
 import { VistaDetalladaComponent } from './ecommerce/vista-detallada/vista-detallada.component';
 import { MenuComponent } from './users/menu/menu.component'; 
 import { FavoritosComponent } from './ecommerce/favoritos/favoritos.component';
+import { CarritoComponent } from './users/carrito/carrito.component';
 
 const routes: Routes = [
   {path:'', component:InicioComponent},
@@ -28,7 +29,8 @@ const routes: Routes = [
   {path: 'petshop/producto/:id',
     component: VistaDetalladaComponent},
   { path:'menu', component: MenuComponent},
-  { path:'favoritos', component: FavoritosComponent}
+  { path:'favoritos', component: FavoritosComponent},
+  { path:'carrito', component: CarritoComponent}
 ];
 
 @NgModule({
