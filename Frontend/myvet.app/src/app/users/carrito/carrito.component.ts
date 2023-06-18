@@ -27,6 +27,7 @@ export class CarritoComponent implements OnInit {
 
   verificarProductosEnCarrito(): void {
     this.contieneProducto = this.productosEnCarrito.length > 0;
+    console.log('contieneProducto:', this.contieneProducto);
   }
 
 

@@ -11,8 +11,7 @@
     display: flex;
     justify-content: center;
     align-content: center;
-    gap: 20px;
-    margin: 10px;
+    gap: 5px;
 }
 
 .nav-item{
@@ -27,4 +26,37 @@
     color: rgb(21, 138, 40);
     border: 2px solid #d9f87d;
     transition: all .4s ease-in-out;
+    cursor: pointer;
+}
+
+.ctg-container{
+    justify-content: flex-start;
+    align-content: center;   
+}
+
+.title-ctg{
+    font-size: 1rem;
+    padding: 5px;
+    text-align: center;
+    margin: 0;
+}
+
+@media (min-width: 992px){
+    .title-ctg{
+        display: none;
+    }
+}
+
+@media (min-width: 1022px){
+    .navbar-nav{
+        justify-content: center;
+        align-items: center;
+        padding: 0 20px;
+    }
+
+    .navbar-collapse{
+        justify-content: center;
+    }
+       
+    
 }

@@ -63,6 +63,11 @@
   background-color:  rgb(27, 27, 170);
   color:#fff;
 }
+.agregarAlCarrito:hover{
+  cursor: pointer;
+  background-color: rgba(196, 241, 122, 0.849);
+  border: 2px solid #000;
+}
 
 .elegirCantidad {
   display: flex;
