@@ -17,6 +17,7 @@ import { FavoritosComponent } from './ecommerce/favoritos/favoritos.component';
 import { CarritoComponent } from './users/carrito/carrito.component';
 import { PerfilComponent } from './users/perfil/perfil.component';
 
+
 const routes: Routes = [
   {path:'', component:InicioComponent},
   {path:'quienes-somos', component:QuienesSomosComponent},
