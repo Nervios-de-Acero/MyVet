@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Yanina-Unrein/MyVet_TSDWAD#readme",
   "dependencies": {
+    "json-server": "^0.17.3",
     "rxjs": "^7.8.1"
   }
 }

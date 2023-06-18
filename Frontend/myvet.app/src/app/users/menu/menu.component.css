@@ -1,6 +1,7 @@
+
 .menu-vertical {
   position: absolute;
-  top: 0;
+  top: 100px;
   right: 0;
   width: 200px;
   background-color: rgba(0, 0, 0, 0.5);
@@ -8,45 +9,31 @@
   z-index: 999;
 }
 
-.menu-vertical ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
+  .menu-vertical ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
 
-.menu-vertical li {
-  margin-bottom: 5px;
-}
-
-.menu-vertical a {
-  display: block;
-  padding: 8px;
-  text-decoration: none;
-  color: #333;
+.menu-vertical li {  
   background-color: rgba(196, 241, 122, 0.849);
   border-radius: 5px;
   text-transform: uppercase;
-}
-
-.menu-vertical a:hover {
-  background-color: #e0e0e0;
-}
-
-.menu-vertical a {
-  display: block;
-  padding: 8px;
-  text-decoration: none;
-  color: #333;
-  background-color: rgba(196, 241, 122, 0.849);
-  border-radius: 5px;
-  text-transform: uppercase;
-  font-weight: normal; /* Cambiar el peso de fuente a normal */
   font-size: 14px;
+  padding: 8px;
+  margin-bottom: 5px;
   transition: background-color 0.3s ease;
+  cursor:pointer;
 }
 
-.menu-vertical a:hover {
+
+.menu-vertical li:hover {
   background-color: #e0e0e0;
-  color: #fff;
-  text-decoration: none; /* Eliminar la línea subrayada */
+}
+
+.menu-vertical a {
+  display: block;
+  text-decoration: none;
+  color: #333;
+  font-weight: normal; /* Cambiar el peso de fuente a normal */ 
 }

@@ -1,23 +1,27 @@
+<app-navbar-ecommerce></app-navbar-ecommerce>
 <div class="producto">
-    <div><button (click)="volver()">Volver</button></div>
-    <div class="imagenProducto"><img [src]="objetoProducto.imagen_url" [alt]="objetoProducto.nombre_producto"></div>
-    <div class="detalles">
-        <div class="info">
-            <h2>{{ objetoProducto.nombre_producto }}</h2> 
-            <h3>{{objetoProducto.marca}}</h3>
-            <h3>{{objetoProducto.precio | currency}}</h3>
-            <p>{{objetoProducto.descripcion}}</p>
+    <div><button (click)="volver()" class="btn-volver btn-primary">Volver</button></div>
+    <div class="card-container">
+        <div class="imagenProducto"><img [src]="objetoProducto.imagen_url" [alt]="objetoProducto.nombre_producto"></div>
+        <div class="detalles">
+            <div class="info">
+                <h2 class="titulo-producto">{{ objetoProducto.nombre_producto }}</h2> 
+                <h3 class="marca-producto">{{objetoProducto.marca}}</h3>
+                <h3 class="precio-producto">{{objetoProducto.precio | currency}}</h3>
+                <p class="descripcion-producto">{{objetoProducto.descripcion}}</p>
+            </div>
+    
+            <button class="favorito">Agregar a favoritos</button><button class="deseado">Producto deseado</button>
+    
+            <div class="elegirCantidad">
+                <button class="menos">-</button>
+                <div><span>2</span></div>
+                <button class="mas">+</button>
+            </div>
+    
+            <button class="agregarAlCarrito" (click)="agregarAlCarrito()">Agregar al carrito</button>
         </div>
-
-        <button class="favorito">Agregar a favoritos</button><button class="deseado">Producto deseado</button>
-
-        <div class="elegirCantidad">
-            <button class="menos">-</button>
-            <div><span>2</span></div>
-            <button class="mas">+</button>
-        </div>
-
-        <button class="agregarAlCarrito" (click)="agregarAlCarrito()">Agregar al carrito</button>
-
     </div>
 </div>
+
+<app-footer-ecommerce></app-footer-ecommerce>
