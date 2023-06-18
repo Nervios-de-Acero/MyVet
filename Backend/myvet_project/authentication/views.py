@@ -32,6 +32,10 @@ class UserLoginView(APIView):
         user = authenticate(request, email=email, password=password)
         if user is not None:
             refresh = RefreshToken.for_user(user)
+
+            # Guardar el token de acceso en la sesión del usuario
+            request.session['access_token'] = str(refresh.access_token)
+
             return Response({
                 'refresh': str(refresh),
                 'access': str(refresh.access_token),

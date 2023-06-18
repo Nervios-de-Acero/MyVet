@@ -20,8 +20,10 @@ import { RegistrarseComponent } from './forms/registrarse/registrarse.component'
 import { MenuComponent } from './users/menu/menu.component';
 import { DetalleProductoService } from 'src/servicios/detalle-producto.service';
 import { FavoritosComponent } from './ecommerce/favoritos/favoritos.component';
-import { NgxPayPalModule } from 'ngx-paypal';
-import { PaypalComponent } from './ecommerce/paypal/paypal.component';
+import { CarritoComponent } from './users/carrito/carrito.component';
+import { VistaDetalladaComponent } from './ecommerce/vista-detallada/vista-detallada.component';
+import { PerfilComponent } from './users/perfil/perfil.component';
+import { UsersModule } from './users/users.module';
 
 const routes: Routes = [
     {path:'', component:InicioComponent},
@@ -33,7 +35,9 @@ const routes: Routes = [
     {path:'inicio-sesion', component:InicioSesionComponent},
     {path:'registrarse', component:RegistrarseComponent},
     { path:'menu', component: MenuComponent },
-    { path:'favoritos', component: FavoritosComponent }
+    { path:'favoritos', component: FavoritosComponent },
+    { path:'carrito', component: CarritoComponent },
+    { path:'perfil', component: PerfilComponent }
 ];
 
 
@@ -54,7 +58,11 @@ const routes: Routes = [
         HttpClientModule,
         ReactiveFormsModule,
         FormulariosModule,
+<<<<<<< HEAD
         NgxPayPalModule
+=======
+        UsersModule
+>>>>>>> 527e25c3d7d6f67bb90f9922a4eb170044c30229
     ]
 })
 export class AppModule { }

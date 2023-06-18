@@ -8,12 +8,42 @@ import { ProductModel } from '../app/models/productos.model';
 })
 export class ProductosService {
   private products: ProductModel[] = [];
+  private carrito: ProductModel[] = [];
+  private cantidadProductos: number = 0;
   // private productosFiltrados: ProductModel[] = [];
   constructor(private http:HttpClient) {}
 
   getProductos(): Observable<ProductModel[]> {
     return this.http.get<ProductModel[]>(`http://localhost:3000/productos`)
   }
+
+  agregarAlCarrito(producto: ProductModel): void {
+    this.carrito.push(producto);
+  }
+
+  obtenerCarrito(): ProductModel[] {
+    return this.carrito;
+  }
+
+  obtenerCantidadProductos(): number {
+    return this.cantidadProductos;
+  }
+
+  actualizarCantidadProductos(): void {
+    this.cantidadProductos = this.carrito.length;
+  }
+
+  vaciarCarrito(): void {
+    this.carrito = [];
+  }
+
+/*   calcularPrecioTotal(): number {
+    let total = 0;
+    for (const producto of this.carrito) {
+      total += producto.precio * producto.cantidad;
+    }
+    return total;
+  } */
 
  /*  getFilteredProducts(animal: string): ProductModel[] {
     return this.products.filter(product => product.tipo_animal === animal);

@@ -9,16 +9,20 @@
       <div class="menu-container" *ngIf="showMenu">
         <app-menu></app-menu>
       </div>
-      <a class="link-item" routerLink="/favoritos">Carrito</a>
+      <a class="link-item" routerLink="/carrito">Carrito</a>
     </div>
     <div class="icon-navbar">
-      <button class="btn-icon" (click)="toggleMenuPaypal()"><i class="bi bi-cart4"></i></button>
-      <div class="menu-container" *ngIf="showMenuPaypal">
-        <app-paypal></app-paypal>
+      <div>
+        <button class="btn-icon" (click)="redirigir()"><i class="bi bi-cart4"></i></button>
+        <span class="product-count">{{ cantidadProductos }}</span>
       </div>
-      <button class="btn-icon" (click)="toggleMenu()"><i class="bi bi-person"></i></button>
+      <button class="btn-icon" [class.btn-logged]="isLogged" (click)="toggleMenu()"><i class="bi bi-person"></i></button>
       <div class="menu-container" *ngIf="showMenu">
-        <app-menu></app-menu>
+        <app-menu *ngIf="isLogged" ></app-menu>
+        <div class='not-logged' *ngIf="!isLogged">
+          <h3>Usted no se ha logueado</h3>
+          <button routerLink="/inicio-sesion">Iniciar Sesión</button>
+        </div>
       </div>
       <!-- <button><i class="bi bi-person-circle"></i></button> -->
     </div>

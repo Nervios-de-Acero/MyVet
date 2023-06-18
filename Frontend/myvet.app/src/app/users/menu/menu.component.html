@@ -1,6 +1,8 @@
-<ul>
-    <li><a routerLink="/inicio">Inicio</a></li>
+<div class="menu-vertical">
+  <ul>
     <li><a routerLink="/perfil">Perfil</a></li>
-    <li><a routerLink="/ajustes">Ajustes</a></li>
-  </ul>
-  
+    <li><a href="/perfil">Lista de deseos</a></li>
+    <li><a href="/perfil">Favoritos</a></li>
+    <li (click)="logout()">Salir</li>
+      </ul>
+</div>
