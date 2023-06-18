@@ -5,6 +5,7 @@ import { InicioSesionComponent } from './inicio-sesion/inicio-sesion.component';
 import { RouterModule } from '@angular/router';
 import { DatosTarjetaComponent } from './datos-tarjeta/datos-tarjeta.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { ReactiveFormsModule } from '@angular/forms';
   imports: [
     CommonModule,
     RouterModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    SharedModule
   ],
   exports: [
     RegistrarseComponent,

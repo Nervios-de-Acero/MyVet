@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { LoginService } from 'src/servicios/login.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-inicio-sesion',
@@ -15,8 +16,9 @@ export class InicioSesionComponent {
 
   invalido=false;
   enviado=false;
+  correcto=false;
 
-  constructor(private fb: FormBuilder, private login: LoginService) {}
+  constructor(private fb: FormBuilder, private login: LoginService, private router: Router) {}
 
   mostrarError(nombre:string, error:string){
     return this.formLogin.get(nombre)?.hasError(error) &&
@@ -34,8 +36,10 @@ export class InicioSesionComponent {
         this.login.loginUser(this.formLogin.value).subscribe({
           next: (res) => {
             this.invalido = false
-            console.log('Login exitoso!, ', res)
-            this.login.userToken = res.access
+            this.correcto = true
+            this.login.setIsLogged(true)
+            setTimeout(() => this.router.navigate(['/petshop']), 1000 )
+            
           },
           error: (err) => {
             this.invalido = true
