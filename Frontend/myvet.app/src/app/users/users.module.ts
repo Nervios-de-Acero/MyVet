@@ -6,7 +6,6 @@ import { CarritoComponent } from './carrito/carrito.component';
 import { RouterModule } from '@angular/router';
 
 
-
 @NgModule({
   declarations: [
     PerfilComponent,
