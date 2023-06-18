@@ -11,7 +11,8 @@
                 <p class="descripcion-producto">{{objetoProducto.descripcion}}</p>
             </div>
     
-            <button class="favorito">Agregar a favoritos</button><button class="deseado">Producto deseado</button>
+            <button class="favorito" [class.agregado]="agregado" (click)="agregarAFavorito(objetoProducto)">Agregar a favoritos</button>
+            <button class="deseado">Producto deseado</button>
     
             <div class="elegirCantidad">
                 <button class="menos">-</button>
@@ -21,6 +22,7 @@
     
             <button class="agregarAlCarrito" (click)="agregarAlCarrito()">Agregar al carrito</button>
         </div>
+
     </div>
 </div>
 

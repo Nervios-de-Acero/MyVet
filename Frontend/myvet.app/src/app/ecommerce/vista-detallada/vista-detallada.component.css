@@ -107,6 +107,10 @@
   color:#fff;
 }
 
+.agregado {
+  background-color: rgb(27, 27, 170);
+}
+
 @media (min-width: 400px){
   .imagenProducto{
     width: 60%;
