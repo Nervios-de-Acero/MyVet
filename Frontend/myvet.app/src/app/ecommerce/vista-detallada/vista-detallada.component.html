@@ -11,8 +11,9 @@
                 <p class="descripcion-producto">{{objetoProducto.descripcion}}</p>
             </div>
     
-            <button class="favorito" [class.agregado]="agregado" (click)="agregarAFavorito(objetoProducto)">Agregar a favoritos</button>
-            <button class="deseado">Producto deseado</button>
+            <button *ngIf="isLogged" class="favorito" [class.agregado]="agregado" (click)="agregarAFavorito(objetoProducto)">Agregar a favoritos</button>
+            <button *ngIf="!isLogged" class="favorito desconectado" routerLink="/inicio-sesion">Agregar a favoritos</button>
+            <button class="deseado disabled">Producto deseado</button>
     
             <div class="elegirCantidad">
                 <button class="menos">-</button>

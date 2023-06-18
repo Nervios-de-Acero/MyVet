@@ -9,23 +9,22 @@ import { ProductosService } from 'src/servicios/productos.service';
   templateUrl: './vista-detallada.component.html',
   styleUrls: ['./vista-detallada.component.css']
 })
-export class VistaDetalladaComponent implements OnInit, OnChanges{
+export class VistaDetalladaComponent implements OnInit{
 
   constructor(private dp: DetalleProductoService, private router: Router, private ps: ProductosService) {}
 
 objetoProducto!: ProductModel;
 agregado: boolean = false;
+isLogged: boolean = false;
 
 ngOnInit(): void {
   this.objetoProducto = this.dp.getDetail()
   
   const favoritos = localStorage.getItem('favoritos')
   favoritos ? this.comprobarAgregado(JSON.parse(favoritos), this.objetoProducto.id) : this.agregado = false
-}
 
-ngOnChanges(): void {
-  const added = localStorage.getItem('agregado')
-  this.agregado = added ? JSON.parse(added) : false
+  const loggedUser = localStorage.getItem('isLogged') 
+  this.isLogged = loggedUser ? JSON.parse(loggedUser) : false
 }
 
 volver(): void {

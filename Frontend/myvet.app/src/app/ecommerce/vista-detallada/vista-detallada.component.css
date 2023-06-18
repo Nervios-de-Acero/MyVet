@@ -112,6 +112,16 @@
   color: #fff;
 }
 
+.desconectado {
+  border: 2px solid grey;
+}
+
+.disabled {
+  background-color: grey;
+  border: none;
+  color:black;
+}
+
 @media (min-width: 400px){
   .imagenProducto{
     width: 60%;
