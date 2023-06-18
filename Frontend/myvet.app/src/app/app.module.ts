@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -24,6 +24,9 @@ import { CarritoComponent } from './users/carrito/carrito.component';
 import { VistaDetalladaComponent } from './ecommerce/vista-detallada/vista-detallada.component';
 import { PerfilComponent } from './users/perfil/perfil.component';
 import { UsersModule } from './users/users.module';
+//import { NgxPayPalModule } from 'ngx-paypal';
+//import { NgxSpinnerModule } from 'ngx-spinner';
+//import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 const routes: Routes = [
     {path:'', component:InicioComponent},
@@ -43,7 +46,7 @@ const routes: Routes = [
 
 @NgModule({
     declarations: [
-        AppComponent
+        AppComponent, 
     ],
     providers: [ProductosService, DetalleProductoService],
     bootstrap: [AppComponent],
@@ -58,6 +61,10 @@ const routes: Routes = [
         ReactiveFormsModule,
         FormulariosModule,
         UsersModule
-    ]
+        //NgxPayPalModule,
+        //NgxSpinnerModule,
+        //NgModule
+    ],
+    //schemas:[CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }
