@@ -4,5 +4,5 @@
       <h3>{{ objetoProducto.nombre_producto }}</h3>
       <h2>{{objetoProducto.precio | currency}}</h2>
   </div>
-  <button class="verMas">Ver más</button>
+  <button class="verMas" (click)="crearDetalle(objetoProducto)">Ver más</button>
 </div>

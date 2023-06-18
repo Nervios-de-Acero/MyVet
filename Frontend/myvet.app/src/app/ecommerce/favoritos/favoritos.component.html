@@ -1,0 +1,27 @@
+<app-navbar-ecommerce></app-navbar-ecommerce>
+
+<main class="favoritosView">
+    <section class="sinFavoritos" *ngIf="favoritos.length === 0" >
+    <h1>Todavía no tienes ningún producto en favoritos</h1>
+    <h3>¡Descubre nuestros productos!</h3>
+    <button class="irAcatalogo" routerLink="/petshop">Ir al catálogo</button>
+    </section>
+
+    <section class="conFavoritos" *ngIf="favoritos.length > 0">
+        <button routerLink="/petshop" class="volver">Volver</button>
+        <div class="favoritosCtn">
+        <article *ngFor="let producto of favoritos" class="productoFav">
+            <div class="contenedorImg">
+                <img [src]="producto.imagen_url" [alt]="producto.nombre_producto">
+            </div>
+            <div class="infoFav">
+                <h3>{{ producto.nombre_producto }}</h3>
+                <p>{{producto.precio | currency}}</p>    
+            </div>
+            <button class="eliminar" (click)="eliminarFavorito(producto)">Eliminar</button>
+        </article>
+    </div>
+    </section>
+    </main>
+<app-footer-ecommerce></app-footer-ecommerce>
+

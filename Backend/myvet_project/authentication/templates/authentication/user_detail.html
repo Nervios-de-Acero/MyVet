@@ -1,0 +1,45 @@
+{% extends "authentication/base.html" %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <div class="card">
+                    <div class="card-header">
+                        <h1 class="card-title">Detalle de usuario</h1>
+                    </div>
+                    <div class="card-body">
+                        <form method="POST" action="{% url 'user-detail' user.id %}">
+                            {% csrf_token %}
+                            <div class="mb-3">
+                                <label class="form-label">Email:</label>
+                                <input type="email" class="form-control" name="email" value="{{ user.email }}">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Nombre:</label>
+                                <input type="text" class="form-control" name="first_name" value="{{ user.first_name }}">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Apellido:</label>
+                                <input type="text" class="form-control" name="last_name" value="{{ user.last_name }}">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Teléfono:</label>
+                                <input type="text" class="form-control" name="telefono" value="{{ user.telefono }}">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">DNI:</label>
+                                <input type="text" class="form-control" name="dni" value="{{ user.dni }}">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Dirección:</label>
+                                <input type="text" class="form-control" name="direccion" value="{{ user.direccion }}">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Guardar cambios</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}

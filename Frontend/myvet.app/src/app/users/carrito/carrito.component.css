@@ -1,0 +1,93 @@
+
+.container-cart{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: rgb(250, 243, 243);
+} 
+
+.title-cart{
+    font-size: 2rem;
+    font-weight: 700;
+    padding: 20px 0;
+}
+
+.container-items{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 10px;
+} 
+
+.title-message{
+    font-size: 0.9rem;
+    text-align: center;
+}
+.info{
+    font-size: 0.9rem;
+    text-align: center;
+    color: dimgrey;
+}
+.btn-ofert{
+    margin-top: 20px;
+}
+
+.compras{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.card-product{
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 0 10px;
+    border-radius: 20px;
+}
+.title-product{
+    font-size: 1rem;
+    padding: 10px;
+    font-weight: 500;
+}
+.img-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.img-product{
+    max-width: 100%;
+    height: 150px;
+}
+.quantity {
+    margin: 0 5px;
+}
+.remove-btn, .add-btn{
+    width: 25px;
+    height: 35px;
+    text-align: center;
+}
+.price{
+    padding: 10px;
+    font-weight: 700;
+    color: dimgrey;
+}
+.btn-delete{
+    border: none;
+    background: none;
+    margin-top: 20px;
+    text-align: start;
+    color: blue;
+    font-weight: 700;
+}
+.btn-delete:hover{
+    cursor: pointer;
+    color: navy;
+    text-decoration: underline;
+}
+.container-price{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin: 20px 0;
+}

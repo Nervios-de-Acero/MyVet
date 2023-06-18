@@ -1,3 +1,4 @@
+<app-navbar></app-navbar>
 <main>
     <form id="register" [formGroup]="formRegistro" (ngSubmit)="onSubmit()">
       <span class="warning errorEnvio" *ngIf="invalido">Error: Algunos campos son inválidos. Revise los datos antes de enviarlos.</span>
@@ -5,19 +6,19 @@
     <legend class="title">Registrate</legend>
       <div class="inputSpanCtn">
         <div class="inputContainer">
-          <input type="text" id="user_first_name" class="input" name="user_first_name" formControlName="nombre" [class.border-danger]="esInvalido('nombre')">
+          <input type="text" id="user_first_name" class="input" name="user_first_name" formControlName="first_name" [class.border-danger]="esInvalido('first_name')">
           <label for="user_first_name" class="label">Nombre :</label>
         </div>
-        <span class="warning" *ngIf="mostrarError('nombre', 'required')">Campo obligatorio</span>
-        <span class="warning" *ngIf="mostrarError('nombre', 'pattern')">Campo inválido. Omita números o caracteres especiales</span>
+        <span class="warning" *ngIf="mostrarError('first_name', 'required')">Campo obligatorio</span>
+        <span class="warning" *ngIf="mostrarError('first_name', 'pattern')">Campo inválido. Omita números o caracteres especiales</span>
       </div>
       <div class="inputSpanCtn">
         <div class="inputContainer">
-          <input type="text" id="user_last_name" class="input" name="user_last_name" formControlName="apellido" [class.border-danger]="esInvalido('apellido')">
+          <input type="text" id="user_last_name" class="input" name="user_last_name" formControlName="last_name" [class.border-danger]="esInvalido('last_name')">
           <label for="user_last_name" class="label">Apellido:</label>
         </div>
-        <span class="warning" *ngIf="mostrarError('apellido', 'required')">Campo obligatorio</span>
-        <span class="warning" *ngIf="mostrarError('apellido', 'pattern')">Campo inválido. Omita números o caracteres especiales</span>
+        <span class="warning" *ngIf="mostrarError('last_name', 'required')">Campo obligatorio</span>
+        <span class="warning" *ngIf="mostrarError('last_name', 'pattern')">Campo inválido. Omita números o caracteres especiales</span>
       </div>
       <div class="inputSpanCtn">
         <div class="inputContainer">
@@ -29,18 +30,11 @@
       </div>
       <div class="inputSpanCtn">
         <div class="inputContainer">
-          <input type="text" id="user_username" class="input" name="user_username" formControlName="username" [class.border-danger]="esInvalido('username')">
-          <label for="user_username" class="label">Nombre de usuario:</label>
-        </div>
-        <span class="warning" *ngIf="mostrarError('username', 'required')">Campo obligatorio</span>
-      </div>
-      <div class="inputSpanCtn">
-        <div class="inputContainer">
-          <input type="password" class="input" id="user_password" name="user_password" formControlName="pass" [class.border-danger]="esInvalido('pass')" (blur)="obtenerPassword()">
+          <input type="password" class="input" id="user_password" name="user_password" formControlName="password" [class.border-danger]="esInvalido('password')" (blur)="obtenerPassword()">
           <label for="user_password" class="label">Contraseña:</label>
         </div>
-        <span class="warning" *ngIf="mostrarError('pass', 'pattern')">La contraseña debe contener mínimo 8 caracteres, una mayúscula, una minúscula, un número y un caracter especial</span>
-        <span class="warning" *ngIf="mostrarError('pass', 'required')">Campo obligatorio</span>
+        <span class="warning" *ngIf="mostrarError('password', 'pattern')">La contraseña debe contener mínimo 8 caracteres, una mayúscula, una minúscula, un número y un caracter especial</span>
+        <span class="warning" *ngIf="mostrarError('password', 'required')">Campo obligatorio</span>
       </div>
       <div class="inputSpanCtn">
         <div class="inputContainer">
@@ -53,3 +47,4 @@
       <input type="submit" id="registerSubmit" value="Registrarse" class="btn_registro">
   </form>
 </main>
+<app-footer></app-footer>
