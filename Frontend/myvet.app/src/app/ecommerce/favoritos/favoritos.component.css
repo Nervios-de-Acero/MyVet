@@ -1,6 +1,6 @@
 .favoritosView {
   width: 100%;
- height: auto;
+  height: auto;
   background-color: #fff;
   display: flex;
   align-items: center;
@@ -16,11 +16,56 @@
   justify-content: center;
 }
 
-.irAcatalogo {
+.irAcatalogo, .volver, .eliminar {
   width: 150px;
   height: 50px;
   background-color:  rgb(27, 27, 170) ;
   border-radius: 15px;
   color: #fff;
   border: none;
+}
+
+.conFavoritos {
+  height: auto;
+  width: 100%;
+  padding: 30px;
+}
+
+.favoritosCtn {
+  width: 100%;
+  padding: 20px;
+  height: auto;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap:15px;
+}
+
+.productoFav {
+  width: 100%;
+  height: auto;
+  border: 2px solid black;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 5px 20px;
+}
+
+.contenedorImg {
+  width: 20%;
+}
+
+.contenedorImg img {
+  width: 100%;
+  height: auto;
+}
+
+.eliminar {
+  width: 10%;
+}
+
+.infoFav {
+  width: 70%;
 }

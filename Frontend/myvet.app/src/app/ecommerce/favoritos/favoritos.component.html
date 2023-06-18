@@ -8,6 +8,8 @@
     </section>
 
     <section class="conFavoritos" *ngIf="favoritos.length > 0">
+        <button routerLink="/petshop" class="volver">Volver</button>
+        <div class="favoritosCtn">
         <article *ngFor="let producto of favoritos" class="productoFav">
             <div class="contenedorImg">
                 <img [src]="producto.imagen_url" [alt]="producto.nombre_producto">
@@ -18,6 +20,7 @@
             </div>
             <button class="eliminar" (click)="eliminarFavorito(producto)">Eliminar</button>
         </article>
+    </div>
     </section>
     </main>
 <app-footer-ecommerce></app-footer-ecommerce>
