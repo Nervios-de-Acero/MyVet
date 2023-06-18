@@ -8,24 +8,57 @@ from rest_framework.response import Response
 from rest_framework.decorators import api_view
 from .serializers import *
 
-# Create your views here.
+
 @api_view(['GET', 'POST'])
 def usuario(request):
-    
     if request.method == 'GET':
-        usuario = Usuario.objects.all()
-        serializer_usuario = UsuarioSerializer(usuario, many=True)
-        
-        return Response(serializer_usuario.data)
-   
+        usuarios = Usuario.objects.all()
+        serializer_usuario = UsuarioSerializer(usuarios, many=True)
+        return render(request, 'usuario/usuario.html', {'usuarios': serializer_usuario.data})
+
     if request.method == 'POST':
         serializer_usuario = UsuarioSerializer(data=request.data)
-        
+
         if serializer_usuario.is_valid():
-            serializer_usuario.create(request.data)
-            return Response( serializer_usuario, status=status.HTTP_201_CREATED)
+            serializer_usuario.save()
+            return render(request, 'usuario/usuario.html', {'usuarios': serializer_usuario.data})
+
+        return render(request, 'usuario/usuario.html', {'error': serializer_usuario.errors})
+
+# @api_view(['GET', 'POST'])
+# def usuario(request):
+#     if request.method == 'GET':
+#         usuario = Usuario.objects.all()
+#         serializer_usuario = UsuarioSerializer(usuario, many=True)
+#         return render(request, 'usuario/usuario.html', {'usuarios': serializer_usuario.data})
+    
+#     if request.method == 'POST':
+#         serializer_usuario = UsuarioSerializer(data=request.data)
         
-        return Response(serializer_usuario.errors)
+#         if serializer_usuario.is_valid():
+#             serializer_usuario.create(request.data)
+#             return render(request, 'usuario/usuario.html', {'usuarios': serializer_usuario.data})
+        
+#         return render(request, 'usuario/usuario.html', {'error': serializer_usuario.errors})
+
+# Create your views here.
+# @api_view(['GET', 'POST'])
+# def usuario(request):
+    
+#     if request.method == 'GET':
+#         usuario = Usuario.objects.all()
+#         serializer_usuario = UsuarioSerializer(usuario, many=True)
+        
+#         return Response(serializer_usuario.data)
+   
+#     if request.method == 'POST':
+#         serializer_usuario = UsuarioSerializer(data=request.data)
+        
+#         if serializer_usuario.is_valid():
+#             serializer_usuario.create(request.data)
+#             return Response( serializer_usuario, status=status.HTTP_201_CREATED)
+        
+#         return Response(serializer_usuario.errors)
 
 
 class RegistroView(generics.CreateAPIView):
