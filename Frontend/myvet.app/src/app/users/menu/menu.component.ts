@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
 })
 export class MenuComponent {
   menuOpen = false;
+  isLogged: boolean = false;
 
   constructor(private login: LoginService, private router: Router) {}
 
@@ -26,6 +27,7 @@ export class MenuComponent {
 
   logout(){
     localStorage.removeItem('isLogged')
+    localStorage.removeItem('favoritos')
     window.location.reload()
 }
 }

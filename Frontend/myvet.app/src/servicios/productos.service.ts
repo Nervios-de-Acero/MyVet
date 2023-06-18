@@ -10,8 +10,16 @@ export class ProductosService {
   private products: ProductModel[] = [];
   private carrito: ProductModel[] = [];
   private cantidadProductos: number = 0;
+  favoritos: ProductModel[] = []
+
+
   // private productosFiltrados: ProductModel[] = [];
-  constructor(private http:HttpClient) {}
+
+  constructor(private http:HttpClient) {
+  
+  const favs = localStorage.getItem('favoritos')
+  this.favoritos = favs ? JSON.parse(favs) : []
+  }
 
   getProductos(): Observable<ProductModel[]> {
     return this.http.get<ProductModel[]>(`http://localhost:3000/productos`)
@@ -44,6 +52,33 @@ export class ProductosService {
     }
     return total;
   } */
+
+  guardarFavs(): void {
+    localStorage.setItem('favoritos',JSON.stringify(this.favoritos))
+  }
+
+  traerFavs(): void {
+    const favs = localStorage.getItem('favoritos')
+    this.favoritos = favs ? JSON.parse(favs) : []
+  }
+
+  agregarFavs(prod: ProductModel): void {
+    this.traerFavs()
+    this.favoritos.push(prod)
+    this.guardarFavs()
+    return
+  }
+
+  quitarFavs(prod: ProductModel): void {
+    this.traerFavs()
+  
+    const index = this.favoritos.findIndex(el => el.id === prod.id);
+      if (index !== -1) {
+        this.favoritos.splice(index, 1);
+        console.log('Producto eliminado de favoritos:', prod);
+      }
+    this.guardarFavs()
+  }
 
  /*  getFilteredProducts(animal: string): ProductModel[] {
     return this.products.filter(product => product.tipo_animal === animal);
