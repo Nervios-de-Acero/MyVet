@@ -28,7 +28,7 @@ class Usuario(AbstractBaseUser, PermissionsMixin):
     email = models.EmailField('Email',max_length = 255, unique = True,)
     first_name = models.CharField('Nombre', max_length = 50, blank = True, null = True)
     last_name = models.CharField('Apellido', max_length = 50, blank = True, null = True)
-    telefono = models.CharField(max_length=15, null=True, blank=True)
+    telefono = models.CharField(max_length=20, null=True, blank=True)
     dni = models.CharField(max_length=8, null=True, blank=True)
     direccion = models.CharField(max_length=50, null=True, blank=True)
     avatar = models.ImageField(upload_to= path_to_avatar, null=True, blank=True)

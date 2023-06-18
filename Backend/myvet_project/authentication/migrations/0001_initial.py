@@ -23,7 +23,7 @@ class Migration(migrations.Migration):
                 ('email', models.EmailField(max_length=255, unique=True, verbose_name='Email')),
                 ('first_name', models.CharField(blank=True, max_length=50, null=True, verbose_name='Nombre')),
                 ('last_name', models.CharField(blank=True, max_length=50, null=True, verbose_name='Apellido')),
-                ('telefono', models.CharField(blank=True, max_length=15, null=True)),
+                ('telefono', models.CharField(blank=True, max_length=20, null=True)),
                 ('dni', models.CharField(blank=True, max_length=8, null=True)),
                 ('direccion', models.CharField(blank=True, max_length=50, null=True)),
                 ('avatar', models.ImageField(blank=True, null=True, upload_to=authentication.models.path_to_avatar)),
