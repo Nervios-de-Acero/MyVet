@@ -46,8 +46,15 @@ class UserLoginView(APIView):
         user = authenticate(request, email=email, password=password)
         
         if user is not None:
-            login(request, user)
-            return redirect('login-success')  # Redirige a la página de inicio de sesión exitosa
+            refresh = RefreshToken.for_user(user)
+
+            # Guardar el token de acceso en la sesión del usuario
+            request.session['access_token'] = str(refresh.access_token)
+
+            return Response({
+                'refresh': str(refresh),
+                'access': str(refresh.access_token),
+            }, status=status.HTTP_200_OK)
         else:
             return render(request, 'authentication/login.html', {'error': 'Credenciales inválidas'})   
 

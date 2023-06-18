@@ -18,7 +18,12 @@ import { InicioSesionComponent } from './forms/inicio-sesion/inicio-sesion.compo
 import { ProductosService } from 'src/servicios/productos.service';
 import { RegistrarseComponent } from './forms/registrarse/registrarse.component';
 import { MenuComponent } from './users/menu/menu.component';
-
+import { DetalleProductoService } from 'src/servicios/detalle-producto.service';
+import { FavoritosComponent } from './ecommerce/favoritos/favoritos.component';
+import { CarritoComponent } from './users/carrito/carrito.component';
+import { VistaDetalladaComponent } from './ecommerce/vista-detallada/vista-detallada.component';
+import { PerfilComponent } from './users/perfil/perfil.component';
+import { UsersModule } from './users/users.module';
 
 const routes: Routes = [
     {path:'', component:InicioComponent},
@@ -29,7 +34,10 @@ const routes: Routes = [
     {path:'servicios', component:ServiciosComponent},
     {path:'inicio-sesion', component:InicioSesionComponent},
     {path:'registrarse', component:RegistrarseComponent},
-    { path:'menu', component: MenuComponent }
+    { path:'menu', component: MenuComponent },
+    { path:'favoritos', component: FavoritosComponent },
+    { path:'carrito', component: CarritoComponent },
+    { path:'perfil', component: PerfilComponent }
 ];
 
 
@@ -37,7 +45,7 @@ const routes: Routes = [
     declarations: [
         AppComponent
     ],
-    providers: [ProductosService],
+    providers: [ProductosService, DetalleProductoService],
     bootstrap: [AppComponent],
     exports: [RouterModule],
     imports: [
@@ -48,7 +56,8 @@ const routes: Routes = [
         SharedModule,
         HttpClientModule,
         ReactiveFormsModule,
-        FormulariosModule
+        FormulariosModule,
+        UsersModule
     ]
 })
 export class AppModule { }

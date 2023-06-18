@@ -1,0 +1,82 @@
+.favoritosView {
+  width: 100%;
+  height: auto;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sinFavoritos {
+  width: 100%;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.irAcatalogo, .volver, .eliminar {
+  width: 150px;
+  height: 50px;
+  background-color:  rgb(27, 27, 170) ;
+  border-radius: 15px;
+  color: #fff;
+  border: none;
+}
+
+.conFavoritos {
+  height: auto;
+  width: 100%;
+  padding: 30px;
+}
+
+.favoritosCtn {
+  width: 100%;
+  padding: 20px;
+  height: auto;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap:15px;
+}
+
+.productoFav {
+  width: 100%;
+  height: auto;
+  border: 2px solid black;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 5px 20px;
+  flex-wrap: wrap;
+}
+
+.contenedorImg {
+  width: 180px;
+}
+
+.contenedorImg img {
+  width: 100%;
+  height: auto;
+}
+
+.eliminar {
+  min-width: 120px;
+  margin: 0 10px;
+}
+
+.infoFav {
+  width: 180px;
+}
+
+.infoFav h3 {
+  font-size: 16px;
+}
+
+.infoFav p {
+  font-size: 14px;
+  font-weight: bolder;
+}

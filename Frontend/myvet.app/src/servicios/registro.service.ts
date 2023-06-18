@@ -1,15 +1,18 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+
 
 @Injectable({
-  providedIn: 'root'
+providedIn: 'root'
 })
 export class RegistroService {
-        private baseUrl = 'http://localhost:8000'; 
-         constructor(private http: HttpClient) { }
 
-     registerUser(user: any) {
-             return this.http.post(`${this.baseUrl}/signup/`, user);
-     }
+constructor(private http: HttpClient) { }
+
+registerUser(user:any): Observable<any>{
+        console.log('tipo', typeof user)
+        return this.http.post("http://localhost:8000/api/register/", user);
+}
 }
 

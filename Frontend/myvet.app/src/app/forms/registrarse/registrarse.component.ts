@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { RegistroService } from 'src/servicios/registro.service';
 
 @Component({
   selector: 'app-registrarse',
@@ -8,20 +9,34 @@ import { FormBuilder, Validators } from '@angular/forms';
 })
 export class RegistrarseComponent {
   formRegistro = this.fb.group({
-    nombre: ['', [Validators.required, Validators.pattern('^[a-zA-ZáéíóúÁÉÍÓÚñÑ\\s]+$')]],
-    apellido: ['',[Validators.required, Validators.pattern('^[a-zA-ZáéíóúÁÉÍÓÚñÑ\\s]+$')]],
     email: ['', [Validators.required, Validators.email]],
-    username: ['', Validators.required],
-    pass: ['', [Validators.required, Validators.pattern(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#\$\%\^&\*\.]).{8,}$/)]],
+    password: ['', [Validators.required, Validators.pattern(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#\$\%\^&\*\.]).{8,}$/)]],
+    first_name: ['', [Validators.required, Validators.pattern('^[a-zA-ZáéíóúÁÉÍÓÚñÑ\\s]+$')]],
+    last_name: ['',[Validators.required, Validators.pattern('^[a-zA-ZáéíóúÁÉÍÓÚñÑ\\s]+$')]],
+    telefono: null,
+    dni: null,
+    direccion: null,
+    avatar: null,
     pass2: ['', Validators.required]
   })
+
+  /*{
+    "email": "pepitojuarez@gmail.com",
+    "password": "LinkinPark05$",
+    "nombre": "Carlos Gabriel",
+    "apellido": "Del Pont",
+    "telefono": null,
+    "dni": null,
+    "direccion": null,
+    "avatar": null
+} */
 
   enviado = false;
   valorPass: string | undefined | null;
   confirmacionInvalida = false;
   invalido = false;
 
-  constructor(private fb: FormBuilder) {}
+  constructor(private fb: FormBuilder, private rs: RegistroService) {}
 
   esInvalido(nombre: string) {
   return this.formRegistro.get(nombre)?.invalid &&
@@ -34,7 +49,7 @@ export class RegistrarseComponent {
   }
 
   obtenerPassword() {
-    this.valorPass = this.formRegistro.get('pass')?.value 
+    this.valorPass = this.formRegistro.get('password')?.value 
   }
 
   compararPass(){
@@ -50,9 +65,19 @@ export class RegistrarseComponent {
       return
     }
     else {
-      this.invalido = false
-      console.log(this.formRegistro.value) 
-      // INYECTAR SERVICIO CON MÉTODO POST
+      const formFinal = this.formRegistro.value
+      delete formFinal.pass2
+      this.rs.registerUser(formFinal).subscribe({
+      next: (res) => {
+        this.invalido = false
+        console.log('Usuario creado correctamente. Respuesta: ', res)
+      },
+      error: (err) => {
+        this.invalido = true
+        console.log(err)
+      },
+      complete: () => console.log('Trabajo terminado')
+      })
     }
   }
 }
