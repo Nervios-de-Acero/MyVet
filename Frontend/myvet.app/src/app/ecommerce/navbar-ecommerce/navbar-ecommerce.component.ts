@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ProductosService } from 'src/servicios/productos.service';
 
 @Component({
   selector: 'app-navbar-ecommerce',
@@ -7,7 +8,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./navbar-ecommerce.component.css']
 })
 export class NavbarEcommerceComponent implements OnInit {
-  constructor(private router: Router) { }
+  cantidadProductos: number = 0;
+  constructor(private productosService: ProductosService, private router: Router) { }
 
   toggleButton: HTMLElement | null | undefined;
   navWrapper: HTMLElement | null | undefined;
@@ -15,6 +17,7 @@ export class NavbarEcommerceComponent implements OnInit {
   userToken: string = '';
 
   ngOnInit() {
+    this.actualizarCantidadProductos();
     this.toggleButton = document.getElementById('button-menu');
     this.navWrapper = document.getElementById('nav');
 
@@ -38,6 +41,13 @@ export class NavbarEcommerceComponent implements OnInit {
 
     const localToken = localStorage.getItem('userToken') 
     this.userToken = localToken ? JSON.parse(localToken) : ''
+  }
+  actualizarCantidadProductos(): void {
+    this.cantidadProductos = this.productosService.obtenerCarrito().length;
+  }
+
+  redirigir() {
+    this.router.navigate(['/carrito']);
   }
 
   showMenu = false;

@@ -14,6 +14,7 @@ import { CatalogoComponent } from './ecommerce/catalogo/catalogo.component';
 import { VistaDetalladaComponent } from './ecommerce/vista-detallada/vista-detallada.component';
 import { MenuComponent } from './users/menu/menu.component'; 
 import { FavoritosComponent } from './ecommerce/favoritos/favoritos.component';
+import { CarritoComponent } from './users/carrito/carrito.component';
 import { PerfilComponent } from './users/perfil/perfil.component';
 
 const routes: Routes = [
@@ -30,6 +31,7 @@ const routes: Routes = [
     component: VistaDetalladaComponent},
   { path:'menu', component: MenuComponent},
   { path:'favoritos', component: FavoritosComponent},
+  { path:'carrito', component: CarritoComponent},
   { path:'perfil', component: PerfilComponent }
 ];
 
