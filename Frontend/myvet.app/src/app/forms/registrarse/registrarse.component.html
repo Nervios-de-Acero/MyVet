@@ -1,3 +1,4 @@
+<app-navbar></app-navbar>
 <main>
     <form id="register" [formGroup]="formRegistro" (ngSubmit)="onSubmit()">
       <span class="warning errorEnvio" *ngIf="invalido">Error: Algunos campos son inválidos. Revise los datos antes de enviarlos.</span>
@@ -46,3 +47,4 @@
       <input type="submit" id="registerSubmit" value="Registrarse" class="btn_registro">
   </form>
 </main>
+<app-footer></app-footer>
