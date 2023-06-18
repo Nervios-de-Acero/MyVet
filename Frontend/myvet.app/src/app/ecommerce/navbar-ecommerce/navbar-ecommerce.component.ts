@@ -11,6 +11,8 @@ export class NavbarEcommerceComponent implements OnInit {
 
   toggleButton: HTMLElement | null | undefined;
   navWrapper: HTMLElement | null | undefined;
+  isLogged: boolean = false;
+  userToken: string = '';
 
   ngOnInit() {
     this.toggleButton = document.getElementById('button-menu');
@@ -30,6 +32,12 @@ export class NavbarEcommerceComponent implements OnInit {
         }
       });
     }
+
+    const loggedUser = localStorage.getItem('isLogged') 
+    this.isLogged = loggedUser ? JSON.parse(loggedUser) : false
+
+    const localToken = localStorage.getItem('userToken') 
+    this.userToken = localToken ? JSON.parse(localToken) : ''
   }
 
   showMenu = false;
