@@ -66,13 +66,4 @@ local_settings.py
 myvet_proyect_virtual
 myvet
 myvet_virtual
-Backend/myvet_vitual/pyvenv.cfg
-Backend/myvet_vitual/Scripts/pythonw.exe
-Backend/myvet_vitual/Scripts/python.exe
-Backend/myvet_vitual/Scripts/pip3.exe
-Backend/myvet_vitual/Scripts/pip3.11.exe
-Backend/myvet_vitual/Scripts/pip.exe
-Backend/myvet_vitual/Scripts/deactivate.bat
-Backend/myvet_vitual/Scripts/Activate.ps1
-Backend/myvet_vitual/Scripts/activate.bat
-Backend/myvet_vitual/Scripts/activate
+myvet_vitual

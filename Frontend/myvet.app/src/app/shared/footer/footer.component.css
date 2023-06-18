@@ -17,14 +17,15 @@
   }
 
   .logo{
-    width: 150px;
-    height: 150px;
+    max-width: 100%;
+    height: 100px;
   }
   .container{
     width: 80%;
   }
 
   .icon-redes{
+    display: flex;
     justify-content: center;
     align-content: center;
     margin-top: 20px;
