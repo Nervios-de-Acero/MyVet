@@ -11,17 +11,16 @@ import { ProductosService } from 'src/servicios/productos.service';
 })
 export class VistaDetalladaComponent implements OnInit, OnChanges{
 
-  constructor(private dp: DetalleProductoService, private router: Router, private ps: ProductosService) {
-    const added = localStorage.getItem('agregado')
-    this.agregado = added ? JSON.parse(added) : false
-    }
+  constructor(private dp: DetalleProductoService, private router: Router, private ps: ProductosService) {}
 
 objetoProducto!: ProductModel;
 agregado: boolean = false;
 
 ngOnInit(): void {
   this.objetoProducto = this.dp.getDetail()
-  console.log(this.agregado, 'estado inicial')
+  
+  const favoritos = localStorage.getItem('favoritos')
+  favoritos ? this.comprobarAgregado(JSON.parse(favoritos), this.objetoProducto.id) : this.agregado = false
 }
 
 ngOnChanges(): void {
@@ -43,7 +42,17 @@ agregarAlCarrito(): void {
 }
 
 agregarAFavorito(prod: ProductModel): void {
+
   this.ps.agregarFavs(prod)
-}
+  this.agregado = true
 }
 
+
+comprobarAgregado(val: ProductModel[], idProd: number): void{
+if(val.length > 0){
+  val.find(el => el.id === idProd) ? this.agregado = true : this.agregado = false
+  return
+}
+this.agregado = false
+}
+}

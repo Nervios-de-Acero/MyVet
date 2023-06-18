@@ -109,6 +109,7 @@
 
 .agregado {
   background-color: rgb(27, 27, 170);
+  color: #fff;
 }
 
 @media (min-width: 400px){

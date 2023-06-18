@@ -11,7 +11,7 @@ export class ProductosService {
   private carrito: ProductModel[] = [];
   private cantidadProductos: number = 0;
   favoritos: ProductModel[] = []
-  agregado: boolean = false
+
 
   // private productosFiltrados: ProductModel[] = [];
 
@@ -19,9 +19,6 @@ export class ProductosService {
   
   const favs = localStorage.getItem('favoritos')
   this.favoritos = favs ? JSON.parse(favs) : []
-
-  const added = localStorage.getItem('agregado')
-  this.agregado = added ? JSON.parse(added) : false
   }
 
   getProductos(): Observable<ProductModel[]> {
@@ -66,39 +63,21 @@ export class ProductosService {
   }
 
   agregarFavs(prod: ProductModel): void {
-    const id = prod.id
     this.traerFavs()
-
-    if(this.agregado === true){
-      this.quitarFavs(prod);
-      this.agregado = false;
-      console.log('cambió this.favoritos a ', this.favoritos)
-      localStorage.setItem('agregado', JSON.stringify(this.agregado))
-      return;
-    }
-    
-    const agregado = this.favoritos.filter(el => el.id === id)
-    if(!agregado) {
-      this.favoritos.push(prod)
-      this.guardarFavs()
-      console.log('cambió this.favoritos a ', this.favoritos)
-      this.agregado = true
-      return
-    }
-    else this.agregado = false
+    this.favoritos.push(prod)
+    this.guardarFavs()
+    return
   }
 
   quitarFavs(prod: ProductModel): void {
     this.traerFavs()
-    
+  
     const index = this.favoritos.findIndex(el => el.id === prod.id);
-    
-    
       if (index !== -1) {
         this.favoritos.splice(index, 1);
         console.log('Producto eliminado de favoritos:', prod);
       }
-    
+    this.guardarFavs()
   }
 
  /*  getFilteredProducts(animal: string): ProductModel[] {
