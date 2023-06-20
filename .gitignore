@@ -67,3 +67,11 @@ myvet_proyect_virtual
 myvet
 myvet_virtual
 myvet_vitual
+myvet_proyect
+
+
+Backend/myvet_project/usuario/migrations/0001_initial.py
+Backend/myvet_project/authentication/migrations/0001_initial.py
+
+**/migrations/0001_initial.py
+**/migrations/0002_initial.py

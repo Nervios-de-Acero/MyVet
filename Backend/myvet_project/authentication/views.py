@@ -27,22 +27,25 @@ class UserRegistrationView(generics.CreateAPIView):
         serializer = self.get_serializer(data=request.data)
         if serializer.is_valid():
             serializer.save()
-            return render(request, 'authentication/registration_success.html')
+            return render(request, 'authentication/registration_success.html') 
+            # return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-
 
 
 class HomeView(APIView):
     def get(self, request):
         return render(request, 'authentication/home.html')
-    
+  
+  
 class UserLoginView(APIView):
+    permission_classes = [AllowAny]
     def get(self, request):
         return render(request, 'authentication/login.html')
 
     def post(self, request):
-        email = request.POST.get('email')
-        password = request.POST.get('password')
+        email = request.data.get('email')
+        password = request.data.get('password')
+
         user = authenticate(request, email=email, password=password)
         
         if user is not None:
