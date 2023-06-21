@@ -12,7 +12,7 @@ urlpatterns = [
     path('users/<int:pk>/update/', views.UserDetailView.as_view(), name='user-update'),
     path('home/', views.HomeView.as_view(), name='home'),
     path('login/', views.UserLoginView.as_view(), name='user-login'),  
-    path('login-success/', LoginSuccessView.as_view(), name='login-success'),
+     path('login-success/', LoginSuccessView.as_view(), name='login-success'),
 ]
 
 

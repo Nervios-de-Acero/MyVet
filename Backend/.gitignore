@@ -132,3 +132,7 @@ Thumbs.db
 myvet_proyect_virtual
 myvet
 myvet_virtual
+myvet_proyect
+
+**/migrations/0001_initial.py
+**/migrations/0002_initial.py

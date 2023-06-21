@@ -3,12 +3,12 @@
 </section>
 <section class="container-cart">
     <h1 class="title-cart">Mi Carrito </h1>
-    <div class="container-items" *ngif="!contieneProducto">
+    <div class="container-items" *ngIf="!contieneProducto">
         <h2 class="title-message">Tu carrito está vacío</h2>
         <div>
             <p class="info">¿No sabés qué comprar? ¡Miles de productos te esperan!</p>
         </div>
-        <button type="button" class="btn btn-ofert btn-primary">Descrube ofertas</button><!--Me lleva al catalogo-->
+        <button class="btn btn-ofert btn-primary" routerLink="/petshop">Descrube ofertas</button><!--Me lleva al catalogo-->
     </div>
   <section class="compras" *ngFor="let producto of productosEnCarrito">
     <article class="card-product">
