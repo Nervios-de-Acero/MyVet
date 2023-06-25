@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
 import { ProductModel } from '../app/models/productos.model';
 
 @Injectable({
@@ -11,9 +11,8 @@ export class ProductosService {
   private carrito: ProductModel[] = [];
   private cantidadProductos: number = 0;
   favoritos: ProductModel[] = []
+ 
 
-
-  // private productosFiltrados: ProductModel[] = [];
 
   constructor(private http:HttpClient) {
   
@@ -45,14 +44,14 @@ export class ProductosService {
     this.carrito = [];
   }
 
-/*   calcularPrecioTotal(): number {
+  calcularPrecioTotal(): number {
     let total = 0;
     for (const producto of this.carrito) {
       total += producto.precio * producto.cantidad;
     }
     return total;
-  } */
-
+  } 
+  
   guardarFavs(): void {
     localStorage.setItem('favoritos',JSON.stringify(this.favoritos))
   }
@@ -96,5 +95,15 @@ export class ProductosService {
     // Lógica para filtrar los productos según el animal
     const productosFiltrados = this.products.filter(producto => producto.tipo_animal === animal);
     return this.productosFiltrados = productosFiltrados;
+  } */
+
+
+  /* filtrarProductosPorCategoria(categoria: string): void {
+    this.productosFiltrados = this.products.filter(producto => producto.categoria === categoria);
+    console.log('haces click')
+  }
+
+  getProductosFiltrados(): ProductModel[] {
+    return this.productosFiltrados;
   } */
 }
