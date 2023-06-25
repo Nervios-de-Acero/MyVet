@@ -16,7 +16,7 @@
       <div class="img-container">
         <img class="img-product" [src]="producto.imagen_url" alt="">
         <div class="buton-quantity">
-<button class="remove-btn btn-primary" (click)="decrementQuantity()">-</button>
+          <button class="remove-btn btn-primary" (click)="decrementQuantity()">-</button>
           <span class="quantity"><!-- {{ producto.cantidad }}-->0</span>
           <button class="add-btn btn-primary" (click)="incrementQuantity()">+</button>
         </div>
@@ -29,11 +29,9 @@
           <div class="container-price">
             <h3 class="tilte-total">Total con envío</h3>
             <span class="price-span"><!-- {{ calcularPrecioTotal() | currency }}-->Precio</span>
-          </div>
-          <button type="button" class="btn btn-continue btn-primary">Continuar con la compra</button> <!--Me lleva a la pasarela de pagos-->
-          
-          <!--<ngx-paypal [config]="payPalConfig"></ngx-paypal>-->
-
+          </div>          
         </section>
+        <button type="button" class="btn btn-continue btn-primary">Continuar con la compra</button> <!--Me lleva a la pasarela de pagos-->
+        <!-- <ngx-paypal *ngIf="contieneProducto" [config]="payPalConfig()"></ngx-paypal> -->
 </section>
 

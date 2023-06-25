@@ -2,19 +2,25 @@ from django.contrib.auth.models import BaseUserManager, AbstractBaseUser, Permis
 from django.db import models
 
 
+
 # Create your models here.
 
 def path_to_avatar(instance, filename): 
      return f'avatars/{instance.id}/{filename}'     
 
 class UserManager(BaseUserManager):
-    def create_user(self, email, password=None, **extra_fields):
+    def create_user(self, email, password=None, stripe_card_token=None, **extra_fields):
         if not email:
             raise ValueError('El email debe ser proporcionado')
 
         email = self.normalize_email(email)
         user = self.model(email=email, **extra_fields)
         user.set_password(password)
+        
+        # Asignar el token de tarjeta de Stripe al usuario si se proporciona
+        if stripe_card_token:
+            user.stripe_card_token = stripe_card_token
+       
         user.save()
         return user
 
@@ -32,6 +38,9 @@ class Usuario(AbstractBaseUser, PermissionsMixin):
     dni = models.CharField(max_length=8, null=True, blank=True)
     direccion = models.CharField(max_length=50, null=True, blank=True)
     avatar = models.ImageField(upload_to= path_to_avatar, null=True, blank=True)
+    # Nuevos campos relacionados con la información de pago
+    stripe_customer_id = models.CharField('ID de cliente de Stripe', max_length=255, blank=True, null=True)
+    stripe_card_token = models.CharField('Token de tarjeta de Stripe', max_length=255, blank=True, null=True)
     is_active = models.BooleanField(default = True)
     is_staff = models.BooleanField(default = False)
     objects = UserManager()
