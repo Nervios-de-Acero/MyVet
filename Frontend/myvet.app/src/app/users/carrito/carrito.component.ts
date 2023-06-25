@@ -18,8 +18,6 @@ export class CarritoComponent implements OnInit {
 
   constructor(public productosService: ProductosService) {}
 
-
-  
   ngOnInit(): void {
     //this.initConfig();
     this.obtenerProductosEnCarrito();
@@ -27,17 +25,17 @@ export class CarritoComponent implements OnInit {
 
   /* private initConfig(): void {
     this.payPalConfig = {
-        currency: 'ARS',
-        clientId: 'sb',
+        currency: 'USD',
+        clientId: 'AbNTmzpQA4hKdLdo47uJDrC_DcTvIWSQ3DZj62suGEQ-0nGuC56SAdmMg5xOtSQjA2eTJTMTRU4Ys2fH',
         createOrderOnClient: (data) => < ICreateOrderRequest > {
             intent: 'CAPTURE',
             purchase_units: [{
                 amount: {
-                    currency_code: 'ARS',
+                    currency_code: 'USD',
                     value: '9.99',
                     breakdown: {
                         item_total: {
-                            currency_code: 'ARS',
+                            currency_code: 'USD',
                             value: '9.99'
                         }
                     }
@@ -47,7 +45,7 @@ export class CarritoComponent implements OnInit {
                     quantity: '1',
                     category: 'DIGITAL_GOODS',
                     unit_amount: {
-                        currency_code: 'ARS',
+                        currency_code: 'USD',
                         value: '9.99',
                     },
                 }]
@@ -65,27 +63,21 @@ export class CarritoComponent implements OnInit {
             actions.order.get().then((details: any)=> {
                 console.log('onApprove - you can get full order details inside onApprove: ', details);
             });
-
         },
         onClientAuthorization: (data) => {
-            console.log('onClientAuthorization - you should probably inform your server about completed transaction at this point', data);
-            
+            console.log('onClientAuthorization - you should probably inform your server about completed transaction at this point', data);            
         },
         onCancel: (data, actions) => {
             console.log('OnCancel', data, actions);
-            
-
         },
         onError: err => {
-            console.log('OnError', err);
-            
+            console.log('OnError', err);            
         },
         onClick: (data, actions) => {
-            console.log('onClick', data, actions);
-            
+            console.log('onClick', data, actions);            
         }
     };
-} */
+  }  */
 
   obtenerProductosEnCarrito(): void {
     this.productosEnCarrito = this.productosService.obtenerCarrito();

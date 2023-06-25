@@ -6,5 +6,6 @@ export interface ProductModel {
   marca: string,
   categoria: string[],
   tipo_animal: string,
-  imagen_url: string
+  imagen_url: string,
+  cantidad: number
 }
