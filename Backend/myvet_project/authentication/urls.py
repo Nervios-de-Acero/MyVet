@@ -4,15 +4,17 @@ from . import views
 
 
 urlpatterns = [
-    path('register/', views.UserRegistrationView.as_view(), name='user-register'),
-    path('logout/', views.UserLogoutView.as_view(), name='user-logout'),
-    path('logout-success/', TemplateView.as_view(template_name='logout_success.html'), name='logout-success'),
-    path('users/', views.UserListView.as_view(), name='user-list'),
-    path('users/<int:pk>/', views.UserDetailView.as_view(), name='user-detail'),
-    path('users/<int:pk>/update/', views.UserDetailView.as_view(), name='user-update'),
-    path('home/', views.HomeView.as_view(), name='home'),
-    path('login/', views.UserLoginView.as_view(), name='user-login'),  
+     path('register/', views.UserRegistrationView.as_view(), name='user-register'),
+     path('logout/', views.UserLogoutView.as_view(), name='user-logout'),
+     path('logout-success/', TemplateView.as_view(template_name='logout_success.html'), name='logout-success'),
+     path('users/', views.UserListView.as_view(), name='user-list'),
+     path('users/<int:pk>/', views.UserDetailView.as_view(), name='user-detail'),
+     path('users/<int:pk>/update/', views.UserDetailView.as_view(), name='user-update'),
+     path('home/', views.HomeView.as_view(), name='home'),
+     path('login/', views.UserLoginView.as_view(), name='user-login'),  
      path('login-success/', LoginSuccessView.as_view(), name='login-success'),
+     path('crear_cliente/', views.CrearClienteView.as_view(), name='cliente-stripe'),
+     path('procesar_pago/', views.ProcesarPagoView.as_view(), name='pago-stripe'),
 ]
 
 
