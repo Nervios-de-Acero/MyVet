@@ -1,6 +1,7 @@
 from django.contrib.auth.models import BaseUserManager, AbstractBaseUser, PermissionsMixin
 from django.db import models
-
+import stripe
+import clavesStripe
 
 
 # Create your models here.
@@ -17,10 +18,18 @@ class UserManager(BaseUserManager):
         user = self.model(email=email, **extra_fields)
         user.set_password(password)
         
-        # Asignar el token de tarjeta de Stripe al usuario si se proporciona
+         # Asignar el token de tarjeta de Stripe al usuario si se proporciona
         if stripe_card_token:
             user.stripe_card_token = stripe_card_token
-       
+            
+            # Crear un cliente en Stripe
+            stripe.api_key = clavesStripe.STRIPE_SECRET_KEY
+            customer = stripe.Customer.create(
+                email=email,
+                source=stripe_card_token
+            )
+            user.stripe_customer_id = customer.id
+            
         user.save()
         return user
 

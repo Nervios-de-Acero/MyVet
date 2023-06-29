@@ -30,4 +30,5 @@ urlpatterns = [
     path('api/', include(router.urls)),
     path('productos/',include('productos.urls')),
     path('usuario/', include('usuario.urls')),
+    path('carrito/', include('cart.urls')),
 ]

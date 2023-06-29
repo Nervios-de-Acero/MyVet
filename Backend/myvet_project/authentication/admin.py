@@ -9,10 +9,10 @@ class CustomUserAdmin(UserAdmin):
 
 class CustomUserAdmin(UserAdmin):
     model = Usuario
-    list_display = ['email', 'first_name', 'last_name', 'is_staff']
+    list_display = ['email', 'first_name', 'last_name','stripe_customer_id', 'is_staff']
     fieldsets = (
         (None, {'fields': ('email', 'password')}),
-        ('Personal Info', {'fields': ('first_name', 'last_name', 'telefono', 'dni', 'direccion', 'avatar')}),
+        ('Personal Info', {'fields': ('first_name', 'last_name', 'telefono', 'dni', 'direccion', 'avatar','stripe_customer_id')}),
         ('Permissions', {'fields': ('is_active', 'is_staff', 'is_superuser', 'groups', 'user_permissions')}),
         ('Important dates', {'fields': ('last_login',)}),
     )

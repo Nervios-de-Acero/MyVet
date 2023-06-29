@@ -14,6 +14,12 @@ class UsuarioSerializer(serializers.ModelSerializer):
         hashed_password = make_password(password)  # Aplicar el algoritmo de hash a la contraseña
 
         user = Usuario.objects.create(password=hashed_password, **validated_data)
+        
+        # Crear el cliente en Stripe y asignar el ID de cliente al usuario
+        stripe_customer = stripe.Customer.create(email=user.email)
+        user.stripe_customer_id = stripe_customer.id
+        user.save()
+        
         return user
 
 

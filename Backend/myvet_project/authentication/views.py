@@ -13,6 +13,8 @@ from .models import *
 from django.shortcuts import render
 from django.shortcuts import redirect
 from django.views.generic import TemplateView
+import stripe
+import clavesStripe
 
 
 
@@ -130,7 +132,59 @@ class UserDetailView(APIView):
 
 class UserUpdateSuccessView(TemplateView):
     template_name = 'authentication/user_update_success.html'
+    
 
+class CrearClienteView(APIView):
+    def post(self, request):
+        stripe.api_key = clavesStripe.STRIPE_SECRET_KEY
+        email = request.data.get('email')
+        nombre = request.data.get('nombre')
+        direccion = request.data.get('direccion')
+
+        try:
+            # Crear un cliente en Stripe
+            customer = stripe.Customer.create(
+                email=email,
+                name=nombre,
+                address={
+                    'line1': direccion,
+                }
+            )
+            # Obtener el usuario existente
+            try:
+                usuario = Usuario.objects.get(email=email)
+            except Usuario.DoesNotExist:
+                return Response({'error': 'Usuario no encontrado'}, status=status.HTTP_404_NOT_FOUND)
+
+            # Actualizar el campo stripe_customer_id del usuario
+            usuario.stripe_customer_id = customer.id
+            usuario.save()
+
+            return Response({'cliente_id': customer.id}, status=status.HTTP_201_CREATED)
+        except stripe.error.StripeError as e:
+            # Manejar errores de Stripe
+            return Response({'error': str(e)}, status=status.HTTP_400_BAD_REQUEST)
+
+
+class ProcesarPagoView(APIView):
+    def post(self, request):
+        cliente_id = request.data.get('stripe_customer_id')
+        cantidad = request.data.get('cantidad')
+        descripcion = request.data.get('descripcion')
+
+        try:
+            # Crear un cargo en Stripe
+            charge = stripe.Charge.create(
+                amount=int(cantidad) * 100,  # Convertir el monto a centavos
+                currency='usd',
+                description=descripcion,
+                customer=cliente_id
+            )
+            return Response({'charge_id': charge.id}, status=status.HTTP_201_CREATED)
+        except stripe.error.StripeError as e:
+            # Manejar errores de Stripe
+            return Response({'error': str(e)}, status=status.HTTP_400_BAD_REQUEST)
+        
 # class UserRegistrationView(generics.CreateAPIView):
 #     permission_classes = [AllowAny]
 #     serializer_class = UsuarioSerializer

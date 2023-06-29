@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { PerfilComponent } from './perfil/perfil.component';
 import { CarritoComponent } from './carrito/carrito.component';
 import { RouterModule } from '@angular/router';
-//import { NgxPayPalModule } from 'ngx-paypal';
+import { NgxPayPalModule } from 'ngx-paypal';
 //import { NgxSpinnerModule } from 'ngx-spinner/public_api';
 
 
@@ -21,8 +21,8 @@ import { RouterModule } from '@angular/router';
     ],
     imports: [
         CommonModule,
-        RouterModule
-        //NgxPayPalModule
+        RouterModule,
+        NgxPayPalModule
         //NgxSpinnerModule
     ]
 })

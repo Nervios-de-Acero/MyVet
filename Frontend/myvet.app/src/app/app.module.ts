@@ -24,7 +24,7 @@ import { CarritoComponent } from './users/carrito/carrito.component';
 import { VistaDetalladaComponent } from './ecommerce/vista-detallada/vista-detallada.component';
 import { PerfilComponent } from './users/perfil/perfil.component';
 import { UsersModule } from './users/users.module';
-//import { NgxPayPalModule } from 'ngx-paypal';
+import { NgxPayPalModule } from 'ngx-paypal';
 
 //import { NgxSpinnerModule } from 'ngx-spinner';
 //import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -62,7 +62,7 @@ const routes: Routes = [
         ReactiveFormsModule,
         FormulariosModule,
         UsersModule,
-        //NgxPayPalModule,
+        NgxPayPalModule
         //NgxSpinnerModule,
         //NgModule
     ],
