@@ -16,9 +16,9 @@
       <div class="img-container">
         <img class="img-product" [src]="producto.imagen_url" alt="">
         <div class="buton-quantity">
-          <button class="remove-btn btn-primary" (click)="decrementQuantity()">-</button>
-          <span class="quantity"><!-- {{ producto.cantidad }}-->0</span>
-          <button class="add-btn btn-primary" (click)="incrementQuantity()">+</button>
+          <button class="remove-btn btn-primary" (click)="decrementarCantidad(producto)">-</button>
+          <span class="quantity">{{ producto.cantidad }}</span>
+          <button class="add-btn btn-primary" (click)="aumentarCantidad(producto)">+</button>
         </div>
       </div>
             <div>
@@ -32,6 +32,6 @@
           </div>          
         </section>
         <button type="button" class="btn btn-continue btn-primary">Continuar con la compra</button> <!--Me lleva a la pasarela de pagos-->
-        <!-- <ngx-paypal *ngIf="contieneProducto" [config]="payPalConfig()"></ngx-paypal> -->
+        <ngx-paypal *ngIf="contieneProducto" [config]="payPalConfig"></ngx-paypal>
 </section>
 

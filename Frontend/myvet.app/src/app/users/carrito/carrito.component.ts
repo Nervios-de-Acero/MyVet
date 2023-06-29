@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductModel } from '../../models/productos.model';
 import { ProductosService } from '../../../servicios/productos.service';
-//import { ICreateOrderRequest, IPayPalConfig } from 'ngx-paypal';
+import { ICreateOrderRequest, IPayPalConfig } from 'ngx-paypal';
 //import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
@@ -10,7 +10,7 @@ import { ProductosService } from '../../../servicios/productos.service';
   styleUrls: ['./carrito.component.css']
 })
 export class CarritoComponent implements OnInit {
-  //public payPalConfig ? : IPayPalConfig;
+  public payPalConfig ? : IPayPalConfig;
   quantity: number = 0;
   productosSeleccionados: ProductModel[] = [];
   contieneProducto: boolean = false;
@@ -19,11 +19,11 @@ export class CarritoComponent implements OnInit {
   constructor(public productosService: ProductosService) {}
 
   ngOnInit(): void {
-    //this.initConfig();
+    this.initConfig();
     this.obtenerProductosEnCarrito();
   }
 
-  /* private initConfig(): void {
+  private initConfig(): void {
     this.payPalConfig = {
         currency: 'USD',
         clientId: 'AbNTmzpQA4hKdLdo47uJDrC_DcTvIWSQ3DZj62suGEQ-0nGuC56SAdmMg5xOtSQjA2eTJTMTRU4Ys2fH',
@@ -77,7 +77,7 @@ export class CarritoComponent implements OnInit {
             console.log('onClick', data, actions);            
         }
     };
-  }  */
+  } 
 
   obtenerProductosEnCarrito(): void {
     this.productosEnCarrito = this.productosService.obtenerCarrito();
@@ -90,13 +90,13 @@ export class CarritoComponent implements OnInit {
   }
 
 
-  incrementQuantity() {
-    this.quantity++;
+  aumentarCantidad(producto: ProductModel) {
+    producto.cantidad++;
   }
 
-  decrementQuantity() {
-    if (this.quantity > 0) {
-      this.quantity--;
+  decrementarCantidad(producto: ProductModel) {
+    if (producto.cantidad > 0) {
+      producto.cantidad--;
     }
   }
 
