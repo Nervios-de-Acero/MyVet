@@ -63,11 +63,8 @@ __pycache__/
 local_settings.py
 
 #entorno vitual
-myvet_proyect_virtual
-myvet
-myvet_virtual
-myvet_vitual
-myvet_proyect
+myvet_entorno
+
 
 
 Backend/myvet_project/usuario/migrations/0001_initial.py
